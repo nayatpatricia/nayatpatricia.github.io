@@ -1,0 +1,54 @@
+# NMJlessons Website License
+
+This website and its content are provided by NMJlessons, created by Naya James Mbabila for Naya Tiimah Patricia.
+
+## License Terms
+
+THE CONTENT AND MATERIALS ON THIS WEBSITE ("THE WORK") ARE PROVIDED UNDER THE TERMS OF THIS LICENSE. THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE IS PROHIBITED.
+
+BY ACCESSING OR USING THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE.
+
+### 1. Definitions
+
+1. "Content" means all text, images, graphics, design, code, audio, video, and other materials that appear on this website.
+2. "NMJlessons" refers to the entity owned and operated by Naya James Mbabila.
+3. "Website" refers to the NMJlessons website and all its associated content.
+4. "You" means an individual or entity accessing or using the content on this website.
+
+### 2. License Grant
+
+Subject to the terms and conditions of this License, NMJlessons hereby grants You a limited, non-exclusive, non-transferable license to access and view the Content for personal, non-commercial use only.
+
+### 3. Restrictions
+
+1. You may not reproduce, distribute, display, or create derivative works based on the Content without explicit written permission from Naya James Mbabila.
+2. You may not use the Content for commercial purposes without obtaining prior written consent from NMJlessons.
+3. You must retain all copyright and other proprietary notices contained in the original Content.
+4. You may not transfer the rights granted under this License to another party.
+5. You may not modify, reverse engineer, or disassemble any software components of the Website.
+
+### 4. Attribution
+
+If you are granted permission to use any Content from this website, you must provide proper attribution to NMJlessons and Naya James Mbabila in the following format: "Content created by Naya James Mbabila for NMJlessons, https://[your-website-url]"
+
+### 5. Termination
+
+This License and the rights granted hereunder will terminate automatically if You fail to comply with any term or condition of this License. Upon termination, You must cease all use of the Content.
+
+### 6. Disclaimer of Warranties
+
+THE CONTENT IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+### 7. Limitation of Liability
+
+IN NO EVENT WILL NMJLESSONS OR NAYA JAMES MBABILA BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE OF OR INABILITY TO USE THE CONTENT.
+
+### 8. Contact Information
+
+For permissions, questions, or additional information regarding this License, please contact:
+
+Naya James Mbabila
+Email: nayajames2002@gmail.com
+
+
+© 2025 NMJlessons. All rights reserved.

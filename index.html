@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Patricia Tiimah Naya - PhD Candidate</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @keyframes headerGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+            background-size: 200% 200%;
+            animation: headerGradient 10s ease infinite;
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+            transform: translateX(-100%);
+            animation: header-shine 6s infinite;
+        }
+
+        @keyframes header-shine {
+            0% { transform: translateX(-100%); }
+            20% { transform: translateX(100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: block;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            color: #1e3c72;
+            transform: translateY(-3px);
+            background-color: rgba(30, 60, 114, 0.1);
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            flex: 1;
+            animation: fadeIn 1s ease;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: start;
+        }
+
+        .profile-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #1e3c72;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideInFromLeft 0.5s ease;
+        }
+
+        .profile-section:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .slider-section {
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .slide-content {
+            position: absolute;
+            text-align: center;
+            z-index: 1;
+            background: rgba(30, 60, 114, 0.85);
+            padding: 2rem;
+            border-radius: 8px;
+            color: white;
+            max-width: 80%;
+            backdrop-filter: blur(5px);
+        }
+
+        .learn-more {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #1e3c72;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .learn-more:hover {
+            background: #2a5298;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        #footer {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+            background-size: 200% 200%;
+            animation: headerGradient 10s ease infinite;
+            color: #fff;
+            padding: 3rem 0;
+            margin-top: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+            transform: translateX(-100%);
+            animation: footer-shine 6s infinite;
+        }
+
+        .social-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+        }
+
+        .social-link:hover {
+            background: #2a5298;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(30, 60, 114, 0.4);
+        }
+
+        .copyright {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            position: relative;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .slide-content {
+                max-width: 90%;
+                padding: 1rem;
+            }
+
+            .social-links {
+                gap: 1rem;
+            }
+
+            .social-link {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Patricia Tiimah Naya</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">PhD Candidate (ABD) | AAUW International Fellow | Commonwealth Shared Scholar | MSc | BSc<br>
+            University of Massachusetts Boston</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="Full-profile.html"><i class="fas fa-user-female"></i> 👤 About Me</a></li>
+            <li><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
+            <li><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
+            <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <main class="main-content">
+            <div class="profile-grid">
+                <div class="profile-text">
+                    <div class="profile-section">
+                        <p>Patricia Tiimah Naya is a PhD candidate at the University of Massachusetts Boston studying organizational transformation and anti-racist change processes. An AAUW International Fellow, her research examines how institutions navigate complex transformational initiatives while grappling with power dynamics, resistance, and institutional sensemaking.</p>
+                        <p>Her work combines academic scholarship with practical experience, informed by her leadership of the Realizing Dreams Foundation in Ghana and past roles in public service. Naya's research has earned recognition including the CMS Division's Most Promising Early Career Paper Award (AOM, 2024).</p>
+                        <a href="full-profile.html" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/Profile.JPG" alt="Patricia Tiimah Naya" class="profile-image">
+                </div>
+            </div>
+
+            <!-- Slider Section -->
+            <div class="slider-section">
+                <div class="slide">
+                    <img src="images/a2.png" alt="Academic Excellence">
+                    <div class="slide-content">
+                        <h2>Academic Excellence</h2>
+                        <p>MSc with Distinction and </p>
+                        <p>and Best Dissertation Award (2021)</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/a1.png" alt="Academic Excellence">
+                    <div class="slide-content">
+                        <h2>Academic Excellence</h2>
+                        <p>The Ph.D. Award for Academic Distinction</p>
+                        <p>in Organizations and Social Change (2023)</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/aa.png" alt="Patricia Tiimah Naya">
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Contact</h2>
+                <p>For collaboration opportunities or to discuss my research, please contact me at <a href="mailto:Patricia.naya001@umb.edu">Patricia.naya001@umb.edu</a>.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <ul class="social-links animate__animated animate__fadeIn">
+                <li><a href="https://www.linkedin.com/in/patricia-tiimah-naya-282261198/" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="mailto:Patricia.Naya001@umb.edu" class="social-link"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" class="social-link"><i class="fab fa-google"></i></a></li>
+            </ul>
+            <div class="copyright">
+                © Patricia Tiimah Naya. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            // Show first slide
+            showSlide(0);
+
+            // Auto advance slides
+            setInterval(nextSlide, 5000);
+
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Observe profile sections and other animated elements
+            document.querySelectorAll('.profile-section').forEach(section => {
+                section.style.animationPlayState = 'paused';
+                observer.observe(section);
+            });
+
+            // Handle navigation highlighting
+            const navLinks = document.querySelectorAll('.nav a');
+            navLinks.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.style.backgroundColor = 'rgba(30, 60, 114, 0.1)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
