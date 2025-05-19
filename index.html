@@ -1,59 +1,131 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <title>Patricia Tiimah Naya - PhD Candidate</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Patricia Tiimah Naya is a PhD candidate at the University of Massachusetts Boston studying organizational transformation and anti-racist change processes.">
+    <meta name="author" content="Patricia Tiimah Naya">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' x='50%' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif'>🎓</text></svg>" type="image/svg+xml">
+    <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Base Styles and Variables */
+        :root {
+            --primary-color: #1e3c72;
+            --primary-light: #2a5298;
+            --primary-dark: #0c2553;
+            --accent-color: #ff7e5f;
+            --text-color: #333;
+            --text-light: #6c757d;
+            --bg-color: #f9f9f9;
+            --bg-alt: #f0f2f5;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+        }
+
         @keyframes headerGradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        @keyframes slideInFromLeft {
-            0% {
-                transform: translateX(-30px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            20% { transform: translateX(100%); }
+            100% { transform: translateX(100%); }
         }
 
+        /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+            line-height: 1.3;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        p {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col {
+            padding: 0 15px;
+        }
+
+        /* Header */
         .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 50%, var(--primary-color) 100%);
             background-size: 200% 200%;
             animation: headerGradient 10s ease infinite;
-            color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: var(--white);
+            padding: var(--spacing-xl) 0;
+            margin-bottom: var(--spacing-lg);
+            box-shadow: var(--shadow-lg);
             position: relative;
             overflow: hidden;
             text-align: center;
@@ -68,107 +140,239 @@
             height: 100%;
             background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
             transform: translateX(-100%);
-            animation: header-shine 6s infinite;
+            animation: shine 6s infinite;
         }
 
-        @keyframes header-shine {
-            0% { transform: translateX(-100%); }
-            20% { transform: translateX(100%); }
-            100% { transform: translateX(100%); }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
         }
 
-        .container {
-            max-width: 1200px;
+        .header p {
+            font-size: 1.1rem;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 2rem;
+            opacity: 0.9;
         }
 
+        /* Navigation */
         .nav {
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 1rem 0;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            padding: var(--spacing-sm) 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: var(--transition);
         }
 
-        .nav ul {
-            list-style: none;
+        .nav.scrolled {
+            padding: 0.8rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .nav a {
+        .brand {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-item a {
             text-decoration: none;
-            color: #2c3e50;
+            color: var(--text-color);
             font-weight: 500;
-            transition: color 0.3s ease, transform 0.3s ease;
+            transition: var(--transition);
             display: block;
             padding: 0.5rem 1rem;
-            border-radius: 4px;
+            border-radius: var(--border-radius);
+            position: relative;
         }
 
-        .nav a:hover {
-            color: #1e3c72;
-            transform: translateY(-3px);
-            background-color: rgba(30, 60, 114, 0.1);
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+            transform: translateX(-50%);
         }
 
+        .nav-item a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-item a:hover::after {
+            width: 70%;
+        }
+
+        .nav-item a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-item a.active::after {
+            width: 70%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
         .main-content {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            border-radius: 8px;
-            margin-bottom: 3rem;
+            padding: var(--spacing-xl);
+            background: var(--white);
+            box-shadow: var(--shadow-md);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-xl);
             flex: 1;
-            animation: fadeIn 1s ease;
         }
 
+        /* Profile Section */
         .profile-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: 3fr 2fr;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
             align-items: start;
         }
 
+        .profile-image-container {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
         .profile-image {
-            max-width: 100%;
+            display: block;
+            width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
+            border-radius: var(--border-radius);
         }
 
-        .profile-image:hover {
-            transform: scale(1.02);
+        .profile-image-container:hover .profile-image {
+            transform: scale(1.03);
         }
 
-        .profile-section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #1e3c72;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: slideInFromLeft 0.5s ease;
+        .profile-image-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.1) 100%);
+            pointer-events: none;
         }
 
-        .profile-section:hover {
-            transform: translateX(10px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            padding: var(--spacing-lg);
+            transition: var(--transition);
+            margin-bottom: var(--spacing-lg);
+            border-left: 4px solid var(--primary-color);
         }
 
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-heading {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-light);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color);
+        }
+
+        .btn-accent:hover {
+            background-color: #ff6a4b;
+        }
+
+        /* Slider Section */
         .slider-section {
-            margin: 2rem 0;
+            margin: var(--spacing-xl) 0;
             position: relative;
             overflow: hidden;
-            height: 400px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            height: 450px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
         }
 
         .slide {
@@ -178,7 +382,7 @@
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.8s ease-in-out;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -192,7 +396,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
         }
 
         .slide-content {
@@ -200,43 +404,125 @@
             text-align: center;
             z-index: 1;
             background: rgba(30, 60, 114, 0.85);
-            padding: 2rem;
-            border-radius: 8px;
-            color: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            color: var(--white);
             max-width: 80%;
             backdrop-filter: blur(5px);
+            box-shadow: var(--shadow-md);
         }
 
-        .learn-more {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: #1e3c72;
+        .slide-content h2 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 2rem;
+        }
+
+        .slider-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .slider-dot.active {
+            background-color: var(--white);
+            transform: scale(1.2);
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
             color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
         }
 
-        .learn-more:hover {
-            background: #2a5298;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        .slider-nav:hover {
+            background-color: rgba(255, 255, 255, 0.4);
         }
 
-        #footer {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+        .slider-prev {
+            left: 20px;
+        }
+
+        .slider-next {
+            right: 20px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.2);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 50%, var(--primary-color) 100%);
             background-size: 200% 200%;
             animation: headerGradient 10s ease infinite;
-            color: #fff;
-            padding: 3rem 0;
+            color: var(--white);
+            padding: var(--spacing-xl) 0;
             margin-top: auto;
             position: relative;
             overflow: hidden;
         }
 
-        #footer::before {
+        .footer::before {
             content: '';
             position: absolute;
             top: 0;
@@ -245,73 +531,344 @@
             height: 100%;
             background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
             transform: translateX(-100%);
-            animation: footer-shine 6s infinite;
+            animation: shine 6s infinite;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: var(--spacing-xl);
+        }
+
+        .footer-col h3 {
+            position: relative;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-xs);
+            font-size: 1.3rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .footer-link a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+
+        .footer-link a:hover {
+            color: var(--white);
+            padding-left: 5px;
         }
 
         .social-links {
             list-style: none;
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
         }
 
         .social-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 3rem;
-            height: 3rem;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(5px);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: white;
+            transition: var(--transition);
+            color: var(--white);
         }
 
         .social-link:hover {
-            background: #2a5298;
+            background: var(--accent-color);
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(30, 60, 114, 0.4);
+            box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3);
         }
 
         .copyright {
             text-align: center;
-            color: rgba(255, 255, 255, 0.9);
+            padding-top: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
             font-size: 0.9rem;
-            position: relative;
-            padding-top: 1rem;
         }
 
-        @media (max-width: 768px) {
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 99;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumbs a {
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--primary-color);
+        }
+
+        .breadcrumbs .separator {
+            margin: 0 8px;
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 992px) {
             .profile-grid {
                 grid-template-columns: 1fr;
             }
 
-            .nav ul {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --spacing-xl: 2rem;
+                --spacing-lg: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-container {
+                position: relative;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
                 flex-direction: column;
-                text-align: center;
-                gap: 1rem;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                box-shadow: var(--shadow-md);
+                z-index: 1000;
+            }
+
+            .nav-menu.active {
+                max-height: 300px;
+            }
+
+            .nav-item a {
+                padding: 12px 20px;
+                border-radius: 0;
+            }
+
+            .nav-item a::after {
+                display: none;
+            }
+
+            .slider-section {
+                height: 350px;
             }
 
             .slide-content {
                 max-width: 90%;
-                padding: 1rem;
+                padding: var(--spacing-md);
             }
 
-            .social-links {
-                gap: 1rem;
+            .contact-form {
+                grid-template-columns: 1fr;
             }
 
-            .social-link {
-                width: 2.5rem;
-                height: 2.5rem;
+            .form-group.full-width {
+                grid-column: span 1;
             }
+
+            .card:hover {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .slider-section {
+                height: 300px;
+            }
+
+            .slide-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .slide-content p {
+                font-size: 0.9rem;
+            }
+
+            .slider-nav {
+                width: 35px;
+                height: 35px;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .nav, .footer, .slider-section, .back-to-top {
+                display: none;
+            }
+
+            body {
+                background-color: white;
+                color: black;
+            }
+
+            .main-content {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            a {
+                color: black;
+                text-decoration: underline;
+            }
+
+            .card {
+                break-inside: avoid;
+                box-shadow: none;
+                border-left: 1px solid #ddd;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Schema Markup (Hidden) */
+        .schema-markup {
+            display: none;
         }
     </style>
 </head>
 <body>
+    <!-- Schema Markup -->
+    <script type="application/ld+json" class="schema-markup">
+    {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Patricia Tiimah Naya",
+    "jobTitle": "PhD Candidate",
+    "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "University of Massachusetts Boston"
+    },
+    "alumniOf": [
+        {
+        "@type": "EducationalOrganization",
+        "name": "University College London"
+        },
+        {
+        "@type": "EducationalOrganization",
+        "name": "University for Development Studies, Ghana"
+        }
+    ],
+    "award": [
+        "AAUW International Fellow",
+        "Commonwealth Shared Scholar",
+        "CMS Division's Most Promising Early Career Paper Award (AOM, 2024)"
+    ],
+    "url": "https://nayapatricia.com",
+    "sameAs": [
+        "https://www.linkedin.com/in/patricia-tiimah-naya-282261198/",
+        "https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao"
+    ]
+    }
+    </script>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -321,92 +878,176 @@
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="Full-profile.html"><i class="fas fa-user-female"></i> 👤 About Me</a></li>
-            <li><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
-            <li><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
-            <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
+   <!-- Navigation -->
+    <nav class="nav" id="main-nav">
+        <div class="container nav-container">
+            <span class="brand">Patricia T. Naya</span> 
+            <button class="mobile-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="Full-profile.html"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
+                <li><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
+                <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
     </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Welcome</span>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <div class="container">
-        <main class="main-content">
+        <main class="main-content" id="main-content">
             <div class="profile-grid">
                 <div class="profile-text">
-                    <div class="profile-section">
+                    <div class="card fade-in">
+                        <h2 class="section-heading">About Me</h2>
                         <p>Patricia Tiimah Naya is a PhD candidate at the University of Massachusetts Boston studying organizational transformation and anti-racist change processes. An AAUW International Fellow, her research examines how institutions navigate complex transformational initiatives while grappling with power dynamics, resistance, and institutional sensemaking.</p>
                         <p>Her work combines academic scholarship with practical experience, informed by her leadership of the Realizing Dreams Foundation in Ghana and past roles in public service. Naya's research has earned recognition including the CMS Division's Most Promising Early Career Paper Award (AOM, 2024).</p>
-                        <a href="Full-profile.html" class="learn-more">Learn More</a>
+                        <a href="Full-profile.html" class="btn">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div>
+                <div class="profile-image-container fade-in">
                     <img src="images/Profile.JPG" alt="Patricia Tiimah Naya" class="profile-image">
                 </div>
             </div>
 
             <!-- Slider Section -->
-            <div class="slider-section">
-                <div class="slide">
-                    <img src="images/a2.png" alt="Academic Excellence">
-                    <div class="slide-content">
-                        <h2>Academic Excellence</h2>
-                        <p>MSc with Distinction and </p>
-                        <p>and Best Dissertation Award (2021)</p>
+            <div class="slider-section fade-in">
+                <div class="slides-container">
+                    <div class="slide">
+                        <img src="images/a2.png" alt="Academic Excellence">
+                        <div class="slide-content">
+                            <h2>Academic Excellence</h2>
+                            <p>MSc with Distinction and </p>
+                            <p>and Best Dissertation Award (2021)</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/a1.png" alt="Academic Excellence">
+                        <div class="slide-content">
+                            <h2>Academic Excellence</h2>
+                            <p>The Ph.D. Award for Academic Distinction</p>
+                            <p>in Organizations and Social Change (2023)</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/aa.png" alt="Patricia Tiimah Naya">
+                    </div>
+                    <div class="slide">
+                        <img src="images/family.png" alt="Family">
+                        <div class="slide-content">
+                            <h2>Family</h2>
+                        </div>
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="images/a1.png" alt="Academic Excellence">
-                    <div class="slide-content">
-                        <h2>Academic Excellence</h2>
-                        <p>The Ph.D. Award for Academic Distinction</p>
-                        <p>in Organizations and Social Change (2023)</p>
-                    </div>
+                
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <div class="slider-dot active" data-slide="0"></div>
+                    <div class="slider-dot" data-slide="1"></div>
+                    <div class="slider-dot" data-slide="2"></div>
+                    <div class="slider-dot" data-slide="3"></div>
                 </div>
-                <div class="slide">
-                    <img src="images/aa.png" alt="Patricia Tiimah Naya">
+                
+                <div class="slider-nav slider-prev">
+                    <i class="fas fa-chevron-left"></i>
                 </div>
-                <div class="slide">
-                    <img src="images/family.png" alt="Family">
-                    <div class="slide-content">
-                        <h2>Family</h2>
-                    </div>
+                <div class="slider-nav slider-next">
+                    <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
 
-            <div class="profile-section">
-                <h2>Contact</h2>
+            <!-- Contact Section -->
+            <div class="card fade-in" id="contact">
+                <h2 class="section-heading">Contact</h2>
                 <p>For collaboration opportunities or to discuss my research, please contact me at <a href="mailto:Patricia.naya001@umb.edu">Patricia.naya001@umb.edu</a>.</p>
+                
             </div>
         </main>
     </div>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer class="footer" id="footer">
         <div class="container">
-            <ul class="social-links animate__animated animate__fadeIn">
-                <li><a href="https://www.linkedin.com/in/patricia-tiimah-naya-282261198/" class="social-link"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="mailto:Patricia.Naya001@umb.edu" class="social-link"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" class="social-link"><i class="fab fa-google"></i></a></li>
-            </ul>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About Me</h3>
+                    <p>Patricia Tiimah Naya is a PhD candidate at the University of Massachusetts Boston studying organizational transformation and anti-racist change processes.</p>
+                    <ul class="social-links">
+                        <li><a href="https://www.linkedin.com/in/patricia-tiimah-naya-282261198/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="mailto:Patricia.Naya001@umb.edu" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" class="social-link" aria-label="Google Scholar"><i class="fab fa-google"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="Full-profile.html">About Me</a></li>
+                        <li class="footer-link"><a href="Articles.html">Research</a></li>
+                        <li class="footer-link"><a href="Patricia T. Naya CV.pdf">CV</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><i class="fas fa-envelope"></i> Patricia.naya001@umb.edu</li>
+                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> University of Massachusetts Boston</li>
+                    </ul>
+                </div>
+            </div>
             <div class="copyright">
-                © Patricia Tiimah Naya. All rights reserved.
+                © <span id="current-year"></span> Patricia Tiimah Naya. All rights reserved.
             </div>
         </div>
     </footer>
 
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease',
+                once: true
+            });
+
+            // Initialize slider
             const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            const prevBtn = document.querySelector('.slider-prev');
+            const nextBtn = document.querySelector('.slider-next');
             let currentSlide = 0;
+            let slideInterval;
 
             function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+
+                // Show the selected slide
                 slides[index].classList.add('active');
+                dots[index].classList.add('active');
             }
 
             function nextSlide() {
@@ -414,33 +1055,127 @@
                 showSlide(currentSlide);
             }
 
-            // Show first slide
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            // Initialize slider
             showSlide(0);
 
             // Auto advance slides
-            setInterval(nextSlide, 5000);
+            function startSlideTimer() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
 
-            // Intersection Observer for animations
+            function resetSlideTimer() {
+                clearInterval(slideInterval);
+                startSlideTimer();
+            }
+
+            startSlideTimer();
+
+            // Event listeners for slider controls
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                    resetSlideTimer();
+                });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetSlideTimer();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetSlideTimer();
+            });
+
+            // Mobile navigation
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+
+            // Sticky navigation
+            const nav = document.getElementById('main-nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('active');
+                } else {
+                    backToTop.classList.remove('active');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Fade in elements on scroll
+            const fadeElems = document.querySelectorAll('.fade-in');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.animationPlayState = 'running';
+                        entry.target.classList.add('appear');
                         observer.unobserve(entry.target);
                     }
                 });
             }, { threshold: 0.1 });
             
-            // Observe profile sections and other animated elements
-            document.querySelectorAll('.profile-section').forEach(section => {
-                section.style.animationPlayState = 'paused';
-                observer.observe(section);
+            fadeElems.forEach(el => {
+                observer.observe(el);
             });
 
-            // Handle navigation highlighting
-            const navLinks = document.querySelectorAll('.nav a');
+            // Current year for copyright
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Here you would normally handle the form submission with AJAX
+                    // For now, just show an alert
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+
+            // Highlight active nav link based on current page
+            const currentLocation = location.pathname;
+            const navLinks = document.querySelectorAll('.nav-item a');
             navLinks.forEach(link => {
-                if (link.href === window.location.href) {
-                    link.style.backgroundColor = 'rgba(30, 60, 114, 0.1)';
+                if (link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                } else if (currentLocation === '/' && link.getAttribute('href') === '/') {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
                 }
             });
         });
