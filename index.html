@@ -34,6 +34,7 @@
             --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
             --border-radius: 8px;
             --transition: all 0.3s ease;
+            --transition-slow: all 0.6s ease;
             --spacing-xs: 0.5rem;
             --spacing-sm: 1rem;
             --spacing-md: 1.5rem;
@@ -51,6 +52,12 @@
             0% { transform: translateX(-100%); }
             20% { transform: translateX(100%); }
             100% { transform: translateX(100%); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
         /* Reset & Base Styles */
@@ -366,112 +373,107 @@
             background-color: #ff6a4b;
         }
 
-        /* Slider Section */
-        .slider-section {
+        /* Gallery Section */
+        .gallery-section {
             margin: var(--spacing-xl) 0;
+        }
+
+        .gallery-category {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .gallery-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-xs);
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .gallery-item {
             position: relative;
-            overflow: hidden;
-            height: 450px;
             border-radius: var(--border-radius);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-slow);
+            aspect-ratio: 16/15;
+            transform: translateY(20px);
             opacity: 0;
-            transition: opacity 0.8s ease-in-out;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .slide.active {
+        .gallery-item.animated {
+            transform: translateY(0);
             opacity: 1;
         }
 
-        .slide img {
+        .gallery-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+            z-index: 10;
+        }
+
+        .gallery-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: var(--border-radius);
+            transition: transform 0.8s cubic-bezier(0.25, 0.45, 0.45, 0.95);
         }
 
-        .slide-content {
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
             position: absolute;
-            text-align: center;
-            z-index: 1;
-            background: rgba(30, 60, 114, 0.85);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius);
-            color: var(--white);
-            max-width: 80%;
-            backdrop-filter: blur(5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .slide-content h2 {
-            margin-bottom: var(--spacing-sm);
-            font-size: 2rem;
-        }
-
-        .slider-controls {
-            position: absolute;
-            bottom: 20px;
+            bottom: 0;
             left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            z-index: 2;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            color: var(--white);
+            padding: var(--spacing-md);
+            transform: translateY(100%);
+            transition: var(--transition-slow);
+            opacity: 0;
+            pointer-events: none;
         }
 
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .gallery-caption p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .gallery-nav-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
             cursor: pointer;
             transition: var(--transition);
         }
 
-        .slider-dot.active {
-            background-color: var(--white);
-            transform: scale(1.2);
-        }
-
-        .slider-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .slider-nav:hover {
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-
-        .slider-prev {
-            left: 20px;
-        }
-
-        .slider-next {
-            right: 20px;
+        .gallery-nav-btn:hover {
+            background: var(--primary-light);
         }
 
         /* Contact Form */
@@ -736,15 +738,6 @@
                 display: none;
             }
 
-            .slider-section {
-                height: 350px;
-            }
-
-            .slide-content {
-                max-width: 90%;
-                padding: var(--spacing-md);
-            }
-
             .contact-form {
                 grid-template-columns: 1fr;
             }
@@ -755,6 +748,10 @@
 
             .card:hover {
                 transform: none;
+            }
+
+            .gallery-item {
+                aspect-ratio: 4/3;
             }
         }
 
@@ -767,28 +764,14 @@
                 font-size: 1rem;
             }
 
-            .slider-section {
-                height: 300px;
-            }
-
-            .slide-content h2 {
-                font-size: 1.5rem;
-            }
-
-            .slide-content p {
-                font-size: 0.9rem;
-            }
-
-            .slider-nav {
-                width: 35px;
-                height: 35px;
-                font-size: 1.2rem;
+            .gallery-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         /* Print Styles */
         @media print {
-            .nav, .footer, .slider-section, .back-to-top {
+            .nav, .footer, .back-to-top {
                 display: none;
             }
 
@@ -891,6 +874,7 @@
                 <li><a href="Full-profile.html"><i class="fas fa-user"></i> About Me</a></li>
                 <li><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
                 <li><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
+                <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
                 <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </div>
@@ -922,49 +906,125 @@
                 </div>
             </div>
 
-            <!-- Slider Section -->
-            <div class="slider-section fade-in">
-                <div class="slides-container">
-                    <div class="slide">
-                        <img src="images/a2.png" alt="Academic Excellence">
-                        <div class="slide-content">
-                            <h2>Academic Excellence</h2>
-                            <p>MSc with Distinction and </p>
-                            <p>and Best Dissertation Award (2021)</p>
+            <!-- Gallery Section -->
+            <div class="gallery-section fade-in" id="gallery">
+                <h2 class="section-heading">Gallery</h2>
+                                <!-- Black Diaspora Career Summit -->
+                <div class="gallery-category">
+                    <h3 class="gallery-title">Black Diaspora Career Summit</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/submit1.jpg" alt="Inaugural Black Diaspora Career Summit" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>Inaugural Black Diaspora Career Summit at UMass Boston</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="slide">
-                        <img src="images/a1.png" alt="Academic Excellence">
-                        <div class="slide-content">
-                            <h2>Academic Excellence</h2>
-                            <p>The Ph.D. Award for Academic Distinction</p>
-                            <p>in Organizations and Social Change (2023)</p>
+                        <div class="gallery-item">
+                            <img src="images/submit2.jpg" alt="Panel Discussion at Summit" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>Keynote address at the summit</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="slide">
-                        <img src="images/aa.png" alt="Patricia Tiimah Naya">
-                    </div>
-                    <div class="slide">
-                        <img src="images/family.png" alt="Family">
-                        <div class="slide-content">
-                            <h2>Family</h2>
+                        <div class="gallery-item">
+                            <img src="images/submit3.jpg" alt="Networking at Summit" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>Networking and discussion session with participants</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Slider Controls -->
-                <div class="slider-controls">
-                    <div class="slider-dot active" data-slide="0"></div>
-                    <div class="slider-dot" data-slide="1"></div>
-                    <div class="slider-dot" data-slide="2"></div>
-                    <div class="slider-dot" data-slide="3"></div>
+                <!-- Recognition at UMass Boston -->
+                <div class="gallery-category">
+                    <h3 class="gallery-title">Recognition at UMass Boston</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/umass2.png" alt="PhD Award for Academic Distinction" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>With Dean of College of Management; The Ph.D. Award for Academic Distinction in Organizations and Social Change </p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/umass3.png" alt="PhD Award for Academic Distinction" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>The Ph.D. Award for Academic Distinction in Organizations and Social Change (2023)</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/umass1.jpg" alt="Presenting Research at UMass" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>With my supervisors: Alessia Contu and Jared Mitchell Poole</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related to PhD at UMass Boston -->
+                <div class="gallery-category">
+                    <h3 class="gallery-title">Activities</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/activity1.jpg" alt="Conference Presentation" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>Conference presentation </p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/activity2.jpg" alt="PhD Award for Academic Distinction" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>Conference presentation</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/activity3.jpg" alt="Presenting Research at UMass" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p> AOMS 2024</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="slider-nav slider-prev">
-                    <i class="fas fa-chevron-left"></i>
+                <!-- Academic Excellence at UCL -->
+                <div class="gallery-category">
+                    <h3 class="gallery-title">Academic Excellence at University College London (UCL)</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/ucl2.jpg" alt="MSc with Distinction and Best Dissertation Award (2021)" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>MSc with Distinction and Best Dissertation Award (2021)</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/ucl1.png" alt="UCL Graduation Ceremony" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>UCL Graduation Ceremony 2021</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="slider-nav slider-next">
-                    <i class="fas fa-chevron-right"></i>
+                
+                <!-- Personal Life -->
+                <div class="gallery-category">
+                    <h3 class="gallery-title">Personal Life</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/family.png" alt="With Family" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>With my family</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/personal1.png" alt="Professional Engagement" class="gallery-img">
+                            <div class="gallery-caption">
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/Profile.JPG" alt="Professional Headshot" class="gallery-img">
+                            <div class="gallery-caption">
+                                <p>Professional Headshot</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -972,7 +1032,6 @@
             <div class="card fade-in" id="contact">
                 <h2 class="section-heading">Contact</h2>
                 <p>For collaboration opportunities or to discuss my research, please contact me at <a href="mailto:Patricia.naya001@umb.edu">Patricia.naya001@umb.edu</a>.</p>
-                
             </div>
         </main>
     </div>
@@ -997,6 +1056,7 @@
                         <li class="footer-link"><a href="Full-profile.html">About Me</a></li>
                         <li class="footer-link"><a href="Articles.html">Research</a></li>
                         <li class="footer-link"><a href="Patricia T. Naya CV.pdf">CV</a></li>
+                        <li class="footer-link"><a href="#gallery">Gallery</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1027,72 +1087,6 @@
                 duration: 800,
                 easing: 'ease',
                 once: true
-            });
-
-            // Initialize slider
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.slider-dot');
-            const prevBtn = document.querySelector('.slider-prev');
-            const nextBtn = document.querySelector('.slider-next');
-            let currentSlide = 0;
-            let slideInterval;
-
-            function showSlide(index) {
-                // Hide all slides
-                slides.forEach(slide => {
-                    slide.classList.remove('active');
-                });
-                dots.forEach(dot => {
-                    dot.classList.remove('active');
-                });
-
-                // Show the selected slide
-                slides[index].classList.add('active');
-                dots[index].classList.add('active');
-            }
-
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            // Initialize slider
-            showSlide(0);
-
-            // Auto advance slides
-            function startSlideTimer() {
-                slideInterval = setInterval(nextSlide, 5000);
-            }
-
-            function resetSlideTimer() {
-                clearInterval(slideInterval);
-                startSlideTimer();
-            }
-
-            startSlideTimer();
-
-            // Event listeners for slider controls
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentSlide = index;
-                    showSlide(currentSlide);
-                    resetSlideTimer();
-                });
-            });
-
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetSlideTimer();
-            });
-
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetSlideTimer();
             });
 
             // Mobile navigation
@@ -1152,20 +1146,25 @@
                 observer.observe(el);
             });
 
+            // Gallery item animations
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const galleryObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('animated');
+                        }, 150 * index);
+                        galleryObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            galleryItems.forEach(item => {
+                galleryObserver.observe(item);
+            });
+
             // Current year for copyright
             document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            // Form submission
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    // Here you would normally handle the form submission with AJAX
-                    // For now, just show an alert
-                    alert('Thank you for your message! I will get back to you soon.');
-                    contactForm.reset();
-                });
-            }
 
             // Highlight active nav link based on current page
             const currentLocation = location.pathname;
