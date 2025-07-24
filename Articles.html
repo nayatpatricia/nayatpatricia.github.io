@@ -11,8 +11,6 @@
     <link rel="icon" href="images/pat.svg" type="image/svg+xml">
     
     <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +57,7 @@
             --primary-light: #2a5298;
             --primary-dark: #0c2553;
             --accent-color: #ff7e5f;
+            --accent-light: #ff9e88;
             --text-color: #333;
             --text-light: #6c757d;
             --bg-color: #f9f9f9;
@@ -69,6 +68,7 @@
             --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
             --border-radius: 8px;
             --transition: all 0.3s ease;
+            --transition-slow: all 0.6s ease;
             --spacing-xs: 0.5rem;
             --spacing-sm: 1rem;
             --spacing-md: 1.5rem;
@@ -87,6 +87,17 @@
             0% { transform: translateX(-100%); }
             20% { transform: translateX(100%); }
             100% { transform: translateX(100%); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
         /* Base Styles */
@@ -109,6 +120,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -134,6 +146,7 @@
         img {
             max-width: 100%;
             height: auto;
+            display: block;
         }
 
         /* Layout */
@@ -174,6 +187,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: var(--spacing-xs);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .header p {
@@ -192,6 +206,8 @@
             top: 0;
             z-index: 1000;
             transition: var(--transition);
+            backdrop-filter: blur(5px);
+            background-color: rgba(255,255,255,0.9);
         }
 
         .nav.scrolled {
@@ -210,6 +226,13 @@
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .brand i {
+            color: var(--accent-color);
         }
 
         .nav-menu {
@@ -264,6 +287,11 @@
             color: var(--text-color);
             font-size: 1.5rem;
             cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle:hover {
+            color: var(--primary-color);
         }
 
         /* Main Content */
@@ -276,6 +304,45 @@
             border-radius: var(--border-radius);
             margin-bottom: var(--spacing-xl);
             flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Profile Sections */
+        .profile-section {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            padding: var(--spacing-lg);
+            transition: var(--transition);
+            margin-bottom: var(--spacing-lg);
+            border-left: 4px solid var(--primary-color);
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+            animation-play-state: paused;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30,60,114,0.03) 0%, rgba(255,255,255,0) 100%);
+            z-index: 0;
+        }
+
+        .profile-section > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
 
         .section-heading {
@@ -294,6 +361,11 @@
             width: 40px;
             height: 3px;
             background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .section-heading:hover::after {
+            width: 60px;
         }
 
         /* Publications */
@@ -305,6 +377,24 @@
             transition: var(--transition);
             margin-bottom: var(--spacing-lg);
             border-left: 4px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .publication::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30,60,114,0.03) 0%, rgba(255,255,255,0) 100%);
+            z-index: 0;
+        }
+
+        .publication > * {
+            position: relative;
+            z-index: 1;
         }
 
         .publication:hover {
@@ -345,6 +435,7 @@
             color: var(--text-light);
             transition: var(--transition);
             font-family: 'Merriweather', serif;
+            position: relative;
         }
 
         .tab-button:hover {
@@ -367,7 +458,9 @@
 
         /* Buttons */
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
             padding: 0.8rem 2rem;
             background-color: var(--primary-color);
             color: var(--white);
@@ -379,6 +472,20 @@
             cursor: pointer;
             box-shadow: var(--shadow-sm);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
+            transform: translateX(-100%);
+            transition: var(--transition);
         }
 
         .btn:hover {
@@ -388,6 +495,10 @@
             box-shadow: var(--shadow-md);
         }
 
+        .btn:hover::after {
+            transform: translateX(100%);
+        }
+
         /* Research Themes */
         .research-themes {
             margin-top: var(--spacing-xl);
@@ -395,6 +506,24 @@
             background: var(--bg-alt);
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .research-themes::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30,60,114,0.05) 0%, rgba(255,255,255,0) 100%);
+            z-index: 0;
+        }
+
+        .research-themes > * {
+            position: relative;
+            z-index: 1;
         }
 
         .theme-grid {
@@ -413,6 +542,24 @@
             align-items: center;
             box-shadow: var(--shadow-sm);
             border-left: 3px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30,60,114,0.05) 0%, rgba(255,255,255,0) 100%);
+            z-index: 0;
+        }
+
+        .theme-item > * {
+            position: relative;
+            z-index: 1;
         }
 
         .theme-item:hover {
@@ -426,6 +573,12 @@
             font-size: 1.2rem;
             width: 30px;
             text-align: center;
+            transition: var(--transition);
+        }
+
+        .theme-item:hover .theme-icon {
+            transform: rotate(15deg) scale(1.2);
+            color: var(--primary-color);
         }
 
         /* Footer */
@@ -481,16 +634,28 @@
 
         .footer-link {
             margin-bottom: var(--spacing-xs);
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            transform: translateX(5px);
         }
 
         .footer-link a {
             color: rgba(255, 255, 255, 0.8);
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
         }
 
         .footer-link a:hover {
             color: var(--white);
-            padding-left: 5px;
+        }
+
+        .footer-link i {
+            width: 20px;
+            text-align: center;
         }
 
         .social-links {
@@ -533,8 +698,8 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background-color: var(--primary-color);
             color: var(--white);
@@ -548,6 +713,7 @@
             transition: var(--transition);
             z-index: 99;
             box-shadow: var(--shadow-md);
+            border: none;
         }
 
         .back-to-top.active {
@@ -557,7 +723,7 @@
 
         .back-to-top:hover {
             background-color: var(--primary-light);
-            transform: translateY(-3px);
+            transform: translateY(-3px) scale(1.1);
         }
 
         /* Breadcrumbs */
@@ -582,36 +748,33 @@
             margin: 0 8px;
         }
 
-        /* Accessibility */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
 
-        /* Fade-in animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+        ::-webkit-scrollbar-track {
+            background: var(--bg-alt);
         }
 
-        .fade-in.appear {
-            opacity: 1;
-            transform: translateY(0);
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
         }
 
-        /* Responsive Design */
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-light);
+        }
+
+        /* Media Queries */
         @media (max-width: 992px) {
             .footer-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
                 gap: var(--spacing-lg);
+            }
+            
+            .theme-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
@@ -620,19 +783,19 @@
                 --spacing-xl: 2rem;
                 --spacing-lg: 1.5rem;
             }
-
+            
             .header h1 {
                 font-size: 2rem;
             }
-
+            
             .nav-container {
                 position: relative;
             }
-
+            
             .mobile-toggle {
                 display: block;
             }
-
+            
             .nav-menu {
                 position: absolute;
                 top: 100%;
@@ -647,24 +810,28 @@
                 box-shadow: var(--shadow-md);
                 z-index: 1000;
             }
-
+            
             .nav-menu.active {
                 max-height: 300px;
             }
-
+            
             .nav-item a {
                 padding: 12px 20px;
                 border-radius: 0;
             }
-
+            
             .nav-item a::after {
                 display: none;
             }
-
+            
             .tab-buttons {
                 flex-direction: column;
             }
-
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .theme-grid {
                 grid-template-columns: 1fr;
             }
@@ -674,9 +841,13 @@
             .header h1 {
                 font-size: 1.8rem;
             }
-
+            
             .header p {
                 font-size: 1rem;
+            }
+            
+            .main-content {
+                padding: var(--spacing-lg);
             }
         }
     </style>
@@ -697,7 +868,7 @@
     <!-- Navigation -->
     <nav class="nav" id="main-nav">
         <div class="container nav-container">
-            <span class="brand">Patricia T. Naya</span> 
+            <span class="brand"><i class="fas fa-graduation-cap"></i> Patricia T. Naya</span>
             <button class="mobile-toggle" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
@@ -733,7 +904,7 @@
 
                 <div id="key-publications" class="tab-content active">
                     <div class="publications">
-                        <article class="publication fade-in">
+                        <article class="publication" style="animation-delay: 0.1s">
                             <h3>Critical conversations in MOS: A dual-interview on the continuing struggles against anti-Blackness and racial capitalism</h3>
                             <div class="publication-meta">
                                 <strong>Authors:</strong> Stella Nkomo, Patricia Tiimah Naya<br>
@@ -743,7 +914,7 @@
                             <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:qjMakFHDy7sC" class="btn">View Publication</a>
                         </article>
                         
-                        <article class="publication fade-in">
+                        <article class="publication" style="animation-delay: 0.2s">
                             <h3>Piercing the Veil of Colorblindness with an Anti-Racist Identity: Sensemaking, Power, and the Reproduction of Racialized Socioeconomic Inequality</h3>
                             <div class="publication-meta">
                                 <strong>Authors:</strong> Patricia T. Naya, Alessia Contu, Jared M. Poole<br>
@@ -753,7 +924,7 @@
                             <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:d1gkVwhDpl0C" class="btn">View Publication</a>
                         </article>
 
-                        <article class="publication fade-in">
+                        <article class="publication" style="animation-delay: 0.3s">
                             <h3>The Era of Inclusivity: Employees Driving Green Human Resource Management</h3>
                             <div class="publication-meta">
                                 <strong>Authors:</strong> Patricia Tiimah Naya<br>
@@ -767,7 +938,7 @@
 
                 <div id="conference-proceedings" class="tab-content">
                     <div class="publications">
-                        <article class="publication fade-in">
+                        <article class="publication" style="animation-delay: 0.1s">
                             <h3>Those of Us Who Stay: The Cost of "Finding the Right Home" for Gendered and Racialized Academics</h3>
                             <div class="publication-meta">
                                 <strong>Authors:</strong> Patricia Tiimah Naya, Jared Mitchell Poole, Alessia Contu<br>
@@ -777,7 +948,7 @@
                             <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:u5HHmVD_uO8C" class="btn">View Publication</a>
                         </article>
 
-                        <article class="publication fade-in">
+                        <article class="publication" style="animation-delay: 0.2s">
                             <h3>The Politics of Anti-Racist Change: Navigating Resistance, Power, and Privilege in Universities</h3>
                             <div class="publication-meta">
                                 <strong>Author:</strong> Patricia Naya<br>
@@ -787,7 +958,7 @@
                             <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:9yKSN-GCB0IC" class="btn">View Publication</a>
                         </article>
 
-                        <article class="publication fade-in">
+                        <article class="publication" style="animation-delay: 0.3s">
                             <h3>Becoming an Anti-Racist Organization and the Politics of Being Woke</h3>
                             <div class="publication-meta">
                                 <strong>Authors:</strong> Patricia Tiimah Naya, Alessia Contu, Jared Mitchell Poole<br>
@@ -800,7 +971,7 @@
                 </div>
             </div>
 
-            <div class="research-themes fade-in">
+            <div class="research-themes" style="animation-delay: 0.4s">
                 <h2 class="section-heading">Research Themes</h2>
                 <div class="theme-grid">
                     <div class="theme-item">
@@ -844,17 +1015,18 @@
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li class="footer-link"><a href="index.html">Home</a></li>
-                        <li class="footer-link"><a href="Full-profile.html">About Me</a></li>
-                        <li class="footer-link"><a href="Articles.html">Research</a></li>
-                        <li class="footer-link"><a href="Patricia T. Naya CV.pdf">CV</a></li>
+                        <li class="footer-link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li class="footer-link"><a href="Full-profile.html"><i class="fas fa-user"></i> About Me</a></li>
+                        <li class="footer-link"><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
+                        <li class="footer-link"><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li class="footer-link"><i class="fas fa-envelope"></i> Patricia.naya001@umb.edu</li>
+                        <li class="footer-link"><a href="mailto:Patricia.naya001@umb.edu"><i class="fas fa-envelope"></i> Patricia.naya001@umb.edu</a></li>
                         <li class="footer-link"><i class="fas fa-map-marker-alt"></i> University of Massachusetts Boston</li>
+                        <li class="footer-link"><i class="fas fa-building"></i> College of Management</li>
                     </ul>
                 </div>
             </div>
@@ -880,7 +1052,7 @@
                 once: true
             });
 
-            // Tab functionality - fixed version
+            // Tab functionality
             const tabButtons = document.querySelectorAll('.tab-button');
             const tabContents = document.querySelectorAll('.tab-content');
             
@@ -904,12 +1076,15 @@
             
             mobileToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
+                mobileToggle.innerHTML = navMenu.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
             });
 
             // Close mobile menu when clicking outside
             document.addEventListener('click', (e) => {
                 if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
                 }
             });
 
@@ -940,35 +1115,48 @@
                 });
             });
 
-            // Fade in elements on scroll
-            const fadeElems = document.querySelectorAll('.fade-in');
+            // Animate sections when they come into view
+            const profileSections = document.querySelectorAll('.publication, .research-themes');
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('appear');
+                        setTimeout(() => {
+                            entry.target.style.animationPlayState = 'running';
+                        }, index * 150);
                         observer.unobserve(entry.target);
                     }
                 });
             }, { threshold: 0.1 });
-            
-            fadeElems.forEach(el => {
-                observer.observe(el);
+
+            profileSections.forEach(section => {
+                observer.observe(section);
             });
 
-            // Current year for copyright
+            // Set current year in footer
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
-            // Highlight active nav link based on current page
-            const currentLocation = location.pathname;
-            const navLinks = document.querySelectorAll('.nav-item a');
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentLocation) {
-                    link.classList.add('active');
-                } else if (currentLocation === '/' && link.getAttribute('href') === '/') {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
             });
         });
     </script>
