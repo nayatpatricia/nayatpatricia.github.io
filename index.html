@@ -9,10 +9,9 @@
     <!-- Favicon -->
     <link rel="icon" href="images/pat.svg" type="image/svg+xml">
     
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +23,7 @@
             --primary-light: #2a5298;
             --primary-dark: #0c2553;
             --accent-color: #ff7e5f;
+            --accent-light: #ff9e88;
             --text-color: #333;
             --text-light: #6c757d;
             --bg-color: #f9f9f9;
@@ -60,6 +60,11 @@
             100% { transform: translateY(0px); }
         }
 
+        @keyframes fadeInStagger {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
         /* Reset & Base Styles */
         * {
             margin: 0;
@@ -80,6 +85,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -105,6 +111,7 @@
         img {
             max-width: 100%;
             height: auto;
+            display: block;
         }
 
         /* Layout */
@@ -155,6 +162,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: var(--spacing-xs);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .header p {
@@ -173,6 +181,8 @@
             top: 0;
             z-index: 1000;
             transition: var(--transition);
+            backdrop-filter: blur(5px);
+            background-color: rgba(255,255,255,0.9);
         }
 
         .nav.scrolled {
@@ -191,6 +201,13 @@
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .brand i {
+            color: var(--accent-color);
         }
 
         .nav-menu {
@@ -245,6 +262,11 @@
             color: var(--text-color);
             font-size: 1.5rem;
             cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle:hover {
+            color: var(--primary-color);
         }
 
         /* Main Content */
@@ -257,6 +279,8 @@
             border-radius: var(--border-radius);
             margin-bottom: var(--spacing-xl);
             flex: 1;
+            position: relative;
+            z-index: 1;
         }
 
         /* Profile Section */
@@ -273,18 +297,22 @@
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow-md);
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
 
         .profile-image {
             display: block;
             width: 100%;
             height: auto;
-            transition: transform 0.5s ease;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
             border-radius: var(--border-radius);
+            transform: translateZ(0);
+            will-change: transform;
         }
 
         .profile-image-container:hover .profile-image {
-            transform: scale(1.03);
+            transform: scale(1.05) translateZ(10px);
         }
 
         .profile-image-container::after {
@@ -306,6 +334,24 @@
             transition: var(--transition);
             margin-bottom: var(--spacing-lg);
             border-left: 4px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30,60,114,0.03) 0%, rgba(255,255,255,0) 100%);
+            z-index: 0;
+        }
+
+        .card > * {
+            position: relative;
+            z-index: 1;
         }
 
         .card:hover {
@@ -329,11 +375,18 @@
             width: 40px;
             height: 3px;
             background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .section-heading:hover::after {
+            width: 60px;
         }
 
         /* Buttons */
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
             padding: 0.8rem 2rem;
             background-color: var(--primary-color);
             color: var(--white);
@@ -345,6 +398,20 @@
             cursor: pointer;
             box-shadow: var(--shadow-sm);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
+            transform: translateX(-100%);
+            transition: var(--transition);
         }
 
         .btn:hover {
@@ -352,6 +419,10 @@
             color: var(--white);
             transform: translateY(-3px);
             box-shadow: var(--shadow-md);
+        }
+
+        .btn:hover::after {
+            transform: translateX(100%);
         }
 
         .btn-outline {
@@ -370,7 +441,7 @@
         }
 
         .btn-accent:hover {
-            background-color: #ff6a4b;
+            background-color: var(--accent-light);
         }
 
         /* Gallery Section */
@@ -389,6 +460,11 @@
             padding-bottom: var(--spacing-xs);
             border-bottom: 2px solid var(--accent-color);
             display: inline-block;
+            transition: var(--transition);
+        }
+
+        .gallery-title:hover {
+            color: var(--primary-light);
         }
 
         .gallery-grid {
@@ -403,9 +479,12 @@
             overflow: hidden;
             box-shadow: var(--shadow-sm);
             transition: var(--transition-slow);
-            aspect-ratio: 16/15;
+            aspect-ratio: 16/9;
             transform: translateY(20px);
             opacity: 0;
+            animation: fadeInStagger 0.6s forwards;
+            animation-delay: calc(var(--animation-order) * 100ms);
+            will-change: transform, opacity;
         }
 
         .gallery-item.animated {
@@ -424,10 +503,17 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.8s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+            will-change: transform;
+        }
+
+        /* Special handling for group photos to ensure faces aren't cut off */
+        .gallery-item.group-photo .gallery-img {
+            object-fit: contain;
+            background-color: #f0f0f0;
         }
 
         .gallery-item:hover .gallery-img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .gallery-caption {
@@ -566,16 +652,28 @@
 
         .footer-link {
             margin-bottom: var(--spacing-xs);
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            transform: translateX(5px);
         }
 
         .footer-link a {
             color: rgba(255, 255, 255, 0.8);
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
         }
 
         .footer-link a:hover {
             color: var(--white);
-            padding-left: 5px;
+        }
+
+        .footer-link i {
+            width: 20px;
+            text-align: center;
         }
 
         .social-links {
@@ -618,8 +716,8 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background-color: var(--primary-color);
             color: var(--white);
@@ -633,6 +731,7 @@
             transition: var(--transition);
             z-index: 99;
             box-shadow: var(--shadow-md);
+            border: none;
         }
 
         .back-to-top.active {
@@ -642,7 +741,7 @@
 
         .back-to-top:hover {
             background-color: var(--primary-light);
-            transform: translateY(-3px);
+            transform: translateY(-3px) scale(1.1);
         }
 
         /* Breadcrumbs */
@@ -680,14 +779,38 @@
             border-width: 0;
         }
 
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-alt);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-light);
+        }
+
         /* Media Queries */
         @media (max-width: 992px) {
             .profile-grid {
                 grid-template-columns: 1fr;
             }
 
+            .profile-image-container {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
             .footer-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
                 gap: var(--spacing-lg);
             }
         }
@@ -753,6 +876,10 @@
             .gallery-item {
                 aspect-ratio: 4/3;
             }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 576px) {
@@ -766,6 +893,10 @@
 
             .gallery-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: var(--spacing-lg);
             }
         }
 
@@ -865,7 +996,7 @@
    <!-- Navigation -->
     <nav class="nav" id="main-nav">
         <div class="container nav-container">
-            <span class="brand">Patricia T. Naya</span> 
+            <span class="brand"><i class="fas fa-graduation-cap"></i> Patricia T. Naya</span> 
             <button class="mobile-toggle" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
@@ -913,25 +1044,25 @@
                 <div class="gallery-category">
                     <h3 class="gallery-title">Black Diaspora Career Summit</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">
+                        <div class="gallery-item group-photo" style="--animation-order: 1">
                             <img src="images/submit1.jpg" alt="Black Diaspora Career Summit" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>Inaugural Black Diaspora Career Summit at UMass Boston</p>
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item" style="--animation-order: 2">
                             <img src="images/submit2.jpg" alt="Black Diaspora Career Summit" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>Conceptualizing the submit</p>
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item group-photo" style="--animation-order: 3">
                             <img src="images/submit5.jpeg" alt="Black Diaspora Career Summit" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>Speakers, Mentoring and Organizing Committee</p>
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item" style="--animation-order: 4">
                             <img src="images/submit4.jpeg" alt="Black Diaspora Career Summit" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>Excellence Awards</p>
@@ -944,19 +1075,19 @@
                 <div class="gallery-category">
                     <h3 class="gallery-title">Recognition at UMass Boston</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">
+                        <div class="gallery-item" style="--animation-order: 1">
                             <img src="images/umass2.png" alt="Recognition at UMass Boston" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>With Dean of College of Management; The Ph.D. Award for Academic Distinction in Organizations and Social Change </p>
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item" style="--animation-order: 2">
                             <img src="images/umass3.png" alt="Recognition at UMass Boston" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>The Ph.D. Award for Academic Distinction in Organizations and Social Change (2023)</p>
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item group-photo" style="--animation-order: 3">
                             <img src="images/umass1.jpg" alt="Supervisors" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>With my supervisors: Alessia Contu and Jared Mitchell Poole</p>
@@ -969,19 +1100,19 @@
                 <div class="gallery-category">
                     <h3 class="gallery-title">Activities</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">
+                        <div class="gallery-item" style="--animation-order: 1">
                             <img src="images/activity1.jpg" alt="Conference Presentation" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>Conference presentation </p>
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item" style="--animation-order: 2">
                             <img src="images/activity2.jpg" alt="Conference presentation" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>Conference presentation</p>
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item group-photo" style="--animation-order: 3">
                             <img src="images/activity3.jpg" alt="AOMS 2024" class="gallery-img">
                             <div class="gallery-caption">
                                 <p> AOMS 2024</p>
@@ -994,13 +1125,13 @@
                 <div class="gallery-category">
                     <h3 class="gallery-title">Academic Excellence at University College London (UCL)</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">
+                        <div class="gallery-item" style="--animation-order: 1">
                             <img src="images/ucl2.jpg" alt="MSc with Distinction and Best Dissertation Award (2020)" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>MSc with Distinction and Best Dissertation Award (2020)</p>
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item" style="--animation-order: 2">
                             <img src="images/ucl1.png" alt="UCL" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>University College London </p>
@@ -1013,18 +1144,18 @@
                 <div class="gallery-category">
                     <h3 class="gallery-title">Personal Life</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">
+                        <div class="gallery-item group-photo" style="--animation-order: 1">
                             <img src="images/family.png" alt="With Family" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>With my family</p>
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item" style="--animation-order: 2">
                             <img src="images/personal1.png" alt="Personal" class="gallery-img">
                             <div class="gallery-caption">
                             </div>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item group-photo" style="--animation-order: 3">
                             <img src="images/family2.jpeg" alt="Family" class="gallery-img">
                             <div class="gallery-caption">
                                 <p>With siblings</p>
@@ -1058,17 +1189,17 @@
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li class="footer-link"><a href="index.html">Home</a></li>
-                        <li class="footer-link"><a href="Full-profile.html">About Me</a></li>
-                        <li class="footer-link"><a href="Articles.html">Research</a></li>
-                        <li class="footer-link"><a href="Patricia T. Naya CV.pdf">CV</a></li>
-                        <li class="footer-link"><a href="#gallery">Gallery</a></li>
+                        <li class="footer-link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li class="footer-link"><a href="Full-profile.html"><i class="fas fa-user"></i> About Me</a></li>
+                        <li class="footer-link"><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
+                        <li class="footer-link"><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
+                        <li class="footer-link"><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li class="footer-link"><i class="fas fa-envelope"></i> Patricia.naya001@umb.edu</li>
+                        <li class="footer-link"><a href="mailto:Patricia.naya001@umb.edu"><i class="fas fa-envelope"></i> Patricia.naya001@umb.edu</a></li>
                         <li class="footer-link"><i class="fas fa-map-marker-alt"></i> University of Massachusetts Boston</li>
                     </ul>
                 </div>
@@ -1101,12 +1232,15 @@
 
             mobileToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
+                mobileToggle.innerHTML = navMenu.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
             });
 
             // Close mobile menu when clicking outside
             document.addEventListener('click', (e) => {
                 if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
                 }
             });
 
@@ -1137,12 +1271,14 @@
                 });
             });
 
-            // Fade in elements on scroll
+            // Fade in elements on scroll with staggered timing
             const fadeElems = document.querySelectorAll('.fade-in');
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('appear');
+                        setTimeout(() => {
+                            entry.target.classList.add('appear');
+                        }, index * 150);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -1152,21 +1288,23 @@
                 observer.observe(el);
             });
 
-            // Gallery item animations
+            // Gallery item animations with staggered timing
             const galleryItems = document.querySelectorAll('.gallery-item');
-            const galleryObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
+            galleryItems.forEach((item, index) => {
+                // Set custom property for animation delay
+                item.style.setProperty('--animation-order', index);
+                
+                // Intersection Observer for each item
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
                             entry.target.classList.add('animated');
-                        }, 150 * index);
-                        galleryObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            galleryItems.forEach(item => {
-                galleryObserver.observe(item);
+                            io.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                io.observe(item);
             });
 
             // Current year for copyright
@@ -1183,6 +1321,30 @@
                 } else {
                     link.classList.remove('active');
                 }
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
             });
         });
     </script>
