@@ -1,1164 +1,946 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Research - Patricia Tiimah Naya | PhD Candidate</title>
+    <title>Research — Dr. Patricia Tiimah Naya, PhD</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Research publications and academic work by Patricia Tiimah Naya, PhD Candidate at University of Massachusetts Boston">
+    <meta name="description" content="Research publications, working papers, and scholarly contributions by Dr. Patricia Tiimah Naya — organizational transformation, power, and inequality. University of Massachusetts Boston.">
     <meta name="author" content="Patricia Tiimah Naya">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/pat.svg" type="image/svg+xml">
-    
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="icon" href="images/HS_Dr. Naya.jpg" type="image/jpeg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json" class="schema-markup">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Patricia Tiimah Naya",
-        "jobTitle": "PhD Candidate",
-        "affiliation": {
-            "@type": "EducationalOrganization",
-            "name": "University of Massachusetts Boston"
-        },
-        "alumniOf": [
-            {
-                "@type": "EducationalOrganization",
-                "name": "University College London"
-            },
-            {
-                "@type": "EducationalOrganization",
-                "name": "University for Development Studies, Ghana"
-            }
-        ],
-        "award": [
-            "AAUW International Fellow",
-            "Commonwealth Shared Scholar",
-            "CMS Division's Most Promising Early Career Paper Award (AOM, 2024)"
-        ],
-        "url": "https://nayapatricia.com",
-        "sameAs": [
-            "https://www.linkedin.com/in/patricia-tiimah-naya-282261198/",
-            "https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao"
-        ]
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary-color: #1e3c72;
-            --primary-light: #2a5298;
-            --primary-dark: #0c2553;
-            --accent-color: #ff7e5f;
-            --accent-light: #ff9e88;
-            --text-color: #333;
-            --text-light: #6c757d;
-            --bg-color: #f9f9f9;
-            --bg-alt: #f0f2f5;
-            --white: #ffffff;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
-            --transition-slow: all 0.6s ease;
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 1.5rem;
-            --spacing-lg: 2rem;
-            --spacing-xl: 3rem;
+            --navy:      #0b1929;
+            --navy-mid:  #122035;
+            --navy-soft: #1c3050;
+            --gold:      #c9a84c;
+            --gold-light:#dfc070;
+            --gold-dim:  #8a6e2e;
+            --cream:     #f6f1e9;
+            --cream-dark:#ede5d5;
+            --white:     #ffffff;
+            --text-body: #1e1e1e;
+            --text-mid:  #555;
+            --serif:     'Cormorant Garamond', Georgia, serif;
+            --sans:      'Jost', sans-serif;
+            --radius:    5px;
+            --shadow-gold: 0 10px 50px rgba(201,168,76,0.18);
+            --shadow-dark: 0 20px 60px rgba(11,25,41,0.25);
+            --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
         }
 
-        /* Keyframe animations */
-        @keyframes headerGradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; scroll-padding-top:72px; }
+        body { font-family:var(--sans); background:var(--cream); color:var(--text-body); overflow-x:hidden; line-height:1.7; }
+        h1,h2,h3,h4 { font-family:var(--serif); font-weight:600; line-height:1.15; }
+        p { margin-bottom:1rem; }
+        a { color:inherit; text-decoration:none; transition:color var(--transition); }
+        img { max-width:100%; display:block; }
+        ::-webkit-scrollbar { width:5px; }
+        ::-webkit-scrollbar-track { background:var(--cream-dark); }
+        ::-webkit-scrollbar-thumb { background:var(--gold-dim); border-radius:3px; }
+
+        body::before {
+            content:''; position:fixed; inset:0;
+            background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+            pointer-events:none; z-index:0; opacity:0.5;
         }
 
-        @keyframes shine {
-            0% { transform: translateX(-100%); }
-            20% { transform: translateX(100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Merriweather', serif;
-            line-height: 1.3;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        p {
-            margin-bottom: var(--spacing-sm);
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        a:hover {
-            color: var(--primary-light);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Layout */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-lg);
-            width: 100%;
-        }
-
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 50%, var(--primary-color) 100%);
-            background-size: 200% 200%;
-            animation: headerGradient 10s ease infinite;
-            color: var(--white);
-            padding: var(--spacing-xl) 0;
-            margin-bottom: var(--spacing-lg);
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
-            transform: translateX(-100%);
-            animation: shine 6s infinite;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: var(--spacing-xs);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .header p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        /* Navigation */
+        /* ── NAV ── */
         .nav {
-            background: var(--white);
-            box-shadow: var(--shadow-sm);
-            padding: var(--spacing-sm) 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: var(--transition);
-            backdrop-filter: blur(5px);
-            background-color: rgba(255,255,255,0.9);
+            position:fixed; top:0; left:0; right:0; z-index:1000;
+            padding:0 2.5rem; height:72px;
+            display:flex; align-items:center; justify-content:space-between;
+            background:rgba(11,25,41,0.92);
+            backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+            border-bottom:1px solid rgba(201,168,76,0.1);
+            transition:background var(--transition);
         }
-
-        .nav.scrolled {
-            padding: 0.8rem 0;
-            box-shadow: var(--shadow-md);
+        .nav.scrolled { background:rgba(11,25,41,0.99); box-shadow:0 4px 32px rgba(0,0,0,0.35); }
+        .nav-brand { display:flex; align-items:center; gap:0.8rem; font-family:var(--serif); font-size:1.1rem; color:var(--white); letter-spacing:0.02em; }
+        .nav-avatar { width:38px; height:38px; border-radius:50%; object-fit:cover; border:1.5px solid var(--gold); flex-shrink:0; }
+        .nav-brand em { font-style:italic; color:var(--gold); }
+        .nav-links { display:flex; align-items:center; list-style:none; gap:0.15rem; }
+        .nav-links a {
+            font-family:var(--sans); font-size:0.75rem; font-weight:500;
+            letter-spacing:0.12em; text-transform:uppercase;
+            color:rgba(255,255,255,0.65); padding:0.45rem 0.9rem; border-radius:4px;
+            transition:color var(--transition), background var(--transition);
         }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand {
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-        }
-
-        .brand i {
-            color: var(--accent-color);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: var(--spacing-lg);
-        }
-
-        .nav-item a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: var(--transition);
-            display: block;
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            position: relative;
-        }
-
-        .nav-item a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            transition: var(--transition);
-            transform: translateX(-50%);
-        }
-
-        .nav-item a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-item a:hover::after {
-            width: 70%;
-        }
-
-        .nav-item a.active {
-            color: var(--primary-color);
-        }
-
-        .nav-item a.active::after {
-            width: 70%;
-        }
-
+        .nav-links a:hover, .nav-links a.active { color:var(--gold); background:rgba(201,168,76,0.08); }
         .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-color);
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
+            display:none; background:none; border:1px solid rgba(201,168,76,0.4);
+            color:var(--gold); width:38px; height:38px; border-radius:4px;
+            font-size:1rem; cursor:pointer; transition:background var(--transition);
+            align-items:center; justify-content:center;
+        }
+        .mobile-toggle:hover { background:rgba(201,168,76,0.12); }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            background:var(--navy); position:relative; overflow:hidden;
+            padding:0; z-index:1; min-height:100vh;
+            display:flex; align-items:stretch;
+        }
+        .page-hero-grid {
+            position:absolute; inset:0;
+            background-image:linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+            background-size:64px 64px; pointer-events:none; z-index:0;
+        }
+        .page-hero::before {
+            content:''; position:absolute;
+            width:800px; height:800px; top:-200px; left:-200px; border-radius:50%;
+            background:radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 68%);
+            animation:pulse 9s ease-in-out infinite; z-index:0;
+        }
+        @keyframes pulse { 0%,100%{transform:scale(1);opacity:1;} 50%{transform:scale(1.08);opacity:0.7;} }
+
+        /* Two-column layout */
+        .hero-layout {
+            display:grid; grid-template-columns:1fr 420px;
+            width:100%; max-width:1400px; margin:0 auto;
+            padding:0 3rem; align-items:center; gap:3rem;
+            position:relative; z-index:2; padding-top:7rem; padding-bottom:5rem;
+        }
+        .hero-text-col { display:flex; flex-direction:column; justify-content:center; }
+        .hero-photo-col { display:flex; align-items:center; justify-content:center; }
+
+        /* Photo frame */
+        .hero-photo-frame {
+            position:relative; width:100%; max-width:380px;
+            animation:fadeUp 1s ease 0.4s both;
+        }
+        .hero-photo-frame::before {
+            content:''; position:absolute;
+            top:-18px; right:-18px; bottom:18px; left:18px;
+            border:1.5px solid rgba(201,168,76,0.28); border-radius:4px; z-index:0;
+        }
+        .hero-photo-frame::after {
+            content:''; position:absolute;
+            top:18px; right:18px; bottom:-18px; left:-18px;
+            background:rgba(201,168,76,0.04); border-radius:4px; z-index:0;
+        }
+        .hero-photo {
+            position:relative; z-index:1;
+            width:100%; border-radius:4px;
+            object-fit:cover; object-position:top center;
+            aspect-ratio:4/5;
+            box-shadow:0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.12);
+            filter:brightness(0.95) contrast(1.02);
+        }
+        .hero-photo-badge {
+            position:absolute; bottom:-14px; left:50%; transform:translateX(-50%);
+            background:var(--gold); color:var(--navy); padding:0.55rem 1.4rem;
+            font-size:0.68rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+            border-radius:100px; white-space:nowrap; z-index:2;
+            box-shadow:0 4px 18px rgba(201,168,76,0.4);
         }
 
-        .mobile-toggle:hover {
-            color: var(--primary-color);
+        .page-eyebrow {
+            display:inline-flex; align-items:center; gap:0.6rem;
+            font-size:0.7rem; letter-spacing:0.22em; text-transform:uppercase;
+            color:var(--gold); margin-bottom:1.25rem; font-weight:500;
+            animation:fadeUp 0.8s ease 0.2s both;
+        }
+        .page-eyebrow::before { content:''; display:inline-block; width:26px; height:1px; background:var(--gold); }
+        @keyframes fadeUp { from{opacity:0;transform:translateY(24px);} to{opacity:1;transform:translateY(0);} }
+
+        .hero-text-col h1 {
+            font-family:var(--serif); font-size:clamp(2.4rem,4vw,4rem);
+            font-weight:300; color:var(--white); line-height:1.08; margin-bottom:1.25rem;
+            animation:fadeUp 0.9s ease 0.35s both;
+        }
+        .hero-text-col h1 em { font-style:italic; color:var(--gold-light); }
+        .hero-text-col p {
+            font-size:1.05rem; color:rgba(255,255,255,0.65); max-width:560px;
+            line-height:1.8; animation:fadeUp 0.8s ease 0.5s both; margin-bottom:0;
+        }
+        .hero-divider { width:52px; height:2px; background:linear-gradient(90deg, var(--gold), transparent); margin:1.5rem 0; animation:fadeIn 0.8s ease 0.55s both; }
+        @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+        /* Pub count pills in hero */
+        .hero-counts {
+            display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:2rem;
+            animation:fadeUp 0.8s ease 0.65s both;
+        }
+        .count-pill {
+            display:inline-flex; align-items:center; gap:0.4rem;
+            padding:0.3rem 0.9rem; background:rgba(201,168,76,0.1);
+            border:1px solid rgba(201,168,76,0.22); border-radius:100px;
+            font-size:0.7rem; letter-spacing:0.06em; color:var(--gold-light);
+        }
+        .count-pill i { font-size:0.62rem; }
+
+        /* Scroll indicator */
+        .hero-scroll {
+            display:flex; align-items:center; gap:0.6rem; margin-top:2.5rem;
+            animation:fadeUp 0.8s ease 0.85s both;
+            font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase;
+            color:rgba(255,255,255,0.3); cursor:pointer; width:fit-content;
+            transition:color var(--transition);
+        }
+        .hero-scroll:hover { color:var(--gold); }
+        .scroll-dot {
+            width:28px; height:28px; border-radius:50%;
+            border:1px solid rgba(201,168,76,0.3);
+            display:flex; align-items:center; justify-content:center;
+            font-size:0.65rem; color:var(--gold);
+            animation:bounce 2.2s ease-in-out infinite;
+        }
+        @keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(5px);} }
+
+        /* ── SECTION UTILITY ── */
+        .section { position:relative; z-index:1; }
+        .section-inner { max-width:1100px; margin:0 auto; padding:5rem 3rem; }
+        .section-label {
+            display:inline-flex; align-items:center; gap:0.6rem;
+            font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase;
+            color:var(--gold); font-weight:500; margin-bottom:0.85rem;
+        }
+        .section-label::before { content:''; display:inline-block; width:22px; height:1px; background:var(--gold); }
+        .section-heading { font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.6rem); font-weight:600; line-height:1.12; margin-bottom:2.5rem; color:var(--navy); }
+
+        /* ── TAB NAV ── */
+        .tab-nav {
+            display:flex; gap:0; margin-bottom:3rem;
+            border-bottom:1px solid rgba(11,25,41,0.12); flex-wrap:wrap;
+        }
+        .tab-btn {
+            font-family:var(--serif); font-size:1.05rem; font-weight:400;
+            color:var(--text-mid); background:none; border:none;
+            border-bottom:2px solid transparent; padding:0.8rem 1.6rem;
+            cursor:pointer; margin-bottom:-1px; letter-spacing:0.01em;
+            transition:color var(--transition), border-color var(--transition);
+        }
+        .tab-btn:hover { color:var(--navy); }
+        .tab-btn.active { color:var(--navy); border-bottom-color:var(--gold); font-weight:600; }
+
+        .tab-pane { display:none; }
+        .tab-pane.active { display:block; }
+
+        /* ── PUBLICATION CARD ── */
+        .pub-list { display:flex; flex-direction:column; gap:1.5rem; }
+
+        .pub-card {
+            background:var(--white); border-radius:var(--radius);
+            border:1px solid rgba(11,25,41,0.08);
+            box-shadow:0 2px 16px rgba(11,25,41,0.06);
+            padding:2rem 2.25rem; position:relative; overflow:hidden;
+            transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+        }
+        .pub-card::before {
+            content:''; position:absolute; top:0; left:0;
+            width:3px; height:0; background:var(--gold);
+            transition:height 0.4s;
+        }
+        .pub-card:hover { transform:translateY(-3px); box-shadow:0 8px 36px rgba(11,25,41,0.12); border-color:rgba(201,168,76,0.2); }
+        .pub-card:hover::before { height:100%; }
+
+        .pub-badges { display:flex; flex-wrap:wrap; gap:0.45rem; margin-bottom:0.85rem; }
+        .badge {
+            display:inline-block; padding:0.18rem 0.65rem; border-radius:100px;
+            font-size:0.65rem; font-weight:600; letter-spacing:0.07em; text-transform:uppercase;
+        }
+        .badge-journal { background:rgba(11,25,41,0.07); color:var(--navy-mid); }
+        .badge-rank { background:rgba(201,168,76,0.14); color:var(--gold-dim); }
+        .badge-type { background:rgba(28,48,80,0.08); color:var(--navy-soft); }
+        .badge-award { background:rgba(201,168,76,0.18); color:#7a5c1a; }
+        .badge-accepted { background:rgba(39,120,75,0.1); color:#1a6b3c; }
+        .badge-review { background:rgba(60,90,180,0.1); color:#2a3fa0; }
+
+        .pub-title {
+            font-family:var(--serif); font-size:1.2rem; font-weight:600;
+            color:var(--navy); margin-bottom:0.5rem; line-height:1.35;
+        }
+        .pub-authors { font-size:0.85rem; color:var(--text-mid); margin-bottom:0.35rem; }
+        .pub-authors strong { color:var(--text-body); }
+        .pub-venue-line { font-size:0.85rem; color:var(--text-mid); margin-bottom:1rem; }
+        .pub-venue-line em { color:var(--navy-soft); font-style:normal; font-weight:500; }
+
+        .pub-abstract { font-size:0.94rem; color:var(--text-mid); line-height:1.78; margin-bottom:1.25rem; }
+
+        .pub-footer { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
+        .pub-link {
+            display:inline-flex; align-items:center; gap:0.4rem;
+            padding:0.6rem 1.4rem; background:var(--navy); color:var(--white);
+            font-family:var(--sans); font-size:0.73rem; font-weight:500;
+            letter-spacing:0.1em; text-transform:uppercase; border-radius:var(--radius);
+            transition:background var(--transition), transform var(--transition);
+        }
+        .pub-link:hover { background:var(--navy-soft); transform:translateY(-1px); }
+
+        /* ── WORKING PAPERS ── */
+        .wp-list { display:flex; flex-direction:column; gap:0.9rem; margin-top:0.5rem; }
+        .wp-item {
+            background:var(--white); border-radius:var(--radius);
+            border:1px solid rgba(11,25,41,0.07); padding:1.4rem 1.75rem;
+            display:grid; grid-template-columns:1fr auto;
+            gap:0.5rem 1.5rem; align-items:start;
+            transition:border-color var(--transition), box-shadow var(--transition);
+        }
+        .wp-item:hover { border-color:rgba(201,168,76,0.25); box-shadow:0 4px 20px rgba(11,25,41,0.07); }
+        .wp-title { font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--navy); line-height:1.35; }
+        .wp-meta { font-size:0.78rem; color:var(--text-mid); margin-top:0.25rem; }
+        .wp-target {
+            font-size:0.68rem; letter-spacing:0.07em; text-transform:uppercase;
+            color:var(--gold-dim); background:rgba(201,168,76,0.08);
+            border:1px solid rgba(201,168,76,0.18); border-radius:100px;
+            padding:0.2rem 0.65rem; white-space:nowrap; align-self:start; margin-top:0.25rem;
         }
 
-        /* Main Content */
-        .main-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: var(--spacing-xl);
-            background: var(--white);
-            box-shadow: var(--shadow-md);
-            border-radius: var(--border-radius);
-            margin-bottom: var(--spacing-xl);
-            flex: 1;
-            position: relative;
-            z-index: 1;
+        /* ── RESEARCH THEMES ── */
+        .themes-section { background:var(--navy); }
+        .themes-section .section-heading { color:var(--white); }
+        .themes-intro { color:rgba(255,255,255,0.58); font-size:1rem; max-width:540px; margin-bottom:2.75rem; }
+        .theme-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:rgba(201,168,76,0.08); border-radius:var(--radius); overflow:hidden; }
+        .theme-card {
+            background:var(--navy-mid); padding:2.25rem 2rem;
+            position:relative; overflow:hidden; transition:background var(--transition);
         }
+        .theme-card:hover { background:var(--navy-soft); }
+        .theme-card::before { content:''; position:absolute; top:0; left:0; width:3px; height:0; background:var(--gold); transition:height 0.4s; }
+        .theme-card:hover::before { height:100%; }
+        .theme-icon { font-size:1.35rem; color:var(--gold); margin-bottom:1.25rem; opacity:0.8; }
+        .theme-card h3 { font-family:var(--serif); font-size:1.15rem; color:var(--white); margin-bottom:0.6rem; font-weight:600; }
+        .theme-card p { font-size:0.87rem; color:rgba(255,255,255,0.5); line-height:1.7; margin:0; }
 
-        /* Profile Sections */
-        .profile-section {
-            background: var(--white);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            padding: var(--spacing-lg);
-            transition: var(--transition);
-            margin-bottom: var(--spacing-lg);
-            border-left: 4px solid var(--primary-color);
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
-            animation-play-state: paused;
-            position: relative;
-            overflow: hidden;
+        /* ── CONTACT / FOOTER ── */
+        .contact-section { background:var(--navy-mid); position:relative; overflow:hidden; }
+        .contact-glow { position:absolute; inset:0; pointer-events:none; z-index:0; }
+        .contact-glow::before {
+            content:''; position:absolute;
+            width:640px; height:640px; top:-220px; left:-160px; border-radius:50%;
+            background:radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+            animation:pulse 8s ease-in-out infinite;
         }
-
-        .profile-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(30,60,114,0.03) 0%, rgba(255,255,255,0) 100%);
-            z-index: 0;
+        .contact-glow::after {
+            content:''; position:absolute;
+            width:560px; height:560px; bottom:-200px; right:-140px; border-radius:50%;
+            background:radial-gradient(circle, rgba(28,48,80,0.8) 0%, transparent 72%);
+            animation:pulse 11s ease-in-out infinite reverse;
         }
-
-        .profile-section > * {
-            position: relative;
-            z-index: 1;
+        .contact-section .section-inner { position:relative; z-index:1; }
+        .contact-grid { display:grid; grid-template-columns:1.25fr 1fr; gap:5rem; align-items:center; }
+        .contact-section .section-heading { color:var(--white); margin-bottom:1.4rem; }
+        .contact-intro { color:rgba(255,255,255,0.58); font-size:1.03rem; line-height:1.78; margin-bottom:1.85rem; }
+        .contact-items { display:flex; flex-direction:column; gap:0.85rem; }
+        .contact-item {
+            display:flex; align-items:center; gap:1rem; padding:0.95rem 1.2rem;
+            background:rgba(255,255,255,0.04); border:1px solid rgba(201,168,76,0.1);
+            border-radius:var(--radius); transition:border-color var(--transition), background var(--transition);
+            color:var(--white);
         }
-
-        .profile-section:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
+        .contact-item:hover { border-color:rgba(201,168,76,0.32); background:rgba(201,168,76,0.05); }
+        .contact-icon {
+            width:40px; height:40px; border-radius:4px;
+            background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center;
+            color:var(--gold); font-size:0.88rem; flex-shrink:0;
         }
+        .contact-item-text span { display:block; font-size:0.67rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.38); margin-bottom:0.15rem; }
+        .contact-item-text strong { font-weight:400; font-size:0.92rem; color:rgba(255,255,255,0.82); }
 
-        .section-heading {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: var(--spacing-md);
-            position: relative;
-            display: inline-block;
+        .contact-social-panel {
+            background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.14);
+            border-radius:var(--radius); padding:2.5rem;
         }
-
-        .section-heading::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background-color: var(--accent-color);
-            transition: var(--transition);
-        }
-
-        .section-heading:hover::after {
-            width: 60px;
-        }
-
-        /* Publications */
-        .publication {
-            background: var(--white);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            padding: var(--spacing-lg);
-            transition: var(--transition);
-            margin-bottom: var(--spacing-lg);
-            border-left: 4px solid var(--primary-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .publication::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(30,60,114,0.03) 0%, rgba(255,255,255,0) 100%);
-            z-index: 0;
-        }
-
-        .publication > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .publication:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .publication-meta {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .publication-description {
-            color: var(--text-color);
-            margin-bottom: var(--spacing-md);
-        }
-
-        /* Tabs */
-        .tabs {
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .tab-buttons {
-            display: flex;
-            gap: var(--spacing-sm);
-            margin-bottom: var(--spacing-lg);
-            border-bottom: 1px solid var(--bg-alt);
-        }
-
-        .tab-button {
-            padding: var(--spacing-sm) var(--spacing-lg);
-            background: transparent;
-            border: none;
-            border-bottom: 3px solid transparent;
-            cursor: pointer;
-            font-size: 1.1rem;
-            color: var(--text-light);
-            transition: var(--transition);
-            font-family: 'Merriweather', serif;
-            position: relative;
-        }
-
-        .tab-button:hover {
-            color: var(--primary-color);
-        }
-
-        .tab-button.active {
-            color: var(--primary-color);
-            border-bottom-color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-            padding: 0.8rem 2rem;
-            background-color: var(--primary-color);
-            color: var(--white);
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
-            transform: translateX(-100%);
-            transition: var(--transition);
-        }
-
-        .btn:hover {
-            background-color: var(--primary-light);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn:hover::after {
-            transform: translateX(100%);
-        }
-
-        /* Research Themes */
-        .research-themes {
-            margin-top: var(--spacing-xl);
-            padding: var(--spacing-lg);
-            background: var(--bg-alt);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .research-themes::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(30,60,114,0.05) 0%, rgba(255,255,255,0) 100%);
-            z-index: 0;
-        }
-
-        .research-themes > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .theme-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-md);
-        }
-
-        .theme-item {
-            background: var(--white);
-            padding: var(--spacing-md);
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            box-shadow: var(--shadow-sm);
-            border-left: 3px solid var(--primary-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .theme-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(30,60,114,0.05) 0%, rgba(255,255,255,0) 100%);
-            z-index: 0;
-        }
-
-        .theme-item > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .theme-item:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .theme-icon {
-            margin-right: var(--spacing-sm);
-            color: var(--accent-color);
-            font-size: 1.2rem;
-            width: 30px;
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .theme-item:hover .theme-icon {
-            transform: rotate(15deg) scale(1.2);
-            color: var(--primary-color);
-        }
-
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 50%, var(--primary-color) 100%);
-            background-size: 200% 200%;
-            animation: headerGradient 10s ease infinite;
-            color: var(--white);
-            padding: var(--spacing-xl) 0;
-            margin-top: auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
-            transform: translateX(-100%);
-            animation: shine 6s infinite;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: var(--spacing-xl);
-        }
-
-        .footer-col h3 {
-            position: relative;
-            margin-bottom: var(--spacing-md);
-            padding-bottom: var(--spacing-xs);
-            font-size: 1.3rem;
-        }
-
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 30px;
-            height: 2px;
-            background-color: var(--accent-color);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-link {
-            margin-bottom: var(--spacing-xs);
-            transition: var(--transition);
-        }
-
-        .footer-link:hover {
-            transform: translateX(5px);
-        }
-
-        .footer-link a {
-            color: rgba(255, 255, 255, 0.8);
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-        }
-
-        .footer-link a:hover {
-            color: var(--white);
-        }
-
-        .footer-link i {
-            width: 20px;
-            text-align: center;
-        }
-
-        .social-links {
-            list-style: none;
-            display: flex;
-            gap: var(--spacing-sm);
-            margin-top: var(--spacing-md);
-        }
-
+        .contact-social-panel h3 { font-family:var(--serif); font-size:1.55rem; color:var(--white); margin-bottom:0.45rem; }
+        .contact-social-panel p { font-size:0.88rem; color:rgba(255,255,255,0.48); margin-bottom:1.85rem; }
+        .social-links { display:flex; flex-direction:column; gap:0.7rem; }
         .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            transition: var(--transition);
-            color: var(--white);
+            display:flex; align-items:center; gap:0.9rem; padding:0.82rem 1.2rem;
+            border-radius:4px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);
+            color:rgba(255,255,255,0.72); font-size:0.86rem; transition:all var(--transition);
         }
+        .social-link i { color:var(--gold); width:18px; text-align:center; }
+        .social-link:hover { background:rgba(201,168,76,0.1); border-color:rgba(201,168,76,0.28); color:var(--white); transform:translateX(4px); }
 
-        .social-link:hover {
-            background: var(--accent-color);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3);
+        /* ── FOOTER (merged into Get In Touch) ── */
+        .footer-bar {
+            margin-top:4rem; padding-top:2.25rem;
+            border-top:1px solid rgba(201,168,76,0.14);
+            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem;
         }
-
-        .copyright {
-            text-align: center;
-            padding-top: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
+        .footer-bar-brand { display:flex; align-items:center; gap:0.9rem; }
+        .footer-bar-brand img {
+            width:34px; height:34px; border-radius:50%; object-fit:cover;
+            border:1.5px solid var(--gold-dim); flex-shrink:0;
         }
+        .footer-bar-brand-text { font-size:0.8rem; color:rgba(255,255,255,0.45); line-height:1.5; }
+        .footer-bar-brand-text strong { display:block; font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--white); }
+        .footer-bar-brand-text strong em { color:var(--gold); font-style:italic; }
+        .footer-bar-links { display:flex; gap:0.35rem; flex-wrap:wrap; }
+        .footer-bar-links a {
+            font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+            color:rgba(255,255,255,0.5); padding:0.4rem 0.75rem; border-radius:4px;
+            transition:color var(--transition), background var(--transition);
+        }
+        .footer-bar-links a:hover { color:var(--gold); background:rgba(201,168,76,0.08); }
+        .footer-bar-copy { font-size:0.76rem; color:rgba(255,255,255,0.28); white-space:nowrap; }
 
-        /* Back to top button */
+        /* ── BACK TO TOP ── */
         .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 99;
-            box-shadow: var(--shadow-md);
-            border: none;
+            position:fixed; bottom:2rem; right:2rem;
+            width:44px; height:44px; background:var(--gold); color:var(--navy);
+            border:none; border-radius:4px; cursor:pointer; font-size:0.95rem;
+            display:flex; align-items:center; justify-content:center;
+            opacity:0; visibility:hidden; transform:translateY(12px);
+            transition:all 0.3s; z-index:999; box-shadow:0 4px 20px rgba(201,168,76,0.3);
         }
+        .back-to-top.active { opacity:1; visibility:visible; transform:translateY(0); }
+        .back-to-top:hover { background:var(--gold-light); transform:translateY(-3px); }
 
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
+        /* ── SIDE NAV ── */
+        .side-nav {
+            position:fixed; right:1.75rem; top:50%; transform:translateY(-50%);
+            z-index:900; display:flex; flex-direction:column; align-items:center; gap:0.85rem;
         }
-
-        .back-to-top:hover {
-            background-color: var(--primary-light);
-            transform: translateY(-3px) scale(1.1);
+        .side-nav-dot {
+            position:relative; width:9px; height:9px; border-radius:50%;
+            background:rgba(11,25,41,0.18); border:1px solid rgba(11,25,41,0.28);
+            transition:background var(--transition), border-color var(--transition), transform var(--transition);
         }
-
-        /* Breadcrumbs */
-        .breadcrumbs {
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--spacing-md);
-            font-size: 0.9rem;
-            color: var(--text-light);
+        .side-nav-dot:hover { transform:scale(1.3); border-color:var(--gold-dim); }
+        .side-nav-dot.active { background:var(--gold); border-color:var(--gold); transform:scale(1.35); box-shadow:0 0 0 3px rgba(201,168,76,0.2); }
+        .side-nav.on-dark .side-nav-dot { background:rgba(255,255,255,0.28); border-color:rgba(255,255,255,0.42); }
+        .side-nav.on-dark .side-nav-dot:hover { border-color:var(--gold-light); }
+        .side-nav.on-dark .side-nav-dot.active { background:var(--gold); border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,168,76,0.32); }
+        .side-nav-dot::after {
+            content:attr(data-label);
+            position:absolute; right:150%; top:50%; transform:translateY(-50%);
+            white-space:nowrap; font-family:var(--sans); font-size:0.68rem;
+            letter-spacing:0.06em; text-transform:uppercase; font-weight:500;
+            color:var(--navy); background:var(--white);
+            padding:0.3rem 0.7rem; border-radius:4px; box-shadow:0 4px 16px rgba(11,25,41,0.14);
+            opacity:0; visibility:hidden; transition:opacity 0.2s, transform 0.2s;
         }
+        .side-nav-dot:hover::after { opacity:1; visibility:visible; transform:translateY(-50%) translateX(-4px); }
+        @media(max-width:1150px){ .side-nav { display:none; } }
 
-        .breadcrumbs a {
-            color: var(--text-light);
-            transition: var(--transition);
+        /* ── REVEAL ── */
+        .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.72s ease, transform 0.72s ease; }
+        .reveal.revealed { opacity:1; transform:translateY(0); }
+        .reveal-delay-1 { transition-delay:0.1s; }
+        .reveal-delay-2 { transition-delay:0.2s; }
+        .reveal-delay-3 { transition-delay:0.3s; }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:1100px){
+            .hero-layout { grid-template-columns:1fr 360px; gap:2rem; }
         }
-
-        .breadcrumbs a:hover {
-            color: var(--primary-color);
+        @media(max-width:900px){
+            .hero-layout { grid-template-columns:1fr; padding-top:9rem; padding-bottom:4rem; }
+            .hero-photo-col { order:-1; }
+            .hero-photo-frame { max-width:280px; margin:0 auto; }
+            .theme-grid { grid-template-columns:1fr; }
+            .contact-grid { grid-template-columns:1fr; }
         }
-
-        .breadcrumbs .separator {
-            margin: 0 8px;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-alt);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-light);
-        }
-
-        /* Media Queries */
-        @media (max-width: 992px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: var(--spacing-lg);
-            }
-            
-            .theme-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            :root {
-                --spacing-xl: 2rem;
-                --spacing-lg: 1.5rem;
-            }
-            
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .nav-container {
-                position: relative;
-            }
-            
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .nav-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                gap: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-                box-shadow: var(--shadow-md);
-                z-index: 1000;
-            }
-            
-            .nav-menu.active {
-                max-height: 300px;
-            }
-            
-            .nav-item a {
-                padding: 12px 20px;
-                border-radius: 0;
-            }
-            
-            .nav-item a::after {
-                display: none;
-            }
-            
-            .tab-buttons {
-                flex-direction: column;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .theme-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .header p {
-                font-size: 1rem;
-            }
-            
-            .main-content {
-                padding: var(--spacing-lg);
-            }
+        @media(max-width:650px){
+            .nav { padding:0 1.25rem; }
+            .nav-links { display:none; flex-direction:column; gap:0; background:rgba(11,25,41,0.98); position:absolute; top:72px; left:0; right:0; padding:1rem 0; border-bottom:1px solid rgba(201,168,76,0.12); }
+            .nav-links.open { display:flex; }
+            .nav-links a { padding:0.7rem 1.5rem; border-radius:0; }
+            .mobile-toggle { display:flex; }
+            .hero-layout { padding:8rem 1.5rem 4rem; }
+            .hero-photo-frame { max-width:220px; }
+            .section-inner { padding:3.5rem 1.5rem; }
+            .tab-btn { padding:0.7rem 1rem; font-size:0.95rem; }
+            .wp-item { grid-template-columns:1fr; }
+            .wp-target { width:fit-content; }
+            .footer-bar { flex-direction:column; align-items:flex-start; }
         }
     </style>
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="sr-only">Skip to main content</a>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">Patricia Tiimah Naya</h1>
-            <p class="animate__animated animate__fadeIn animate__delay-1s">PhD Candidate (ABD) | AAUW International Fellow | Commonwealth Shared Scholar | MSc | BSc<br>
-            University of Massachusetts Boston</p>
-        </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="nav" id="main-nav">
-        <div class="container nav-container">
-            <span class="brand"><i class="fas fa-graduation-cap"></i> Patricia T. Naya</span>
-            <button class="mobile-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li class="nav-item"><a href="Full-profile.html"><i class="fas fa-user"></i> About Me</a></li>
-                <li class="nav-item"><a href="Articles.html" class="active"><i class="fas fa-book-open"></i> Research</a></li>
-                <li class="nav-item"><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
-                <li class="nav-item"><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Breadcrumbs -->
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="index.html">Home</a>
-            <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>Research</span>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="container">
-        <main class="main-content" id="main-content">
-            <h2 class="section-heading">Publications</h2>
-            
-            <div class="tabs">
-                <div class="tab-buttons">
-                    <button class="tab-button active" data-tab="key-publications">Key Publications</button>
-                    <button class="tab-button" data-tab="conference-proceedings">Conference Proceedings</button>
-                </div>
-
-                <div id="key-publications" class="tab-content active">
-                    <div class="publications">
-                        <article class="publication" style="animation-delay: 0.1s">
-                            <h3>Critical conversations in MOS: A dual-interview on the continuing struggles against anti-Blackness and racial capitalism</h3>
-                            <div class="publication-meta">
-                                <strong>Authors:</strong> Stella Nkomo, Patricia Tiimah Naya<br>
-                                <strong>Published:</strong> February 2025 | Organization
-                            </div>
-                            <p class="publication-description">This special issue critically engages with anti-Blackness in Management and Organization Studies through a structural analysis of racial capitalism and radical Black feminist thought, featuring a dual-interview exploring the intersection of MOS and anti-Blackness.</p>
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:qjMakFHDy7sC" class="btn">View Publication</a>
-                        </article>
-                        
-                        <article class="publication" style="animation-delay: 0.2s">
-                            <h3>Piercing the Veil of Colorblindness with an Anti-Racist Identity: Sensemaking, Power, and the Reproduction of Racialized Socioeconomic Inequality</h3>
-                            <div class="publication-meta">
-                                <strong>Authors:</strong> Patricia T. Naya, Alessia Contu, Jared M. Poole<br>
-                                <strong>Published:</strong> September 2024 | Academy of Management Learning & Education
-                            </div>
-                            <p class="publication-description">This study analyzes how anti-racist proclamations impact perceptions and responses within a business school context.</p>
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:d1gkVwhDpl0C" class="btn">View Publication</a>
-                        </article>
-
-                        <article class="publication" style="animation-delay: 0.3s">
-                            <h3>The Era of Inclusivity: Employees Driving Green Human Resource Management</h3>
-                            <div class="publication-meta">
-                                <strong>Authors:</strong> Patricia Tiimah Naya<br>
-                                <strong>Published:</strong> 2022 | UCL Institute for Global Prosperity
-                            </div>
-                            <p class="publication-description">This paper examines the role of GHRM in promoting sustainability within organizations.</p>
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:2osOgNQ5qMEC" class="btn">View Publication</a>
-                        </article>
-                    </div>
-                </div>
-
-                <div id="conference-proceedings" class="tab-content">
-                    <div class="publications">
-                        <article class="publication" style="animation-delay: 0.1s">
-                            <h3>Those of Us Who Stay: The Cost of "Finding the Right Home" for Gendered and Racialized Academics</h3>
-                            <div class="publication-meta">
-                                <strong>Authors:</strong> Patricia Tiimah Naya, Jared Mitchell Poole, Alessia Contu<br>
-                                <strong>Published:</strong> 2024 | Academy of Management Proceedings
-                            </div>
-                            <p class="publication-description">This research delves into the experiences of marginalized academics.</p>
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:u5HHmVD_uO8C" class="btn">View Publication</a>
-                        </article>
-
-                        <article class="publication" style="animation-delay: 0.2s">
-                            <h3>The Politics of Anti-Racist Change: Navigating Resistance, Power, and Privilege in Universities</h3>
-                            <div class="publication-meta">
-                                <strong>Author:</strong> Patricia Naya<br>
-                                <strong>Published:</strong> November 22, 2024 | APPAM Fall Research Conference
-                            </div>
-                            <p class="publication-description">This work explores the dynamics of implementing anti-racist policies in universities.</p>
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:9yKSN-GCB0IC" class="btn">View Publication</a>
-                        </article>
-
-                        <article class="publication" style="animation-delay: 0.3s">
-                            <h3>Becoming an Anti-Racist Organization and the Politics of Being Woke</h3>
-                            <div class="publication-meta">
-                                <strong>Authors:</strong> Patricia Tiimah Naya, Alessia Contu, Jared Mitchell Poole<br>
-                                <strong>Published:</strong> 2023 | Academy of Management Proceedings
-                            </div>
-                            <p class="publication-description">This qualitative study investigates responses from students and faculty to anti-racism proclamations made by university administrators.</p>
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:u-x6o8ySG0sC" class="btn">View Publication</a>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <div class="research-themes" style="animation-delay: 0.4s">
-                <h2 class="section-heading">Research Themes</h2>
-                <div class="theme-grid">
-                    <div class="theme-item">
-                        <i class="fas fa-sync-alt theme-icon"></i>
-                        <h3>Organizational Change and Resistance</h3>
-                    </div>
-                    <div class="theme-item">
-                        <i class="fas fa-balance-scale theme-icon"></i>
-                        <h3>Power Dynamics and Sensemaking</h3>
-                    </div>
-                    <div class="theme-item">
-                        <i class="fas fa-users theme-icon"></i>
-                        <h3>Informal Economies and Grassroots Leadership</h3>
-                    </div>
-                    <div class="theme-item">
-                        <i class="fas fa-leaf theme-icon"></i>
-                        <h3>Sustainability and Green Human Resource Management</h3>
-                    </div>
-                    <div class="theme-item">
-                        <i class="fas fa-seedling theme-icon"></i>
-                        <h3>Rural Entrepreneurship and Gender</h3>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>About Me</h3>
-                    <p>Patricia Tiimah Naya is a PhD candidate at the University of Massachusetts Boston studying organizational transformation and anti-racist change processes.</p>
-                    <ul class="social-links">
-                        <li><a href="https://www.linkedin.com/in/patricia-tiimah-naya-282261198/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="mailto:Patricia.Naya001@umb.edu" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-                        <li><a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" class="social-link" aria-label="Google Scholar"><i class="fab fa-google"></i></a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li class="footer-link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li class="footer-link"><a href="Full-profile.html"><i class="fas fa-user"></i> About Me</a></li>
-                        <li class="footer-link"><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
-                        <li class="footer-link"><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li class="footer-link"><a href="mailto:Patricia.naya001@umb.edu"><i class="fas fa-envelope"></i> Patricia.naya001@umb.edu</a></li>
-                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> University of Massachusetts Boston</li>
-                        <li class="footer-link"><i class="fas fa-building"></i> College of Management</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                © <span id="current-year"></span> Patricia Tiimah Naya. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to top button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
+<!-- ── NAV ── -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-brand">
+        <img src="images/HS_Dr. Naya.jpg" alt="Dr. Patricia Tiimah Naya" class="nav-avatar">
+        <span>Dr. Patricia T. <em>Naya</em></span>
+    </a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
     </button>
+    <ul class="nav-links" id="navMenu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Full-profile.html">About</a></li>
+        <li><a href="Articles.html" class="active">Research</a></li>
+        <li><a href="Full-profile.html#teaching">Teaching</a></li>
+        <li><a href="Patricia T. Naya CV.pdf" target="_blank">CV</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize AOS
-            AOS.init({
-                duration: 800,
-                easing: 'ease',
-                once: true
-            });
+<!-- ── SIDE NAV ── -->
+<nav class="side-nav" aria-label="Page sections">
+    <a href="#publications" class="side-nav-dot" data-label="Publications"></a>
+    <a href="#working-papers" class="side-nav-dot" data-label="Working Papers"></a>
+    <a href="#themes" class="side-nav-dot" data-label="Themes"></a>
+    <a href="#contact" class="side-nav-dot" data-label="Contact"></a>
+</nav>
 
-            // Tab functionality
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const tabId = button.getAttribute('data-tab');
-                    
-                    // Remove active class from all buttons and contents
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    
-                    // Add active class to clicked button and corresponding content
-                    button.classList.add('active');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-label="Research overview" data-nav-theme="dark">
+    <div class="page-hero-grid" aria-hidden="true"></div>
+    <div class="hero-layout">
 
-            // Mobile navigation
-            const mobileToggle = document.querySelector('.mobile-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            mobileToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                mobileToggle.innerHTML = navMenu.classList.contains('active') ? 
-                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-            });
+        <!-- Left: Text -->
+        <div class="hero-text-col">
+            <div class="page-eyebrow">Scholarly Work</div>
+            <h1>Research &amp; <em>Publications</em></h1>
+            <div class="hero-divider" aria-hidden="true"></div>
+            <p>I study what happens when organizations promise justice — examining how those promises are interpreted, contested, and managed over time, and what these processes reveal about the persistence of power and inequality.</p>
+            <div class="hero-counts">
+                <span class="count-pill"><i class="fas fa-book"></i> 4 Peer-Reviewed Publications</span>
+                <span class="count-pill"><i class="fas fa-file-alt"></i> 2 Book Chapters</span>
+                <span class="count-pill"><i class="fas fa-pen-nib"></i> 9+ Working Papers</span>
+                <span class="count-pill"><i class="fas fa-trophy"></i> AOM Early Career Award 2024</span>
+            </div>
+            <div class="hero-scroll" onclick="document.getElementById('publications').scrollIntoView({behavior:'smooth'})">
+                <div class="scroll-dot"><i class="fas fa-chevron-down"></i></div>
+                View Publications
+            </div>
+        </div>
 
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            });
+        <!-- Right: Photo -->
+        <div class="hero-photo-col">
+            <div class="hero-photo-frame">
+                <img src="images/Patricia T. Naya, PhD.jpg"
+                     alt="Dr. Patricia Tiimah Naya, PhD — organizational scholar"
+                     class="hero-photo">
+            </div>
+        </div>
 
-            // Sticky navigation
-            const nav = document.getElementById('main-nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
+    </div>
+</section>
 
-            // Back to top button
-            const backToTop = document.getElementById('backToTop');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    backToTop.classList.add('active');
-                } else {
-                    backToTop.classList.remove('active');
-                }
-            });
+<!-- ── PUBLICATIONS ── -->
+<section class="section" id="publications" style="background:var(--cream);">
+    <div class="section-inner">
+        <div class="section-label">Scholarship</div>
+        <h2 class="section-heading reveal">Publications</h2>
 
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
+        <div class="tab-nav" role="tablist">
+            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="peer-reviewed">Peer-Reviewed</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="book-chapters">Book Chapters</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="conference">Conference</button>
+        </div>
 
-            // Animate sections when they come into view
-            const profileSections = document.querySelectorAll('.publication, .research-themes');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.style.animationPlayState = 'running';
-                        }, index * 150);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
+        <!-- PEER REVIEWED -->
+        <div id="peer-reviewed" class="tab-pane active">
+            <div class="pub-list">
 
-            profileSections.forEach(section => {
-                observer.observe(section);
-            });
+                <article class="pub-card reveal">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">Organization</span>
+                        <span class="badge badge-rank">ABDC Ranking: A</span>
+                        <span class="badge badge-type">2025</span>
+                    </div>
+                    <h3 class="pub-title">Critical Conversations in MOS: A Dual-Interview on the Continuing Struggles Against Anti-Blackness and Racial Capitalism</h3>
+                    <p class="pub-authors">Nkomo, S., &amp; <strong>Naya, P. T.</strong></p>
+                    <p class="pub-venue-line"><em>Organization</em>, 32(2), pp. 180–190</p>
+                    <p class="pub-abstract">A dual-interview with Professor Stella Nkomo on anti-Blackness in Management and Organization Studies, examined through racial capitalism and Black feminist thought. Traces how anti-Blackness is reproduced through organizational theory and practice, and what that demands of scholars committed to change.</p>
+                    <div class="pub-footer">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:qjMakFHDy7sC" target="_blank" class="pub-link"><i class="fas fa-external-link-alt"></i> View Publication</a>
+                    </div>
+                </article>
 
-            // Set current year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+                <article class="pub-card reveal reveal-delay-1">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">Academy of Management Learning &amp; Education</span>
+                        <span class="badge badge-rank">ABDC Ranking: A*</span>
+                        <span class="badge badge-type">2025</span>
+                    </div>
+                    <h3 class="pub-title">"Those of Us Who Stay": Sensemaking, Embodiment, and Navigation of the Inclusion–Exclusion Paradox</h3>
+                    <p class="pub-authors"><strong>Naya, T. P.</strong>, Contu, A., &amp; Poole, M. J.</p>
+                    <p class="pub-venue-line"><em>Academy of Management Learning &amp; Education</em>, Vol. 24, No. 3, pp. 373–396</p>
+                    <p class="pub-abstract">Examines how Black and Brown women academics make sense of being simultaneously included and excluded in university settings. Drawing on embodiment theory and organizational paradox, it shows the emotional and intellectual labor of navigating institutions that claim inclusion while reproducing inequity.</p>
+                    <div class="pub-footer">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:u5HHmVD_uO8C" target="_blank" class="pub-link"><i class="fas fa-external-link-alt"></i> View Publication</a>
+                    </div>
+                </article>
 
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (navMenu.classList.contains('active')) {
-                            navMenu.classList.remove('active');
-                            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                        }
-                    }
-                });
-            });
+                <article class="pub-card reveal reveal-delay-2">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">Academy of Management Learning &amp; Education</span>
+                        <span class="badge badge-rank">ABDC Ranking: A*</span>
+                        <span class="badge badge-award">AOM Early Career Award 2024</span>
+                        <span class="badge badge-type">2024</span>
+                    </div>
+                    <h3 class="pub-title">Piercing the Veil of Colorblindness with an Anti-Racist Identity: Sensemaking, Power, and the Reproduction of Racialized Socioeconomic Inequality</h3>
+                    <p class="pub-authors"><strong>Naya, T. P.</strong>, Contu, A., &amp; Poole, M. J.</p>
+                    <p class="pub-venue-line"><em>Academy of Management Learning &amp; Education</em>, 23(3), pp. 387–407</p>
+                    <p class="pub-abstract">Analyzes how anti-racist commitments at a business school are interpreted and contested by students and faculty. Drawing on sensemaking theory and critical race scholarship, it shows how colorblind ideology lets institutions narrate progress while sustaining racialized hierarchies. Awarded the CMS Division's Most Promising Early Career Paper at the 2024 Academy of Management Annual Meeting, Chicago.</p>
+                    <div class="pub-footer">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:d1gkVwhDpl0C" target="_blank" class="pub-link"><i class="fas fa-external-link-alt"></i> View Publication</a>
+                    </div>
+                </article>
+
+                <article class="pub-card reveal">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">UCL Institute for Global Prosperity</span>
+                        <span class="badge badge-type">Working Paper · 2022</span>
+                    </div>
+                    <h3 class="pub-title">The Era of Inclusivity: Employees Driving Green Human Resource Management toward Sustainable Prosperity</h3>
+                    <p class="pub-authors"><strong>Naya, T. P.</strong></p>
+                    <p class="pub-venue-line">UCL Institute for Global Prosperity Working Paper</p>
+                    <p class="pub-abstract">Drawing on the MSc Best Dissertation (UCL, 2021), examines how employee agency shapes organizational sustainability through Green Human Resource Management. Proposes a model of GHRM in which workers — not only executives — drive ecological and social responsibility.</p>
+                    <div class="pub-footer">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:2osOgNQ5qMEC" target="_blank" class="pub-link"><i class="fas fa-external-link-alt"></i> View Publication</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <!-- BOOK CHAPTERS -->
+        <div id="book-chapters" class="tab-pane">
+            <div class="pub-list">
+
+                <article class="pub-card reveal">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">Edward Elgar Publishing</span>
+                        <span class="badge badge-accepted">Accepted · Forthcoming</span>
+                    </div>
+                    <h3 class="pub-title">The Currency of Racism: How Routine Organizational Processes Sustain Racial Inequality</h3>
+                    <p class="pub-authors"><strong>Naya, T. P.</strong></p>
+                    <p class="pub-venue-line">In <em>A Research Agenda for Diversity Management</em>. Edward Elgar Publishing Ltd.</p>
+                    <p class="pub-abstract">Argues that racial inequality persists not through exceptional acts of prejudice but through routine organizational processes. Drawing on critical race theory, examines how hiring criteria, performance metrics, mentorship, and informal networks function as currency — accessible to those who already hold racial capital, and out of reach for those who don't.</p>
+                </article>
+
+                <article class="pub-card reveal reveal-delay-1">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">Edward Elgar Publishing</span>
+                        <span class="badge badge-type">2026</span>
+                    </div>
+                    <h3 class="pub-title">Embracing Colourbraveness: A Sankofa Approach to Decolonising Business Schools</h3>
+                    <p class="pub-authors"><strong>Naya, T. P.</strong></p>
+                    <p class="pub-venue-line">In <em>The Elgar Companion to Management Education and the Sustainable Development Goals</em>, pp. 127–137. Edward Elgar Publishing.</p>
+                    <p class="pub-abstract">Proposes colourbraveness — a deliberate engagement with race — as a counterpoint to colourblindness in management education. Drawing on the Akan concept of Sankofa (learning from the past to move forward), offers a decolonial framework for how business schools produce and suppress racial knowledge through curriculum, faculty, and institutional culture.</p>
+                </article>
+
+            </div>
+        </div>
+
+        <!-- CONFERENCE -->
+        <div id="conference" class="tab-pane">
+            <div class="pub-list">
+
+                <article class="pub-card reveal">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">16th PROS Symposium</span>
+                        <span class="badge badge-type">2025</span>
+                    </div>
+                    <h3 class="pub-title">Power Relations and Organizational Becoming: A Process Study of Anti-Racist Change Initiatives</h3>
+                    <p class="pub-authors"><strong>Naya, P. T.</strong>, Poole, M. J., &amp; Contu, A.</p>
+                    <p class="pub-venue-line">16th PROS Symposium, Eretria, Greece, June 2025</p>
+                </article>
+
+                <article class="pub-card reveal reveal-delay-1">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">16th PROS Symposium</span>
+                        <span class="badge badge-type">2025</span>
+                    </div>
+                    <h3 class="pub-title">Embodying Paradox: Navigating the Inclusion-Exclusion Paradox among Black and Brown Women in a U.S. University</h3>
+                    <p class="pub-authors"><strong>Naya, P. T.</strong>, Poole, M. J., &amp; Contu, A.</p>
+                    <p class="pub-venue-line">16th PROS Symposium, Eretria, Greece, June 2025</p>
+                </article>
+
+                <article class="pub-card reveal reveal-delay-2">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">APPAM Fall Research Conference</span>
+                        <span class="badge badge-type">2024</span>
+                    </div>
+                    <h3 class="pub-title">The Politics of Anti-Racist Change: Navigating Resistance, Power, and Privilege in Universities</h3>
+                    <p class="pub-authors"><strong>Naya, P. T.</strong></p>
+                    <p class="pub-venue-line">Association for Public Policy and Management (APPAM) Fall Research Conference, Washington, D.C., November 2024</p>
+                </article>
+
+                <article class="pub-card reveal">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">Danish Gender Conference</span>
+                        <span class="badge badge-type">2024</span>
+                    </div>
+                    <h3 class="pub-title">Embodying Paradox: Navigating the Inclusion-Exclusion Paradox among Black and Brown Women in a U.S. University</h3>
+                    <p class="pub-authors"><strong>Naya, T. P.</strong>, Contu, A., &amp; Poole, M. J.</p>
+                    <p class="pub-venue-line">Danish Gender Conference, Copenhagen Business School, Denmark, September 2024</p>
+                </article>
+
+                <article class="pub-card reveal reveal-delay-1">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">Academy of Management Proceedings</span>
+                        <span class="badge badge-award">AOM Early Career Award 2024</span>
+                        <span class="badge badge-type">2024</span>
+                    </div>
+                    <h3 class="pub-title">"Those of Us Who Stay": The Cost of "Finding the Right Home" for Gendered and Racialized Academics</h3>
+                    <p class="pub-authors"><strong>Naya, T. P.</strong>, Poole, M. J., &amp; Contu, A.</p>
+                    <p class="pub-venue-line">Academy of Management Annual Meeting, Chicago, August 2024 &bull; 40th EGOS Colloquium, Milan-Bicocca, July 2024</p>
+                    <div class="pub-footer">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qnzZy1YAAAAJ&citation_for_view=qnzZy1YAAAAJ:u5HHmVD_uO8C" target="_blank" class="pub-link"><i class="fas fa-external-link-alt"></i> View Record</a>
+                    </div>
+                </article>
+
+                <article class="pub-card reveal reveal-delay-2">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">Academy of Management Proceedings</span>
+                        <span class="badge badge-type">2024</span>
+                    </div>
+                    <h3 class="pub-title">Organizational Anti-Racism as a Contested Site of Politics</h3>
+                    <p class="pub-authors"><strong>Naya, T. P.</strong>, Contu, A., &amp; Poole, M. J.</p>
+                    <p class="pub-venue-line">40th EGOS Colloquium, Milan-Bicocca, July 2024 &bull; 18th Organization Studies Summer Workshop, Greece, May 2024</p>
+                </article>
+
+                <article class="pub-card reveal">
+                    <div class="pub-badges">
+                        <span class="badge badge-journal">Academy of Management Proceedings</span>
+                        <span class="badge badge-type">2023</span>
+                    </div>
+                    <h3 class="pub-title">If Not Now, When? If Not Here, Where? Becoming an Anti-Racist Organization and the Politics of Being Woke</h3>
+                    <p class="pub-authors"><strong>Naya, T. P.</strong>, Contu, A., &amp; Poole, M. J.</p>
+                    <p class="pub-venue-line">AOM 83rd Annual Conference, Boston, August 2023 &bull; 39th EGOS Colloquium, Cagliari, July 2023 &bull; International Critical Management Conference, Nottingham, June 2023</p>
+                </article>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── RESEARCH THEMES ── -->
+<section class="section themes-section" id="themes" data-nav-theme="dark">
+    <div class="section-inner">
+        <div class="section-label" style="color:var(--gold)">Research Landscape</div>
+        <h2 class="section-heading reveal">Core Themes</h2>
+        <div class="theme-grid" style="margin-top:2.75rem;">
+            <div class="theme-card reveal">
+                <div class="theme-icon"><i class="fas fa-sitemap"></i></div>
+                <h3>Organizational Transformation</h3>
+            </div>
+            <div class="theme-card reveal reveal-delay-1">
+                <div class="theme-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Power</h3>
+            </div>
+            <div class="theme-card reveal reveal-delay-2">
+                <div class="theme-icon"><i class="fas fa-balance-scale"></i></div>
+                <h3>Inequality</h3>
+            </div>
+            <div class="theme-card reveal reveal-delay-3">
+                <div class="theme-icon"><i class="fas fa-brain"></i></div>
+                <h3>Sensemaking</h3>
+            </div>
+            <div class="theme-card reveal reveal-delay-4">
+                <div class="theme-icon"><i class="fas fa-random"></i></div>
+                <h3>Paradox</h3>
+            </div>
+            <div class="theme-card reveal reveal-delay-5">
+                <div class="theme-icon"><i class="fas fa-user-check"></i></div>
+                <h3>Embodiment</h3>
+            </div>
+            <div class="theme-card reveal reveal-delay-6">
+                <div class="theme-icon"><i class="fas fa-store-alt"></i></div>
+                <h3>Informal Economy</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<footer class="section contact-section" id="contact" role="contentinfo" data-nav-theme="dark">
+    <div class="contact-glow" aria-hidden="true"></div>
+    <div class="section-inner">
+        <div class="contact-grid">
+            <div>
+                <p class="section-label">Get in touch</p>
+                <h2 class="section-heading reveal">Contact</h2>
+                <p class="contact-intro reveal reveal-delay-1">Open to scholarly collaborations, speaking invitations, media inquiries, and conversations about research at the intersection of organizations, power, and justice. Full citations, metrics, and co-author profiles are available on Google Scholar.</p>
+                <div class="contact-items reveal reveal-delay-2">
+                    <a href="mailto:Patricia.naya001@umb.edu" class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-item-text">
+                            <span>Email</span>
+                            <strong>Patricia.naya001@umb.edu</strong>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pt-naya/" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="contact-item-text">
+                            <span>LinkedIn</span>
+                            <strong>Patricia Tiimah Naya</strong>
+                        </div>
+                    </a>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-item-text">
+                            <span>Institution</span>
+                            <strong>University of Massachusetts Boston</strong>
+                        </div>
+                    </div>
+                    <a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-google"></i></div>
+                        <div class="contact-item-text">
+                            <span>Academic profile</span>
+                            <strong>Google Scholar</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-social-panel reveal reveal-delay-1">
+                <h3>Connect</h3>
+                <p>Follow my scholarly work and professional updates.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/pt-naya/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn — Patricia Tiimah Naya
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" target="_blank" class="social-link">
+                        <i class="fab fa-google"></i> Google Scholar Profile
+                    </a>
+                    <a href="mailto:Patricia.naya001@umb.edu" class="social-link">
+                        <i class="fas fa-envelope"></i> Patricia.naya001@umb.edu
+                    </a>
+                    <a href="Patricia T. Naya CV.pdf" target="_blank" class="social-link">
+                        <i class="fas fa-file-alt"></i> Download Curriculum Vitae
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bar reveal">
+            <div class="footer-bar-brand">
+                <img src="images/HS_Dr. Naya.jpg" alt="Dr. Patricia Tiimah Naya" loading="lazy" decoding="async">
+                <div class="footer-bar-brand-text">
+                    <strong>Dr. Patricia Tiimah <em>Naya</em></strong>
+                    &copy; <span id="current-year"></span> · University of Massachusetts Boston
+                </div>
+            </div>
+            <div class="footer-bar-links">
+                <a href="index.html">Home</a>
+                <a href="Full-profile.html">About</a>
+                <a href="Articles.html">Research</a>
+                <a href="Patricia T. Naya CV.pdf" target="_blank">CV</a>
+                <a href="index.html#gallery">Gallery</a>
+            </div>
+            <span class="footer-bar-copy">All rights reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Patricia Tiimah Naya",
+    "honorificPrefix": "Dr.",
+    "honorificSuffix": "PhD",
+    "jobTitle": "Doctor of Philosophy in Business Administration (Organization & Social Change)",
+    "affiliation": { "@type": "EducationalOrganization", "name": "University of Massachusetts Boston" },
+    "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "University of Massachusetts Boston" },
+        { "@type": "EducationalOrganization", "name": "University College London" },
+        { "@type": "EducationalOrganization", "name": "University for Development Studies, Ghana" }
+    ],
+    "award": [
+        "AAUW International Fellow",
+        "Commonwealth Shared Scholar",
+        "CMS Division Most Promising Early Career Paper Award (AOM, 2024)",
+        "PhD Award for Academic Distinction in Organizations and Social Change (UMass Boston, 2023)",
+        "Beacon Emerging Leader Award (UMass Boston, 2023)",
+        "Best Dissertation Award, UCL Institute for Global Prosperity, 2021"
+    ],
+    "url": "https://nayapatricia.com",
+    "sameAs": [
+        "https://www.linkedin.com/in/pt-naya/",
+        "https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao"
+    ]
+}
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Sticky nav
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80), { passive:true });
+
+    // Mobile toggle
+    const toggle = document.getElementById('mobileToggle');
+    const menu   = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+        toggle.innerHTML = open ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerHTML = '<i class="fas fa-bars"></i>';
         });
-    </script>
+    });
+
+    // Back to top
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => btt.classList.toggle('active', window.scrollY > 500), { passive:true });
+    btt.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected','true');
+            document.getElementById(btn.dataset.tab).classList.add('active');
+        });
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); }
+        });
+    }, { threshold:0.08 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Side nav active state + theme (light/dark background) tracking
+    const sideNav = document.querySelector('.side-nav');
+    const sideDots = document.querySelectorAll('.side-nav-dot');
+    if (sideNav && sideDots.length) {
+        const sections = Array.from(sideDots).map(dot => document.querySelector(dot.getAttribute('href'))).filter(Boolean);
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const dot = document.querySelector(`.side-nav-dot[href="#${entry.target.id}"]`);
+                if (!dot) return;
+                if (entry.isIntersecting) {
+                    sideDots.forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                    sideNav.classList.toggle('on-dark', entry.target.dataset.navTheme === 'dark');
+                }
+            });
+        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+        sections.forEach(sec => navObserver.observe(sec));
+    }
+
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const id = this.getAttribute('href');
+            if (id === '#') return;
+            const target = document.querySelector(id);
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior:'smooth', block:'start' }); }
+        });
+    });
+});
+</script>
 </body>
 </html>
