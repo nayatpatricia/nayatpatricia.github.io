@@ -1,1352 +1,1193 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Patricia Tiimah Naya - PhD Candidate</title>
+    <title>Dr. Patricia Naya — Organizational Scholar</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Patricia Tiimah Naya is a PhD candidate at the University of Massachusetts Boston studying organizational transformation and anti-racist change processes.">
+    <meta name="description" content="Dr. Patricia Tiimah Naya — scholar of organizational transformation, power, and inequality. AAUW International Fellow. Commonwealth Shared Scholar. PhD, University of Massachusetts Boston, May 2026.">
     <meta name="author" content="Patricia Tiimah Naya">
-    <!-- Favicon -->
-    <link rel="icon" href="images/pat.svg" type="image/svg+xml">
-    
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="icon" href="images/HS_Dr. Naya.jpg" type="image/jpeg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* Base Styles and Variables */
         :root {
-            --primary-color: #1e3c72;
-            --primary-light: #2a5298;
-            --primary-dark: #0c2553;
-            --accent-color: #ff7e5f;
-            --accent-light: #ff9e88;
-            --text-color: #333;
-            --text-light: #6c757d;
-            --bg-color: #f9f9f9;
-            --bg-alt: #f0f2f5;
-            --white: #ffffff;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
-            --transition-slow: all 0.6s ease;
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 1.5rem;
-            --spacing-lg: 2rem;
-            --spacing-xl: 3rem;
+            --navy:      #0b1929;
+            --navy-mid:  #122035;
+            --navy-soft: #1c3050;
+            --gold:      #c9a84c;
+            --gold-light:#dfc070;
+            --gold-dim:  #8a6e2e;
+            --cream:     #f6f1e9;
+            --cream-dark:#ede5d5;
+            --white:     #ffffff;
+            --text-body: #1e1e1e;
+            --text-mid:  #555;
+            --text-light:#909090;
+            --serif:     'Cormorant Garamond', Georgia, serif;
+            --sans:      'Jost', sans-serif;
+            --radius:    5px;
+            --shadow-gold: 0 10px 50px rgba(201,168,76,0.2);
+            --shadow-dark: 0 24px 70px rgba(11,25,41,0.3);
+            --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
         }
 
-        @keyframes headerGradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; scroll-padding-top:72px; }
+        body { font-family:var(--sans); background:var(--cream); color:var(--text-body); overflow-x:hidden; line-height:1.7; }
+        h1,h2,h3,h4 { font-family:var(--serif); font-weight:600; line-height:1.15; }
+        p { margin-bottom:1rem; }
+        a { color:inherit; text-decoration:none; transition:color var(--transition); }
+        img { max-width:100%; display:block; }
+        ::-webkit-scrollbar { width:5px; }
+        ::-webkit-scrollbar-track { background:var(--cream-dark); }
+        ::-webkit-scrollbar-thumb { background:var(--gold-dim); border-radius:3px; }
+
+        /* GRAIN OVERLAY */
+        body::before {
+            content:'';
+            position:fixed; inset:0;
+            background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+            pointer-events:none; z-index:0; opacity:0.5;
         }
 
-        @keyframes shine {
-            0% { transform: translateX(-100%); }
-            20% { transform: translateX(100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @keyframes fadeInStagger {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Merriweather', serif;
-            line-height: 1.3;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        p {
-            margin-bottom: var(--spacing-sm);
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        a:hover {
-            color: var(--primary-light);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Layout */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-lg);
-            width: 100%;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -15px;
-        }
-
-        .col {
-            padding: 0 15px;
-        }
-
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 50%, var(--primary-color) 100%);
-            background-size: 200% 200%;
-            animation: headerGradient 10s ease infinite;
-            color: var(--white);
-            padding: var(--spacing-xl) 0;
-            margin-bottom: var(--spacing-lg);
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
-            transform: translateX(-100%);
-            animation: shine 6s infinite;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: var(--spacing-xs);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .header p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        /* Navigation */
+        /* ── NAV ── */
         .nav {
-            background: var(--white);
-            box-shadow: var(--shadow-sm);
-            padding: var(--spacing-sm) 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: var(--transition);
-            backdrop-filter: blur(5px);
-            background-color: rgba(255,255,255,0.9);
+            position:fixed; top:0; left:0; right:0; z-index:1000;
+            padding:0 2.5rem; height:72px;
+            display:flex; align-items:center; justify-content:space-between;
+            background:rgba(11,25,41,0.92);
+            backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+            border-bottom:1px solid rgba(201,168,76,0.1);
+            transition:background var(--transition);
         }
+        .nav.scrolled { background:rgba(11,25,41,0.99); box-shadow:0 4px 32px rgba(0,0,0,0.35); }
 
-        .nav.scrolled {
-            padding: 0.8rem 0;
-            box-shadow: var(--shadow-md);
+        .nav-brand {
+            display:flex; align-items:center; gap:0.8rem;
+            font-family:var(--serif); font-size:1.1rem; color:var(--white); letter-spacing:0.02em;
         }
+        .nav-avatar {
+            width:38px; height:38px; border-radius:50%; object-fit:cover;
+            border:1.5px solid var(--gold); flex-shrink:0;
+        }
+        .nav-brand em { font-style:italic; color:var(--gold); }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .nav-links { display:flex; align-items:center; list-style:none; gap:0.15rem; }
+        .nav-links a {
+            font-family:var(--sans); font-size:0.75rem; font-weight:500;
+            letter-spacing:0.12em; text-transform:uppercase;
+            color:rgba(255,255,255,0.65); padding:0.45rem 0.9rem; border-radius:4px;
+            transition:color var(--transition), background var(--transition);
         }
-
-        .brand {
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-        }
-
-        .brand i {
-            color: var(--accent-color);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: var(--spacing-lg);
-        }
-
-        .nav-item a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: var(--transition);
-            display: block;
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            position: relative;
-        }
-
-        .nav-item a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            transition: var(--transition);
-            transform: translateX(-50%);
-        }
-
-        .nav-item a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-item a:hover::after {
-            width: 70%;
-        }
-
-        .nav-item a.active {
-            color: var(--primary-color);
-        }
-
-        .nav-item a.active::after {
-            width: 70%;
-        }
+        .nav-links a:hover, .nav-links a.active { color:var(--gold); background:rgba(201,168,76,0.08); }
 
         .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-color);
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
+            display:none; background:none; border:1px solid rgba(201,168,76,0.4);
+            color:var(--gold); width:38px; height:38px; border-radius:4px;
+            font-size:1rem; cursor:pointer; transition:background var(--transition);
+            align-items:center; justify-content:center;
+        }
+        .mobile-toggle:hover { background:rgba(201,168,76,0.12); }
+
+        /* ── HERO ── */
+        .hero {
+            position:relative; min-height:100vh;
+            display:flex; align-items:center; overflow:hidden;
+            background:var(--navy);
+        }
+        .hero-bg { position:absolute; inset:0; overflow:hidden; }
+        .hero-bg::before {
+            content:''; position:absolute;
+            width:1000px; height:1000px; top:-250px; right:-250px; border-radius:50%;
+            background:radial-gradient(circle, rgba(201,168,76,0.14) 0%, transparent 68%);
+            animation:pulse 7s ease-in-out infinite;
+        }
+        .hero-bg::after {
+            content:''; position:absolute;
+            width:700px; height:700px; bottom:-150px; left:-100px; border-radius:50%;
+            background:radial-gradient(circle, rgba(28,48,80,0.75) 0%, transparent 70%);
+            animation:pulse 10s ease-in-out infinite reverse;
+        }
+        @keyframes pulse { 0%,100%{transform:scale(1);opacity:0.85;} 50%{transform:scale(1.18);opacity:0.5;} }
+
+        .hero-grid {
+            position:absolute; inset:0;
+            background-image:linear-gradient(rgba(201,168,76,0.035) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(201,168,76,0.035) 1px, transparent 1px);
+            background-size:64px 64px; pointer-events:none;
         }
 
-        .mobile-toggle:hover {
-            color: var(--primary-color);
+        /* Signal lines traveling along a handful of the grid's rows/columns */
+        .hero-signals {
+            position:absolute; inset:0; width:100%; height:100%;
+            pointer-events:none;
+        }
+        .signal-line {
+            stroke: var(--gold);
+            stroke-width: 2;
+            stroke-linecap: round;
+            opacity: 0.85;
+            filter: drop-shadow(0 0 5px rgba(201,168,76,0.75));
+        }
+        .signal-h { stroke-dasharray: 5 300; animation: travel-h linear infinite; }
+        .signal-v { stroke-dasharray: 5 300; animation: travel-v linear infinite; }
+        @keyframes travel-h { to { stroke-dashoffset: -1400; } }
+        @keyframes travel-v { to { stroke-dashoffset: -1200; } }
+        .signal-glow { mix-blend-mode: screen; }
+        @media (prefers-reduced-motion: reduce) {
+            .signal-line { animation: none; }
+            .signal-glow { display: none; }
         }
 
-        /* Main Content */
-        .main-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: var(--spacing-xl);
-            background: var(--white);
-            box-shadow: var(--shadow-md);
-            border-radius: var(--border-radius);
-            margin-bottom: var(--spacing-xl);
-            flex: 1;
-            position: relative;
-            z-index: 1;
+        .hero-content {
+            position:relative; z-index:2; width:100%; max-width:1320px;
+            margin:0 auto; padding:8rem 3rem 5rem;
+            display:grid; grid-template-columns:1fr 430px; gap:5rem; align-items:center;
         }
 
-        /* Profile Section */
-        .profile-grid {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: var(--spacing-xl);
-            margin-bottom: var(--spacing-xl);
-            align-items: start;
+        .hero-eyebrow {
+            display:inline-flex; align-items:center; gap:0.6rem;
+            font-size:0.7rem; letter-spacing:0.22em; text-transform:uppercase;
+            color:var(--gold); margin-bottom:1.5rem; font-weight:500;
+            animation:fadeUp 0.8s ease 0.3s both;
+        }
+        .hero-eyebrow::before { content:''; display:inline-block; width:28px; height:1px; background:var(--gold); }
+
+        .hero-name {
+            font-family:var(--serif); font-size:clamp(3rem,5.5vw,5.6rem);
+            font-weight:300; color:var(--white); letter-spacing:-0.01em;
+            line-height:1.04; margin-bottom:0.5rem;
+            animation:fadeUp 0.9s ease 0.5s both;
+        }
+        .hero-name strong { font-weight:700; display:block; }
+        .hero-name em { font-style:italic; color:var(--gold-light); }
+
+        .hero-title {
+            font-family:var(--sans); font-size:0.9rem; font-weight:300;
+            color:rgba(255,255,255,0.55); letter-spacing:0.07em;
+            margin-bottom:1.8rem; text-transform:uppercase;
+            animation:fadeUp 0.8s ease 0.65s both;
         }
 
-        .profile-image-container {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transform-style: preserve-3d;
-            perspective: 1000px;
+        .hero-divider {
+            width:56px; height:2px;
+            background:linear-gradient(90deg, var(--gold), transparent);
+            margin-bottom:1.8rem;
+            animation:fadeIn 0.8s ease 0.8s both;
         }
 
-        .profile-image {
-            display: block;
-            width: 100%;
-            height: auto;
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-            border-radius: var(--border-radius);
-            transform: translateZ(0);
-            will-change: transform;
+        .hero-bio {
+            font-size:1.08rem; color:rgba(255,255,255,0.72);
+            max-width:510px; line-height:1.8; margin-bottom:2.25rem;
+            animation:fadeUp 0.8s ease 0.85s both;
         }
 
-        .profile-image-container:hover .profile-image {
-            transform: scale(1.05) translateZ(10px);
+        .hero-ctas {
+            display:flex; gap:1rem; flex-wrap:wrap;
+            animation:fadeUp 0.8s ease 1s both;
         }
 
-        .profile-image-container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.1) 100%);
-            pointer-events: none;
+        .btn-primary {
+            display:inline-flex; align-items:center; gap:0.5rem;
+            padding:0.85rem 2rem; background:var(--gold); color:var(--navy);
+            font-family:var(--sans); font-size:0.77rem; font-weight:600;
+            letter-spacing:0.1em; text-transform:uppercase; border-radius:var(--radius);
+            border:none; cursor:pointer;
+            transition:background var(--transition), transform var(--transition), box-shadow var(--transition);
         }
-
-        .card {
-            background: var(--white);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            padding: var(--spacing-lg);
-            transition: var(--transition);
-            margin-bottom: var(--spacing-lg);
-            border-left: 4px solid var(--primary-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(30,60,114,0.03) 0%, rgba(255,255,255,0) 100%);
-            z-index: 0;
-        }
-
-        .card > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .section-heading {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: var(--spacing-md);
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-heading::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background-color: var(--accent-color);
-            transition: var(--transition);
-        }
-
-        .section-heading:hover::after {
-            width: 60px;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-            padding: 0.8rem 2rem;
-            background-color: var(--primary-color);
-            color: var(--white);
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
-            transform: translateX(-100%);
-            transition: var(--transition);
-        }
-
-        .btn:hover {
-            background-color: var(--primary-light);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn:hover::after {
-            transform: translateX(100%);
-        }
+        .btn-primary:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:var(--shadow-gold); }
 
         .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
+            display:inline-flex; align-items:center; gap:0.5rem;
+            padding:0.85rem 2rem; background:transparent; color:var(--white);
+            font-family:var(--sans); font-size:0.77rem; font-weight:500;
+            letter-spacing:0.1em; text-transform:uppercase; border-radius:var(--radius);
+            border:1px solid rgba(255,255,255,0.28); cursor:pointer;
+            transition:border-color var(--transition), color var(--transition), background var(--transition), transform var(--transition);
+        }
+        .btn-outline:hover { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,0.05); transform:translateY(-2px); }
+
+        .hero-credentials {
+            display:flex; flex-wrap:wrap; gap:0.55rem;
+            margin-top:2.25rem; padding-top:1.75rem;
+            border-top:1px solid rgba(255,255,255,0.09);
+            animation:fadeUp 0.8s ease 1.15s both;
+        }
+        .credential-pill {
+            display:inline-flex; align-items:center; gap:0.4rem;
+            padding:0.3rem 0.85rem;
+            background:rgba(201,168,76,0.09); border:1px solid rgba(201,168,76,0.22);
+            border-radius:100px; font-size:0.7rem; letter-spacing:0.06em;
+            color:var(--gold-light); font-weight:400;
+        }
+        .credential-pill i { font-size:0.62rem; }
+
+        /* Hero photo */
+        .hero-photo-wrap { order:2; position:relative; animation:fadeIn 1.2s ease 0.4s both; }
+        .hero-photo-frame { position:relative; border-radius:2px; overflow:hidden; }
+        .hero-photo-frame::before {
+            content:''; position:absolute; inset:-1px;
+            background:linear-gradient(135deg, var(--gold) 0%, transparent 50%, var(--gold-dim) 100%);
+            border-radius:3px; z-index:0;
+        }
+        .hero-photo-inner { position:relative; z-index:1; margin:2px; border-radius:2px; overflow:hidden; background:var(--navy-mid); }
+        .hero-photo-inner img {
+            width:100%; height:590px; object-fit:cover; object-position:top center;
+            display:block; transition:transform 0.8s cubic-bezier(0.16,1,0.3,1);
+            filter:brightness(0.96) contrast(1.04);
+        }
+        .hero-photo-frame:hover .hero-photo-inner img { transform:scale(1.07); }
+        .corner { position:absolute; width:75px; height:75px; z-index:3; }
+        .corner-bl { bottom:-14px; left:-14px; border-left:2px solid var(--gold); border-bottom:2px solid var(--gold); }
+        .corner-tr { top:-14px; right:-14px; border-right:2px solid var(--gold); border-top:2px solid var(--gold); }
+
+        .hero-scroll {
+            position:absolute; bottom:2.25rem; left:50%; transform:translateX(-50%);
+            display:flex; flex-direction:column; align-items:center; gap:0.45rem;
+            color:rgba(255,255,255,0.28); font-size:0.62rem; letter-spacing:0.15em;
+            text-transform:uppercase; z-index:2; animation:bounce 2.5s ease-in-out infinite;
+        }
+        @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(10px);} }
+
+        /* ── STATS STRIP ── */
+        .stats-strip {
+            background:var(--navy-mid);
+            border-top:1px solid rgba(201,168,76,0.14);
+            border-bottom:1px solid rgba(201,168,76,0.14);
+            padding:2.5rem 3rem; position:relative; z-index:1;
+        }
+        .stats-inner {
+            max-width:1100px; margin:0 auto;
+            display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; text-align:center;
+        }
+        .stat-item { padding:1rem; border-right:1px solid rgba(201,168,76,0.1); }
+        .stat-item:last-child { border-right:none; }
+        .stat-number {
+            font-family:var(--serif); font-size:2.5rem; font-weight:700;
+            color:var(--gold); display:block; line-height:1; margin-bottom:0.35rem;
+        }
+        .stat-label { font-size:0.69rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.45); }
+
+        /* ── SECTION UTILITY ── */
+        .section { position:relative; z-index:1; }
+        .section-inner { max-width:1200px; margin:0 auto; padding:5.5rem 3rem; }
+        .section-label {
+            display:inline-flex; align-items:center; gap:0.6rem;
+            font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase;
+            color:var(--gold); font-weight:500; margin-bottom:0.85rem;
+        }
+        .section-label::before { content:''; display:inline-block; width:22px; height:1px; background:var(--gold); }
+        .section-heading {
+            font-family:var(--serif); font-size:clamp(2rem,3.5vw,3rem);
+            font-weight:600; line-height:1.12; margin-bottom:0.5rem;
         }
 
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
+        /* ── ABOUT ── */
+        .about-section { background:var(--cream); }
+        .about-grid { display:grid; grid-template-columns:370px 1fr; gap:5rem; align-items:start; }
+        .about-photo { position:sticky; top:96px; }
+        .about-photo-frame { position:relative; border-radius:2px; overflow:hidden; box-shadow:var(--shadow-dark); }
+        .about-photo-frame img {
+            width:100%; height:520px; object-fit:cover; object-position:top;
+            filter:sepia(6%) contrast(1.05); transition:filter 0.4s;
+        }
+        .about-photo-frame:hover img { filter:sepia(0%) contrast(1.08); }
+        .about-photo-badge {
+            position:absolute; bottom:1.5rem; left:1.5rem;
+            background:rgba(11,25,41,0.92); backdrop-filter:blur(8px);
+            border:1px solid rgba(201,168,76,0.28); border-radius:4px;
+            padding:0.7rem 1.2rem; color:var(--white);
+        }
+        .about-photo-badge .badge-title { font-family:var(--serif); font-size:1rem; font-weight:600; color:var(--gold); display:block; }
+        .about-photo-badge .badge-sub { font-size:0.7rem; letter-spacing:0.06em; color:rgba(255,255,255,0.55); text-transform:uppercase; }
+
+        .about-text .section-heading { color:var(--navy); margin-bottom:1.75rem; }
+        .about-text p { color:var(--text-mid); font-size:1.05rem; line-height:1.82; }
+
+        .awards-list { list-style:none; margin-top:1.75rem; display:flex; flex-direction:column; gap:0.7rem; }
+        .awards-list li { display:flex; align-items:flex-start; gap:0.7rem; font-size:0.95rem; color:var(--text-body); }
+        .awards-list i { color:var(--gold); font-size:0.72rem; margin-top:0.38rem; flex-shrink:0; }
+
+        .about-cta { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
+        .btn-navy {
+            display:inline-flex; align-items:center; gap:0.5rem;
+            padding:0.85rem 2rem; background:var(--navy); color:var(--white);
+            font-family:var(--sans); font-size:0.77rem; font-weight:500;
+            letter-spacing:0.1em; text-transform:uppercase; border-radius:var(--radius);
+            border:1px solid transparent;
+            transition:background var(--transition), transform var(--transition), border-color var(--transition);
+        }
+        .btn-navy:hover { background:var(--navy-soft); border-color:var(--gold-dim); transform:translateY(-2px); }
+        .btn-gold-outline {
+            display:inline-flex; align-items:center; gap:0.5rem;
+            padding:0.85rem 2rem; background:transparent; color:var(--navy);
+            font-family:var(--sans); font-size:0.77rem; font-weight:500;
+            letter-spacing:0.1em; text-transform:uppercase; border-radius:var(--radius);
+            border:1.5px solid var(--gold-dim);
+            transition:background var(--transition), color var(--transition), transform var(--transition);
+        }
+        .btn-gold-outline:hover { background:var(--gold); color:var(--navy); transform:translateY(-2px); }
+
+        /* ── RESEARCH ── */
+        .research-section { background:var(--navy); }
+        .research-section .section-heading { color:var(--white); }
+        .dissertation-note {
+            display:inline-block; margin-bottom:2.75rem;
+            font-family:var(--serif); font-style:italic; font-size:0.95rem;
+            color:var(--gold-light); opacity:0.85;
         }
 
-        .btn-accent {
-            background-color: var(--accent-color);
+        .research-grid {
+            display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px;
+            margin-bottom:3rem; background:rgba(201,168,76,0.08);
+            border-radius:var(--radius); overflow:hidden;
+        }
+        .research-card {
+            background:var(--navy-mid); padding:2.5rem 2rem;
+            position:relative; overflow:hidden; transition:background var(--transition);
+        }
+        .research-card:hover { background:var(--navy-soft); }
+        .research-card::before {
+            content:''; position:absolute; top:0; left:0; width:3px; height:0;
+            background:var(--gold); transition:height 0.4s;
+        }
+        .research-card:hover::before { height:100%; }
+        .research-icon { font-size:1.4rem; color:var(--gold); margin-bottom:1.4rem; opacity:0.8; }
+        .research-card h3 { font-family:var(--serif); font-size:1.2rem; color:var(--white); margin-bottom:0.65rem; font-weight:600; }
+        .research-card p { font-size:0.88rem; color:rgba(255,255,255,0.52); line-height:1.72; margin:0; }
+
+        /* Publications strip */
+        .pub-strip {
+            display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2.75rem;
+        }
+        .pub-card {
+            background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.14);
+            border-radius:var(--radius); padding:1.5rem 1.75rem;
+            transition:border-color var(--transition), background var(--transition);
+        }
+        .pub-card:hover { border-color:rgba(201,168,76,0.3); background:rgba(201,168,76,0.1); }
+        .pub-venue {
+            font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase;
+            color:var(--gold); font-weight:600; margin-bottom:0.5rem; display:block;
+        }
+        .pub-title { font-family:var(--serif); font-size:1rem; color:var(--white); line-height:1.4; margin-bottom:0.4rem; }
+        .pub-meta { font-size:0.8rem; color:rgba(255,255,255,0.4); }
+        .pub-badge {
+            display:inline-block; margin-top:0.5rem;
+            padding:0.15rem 0.6rem; background:rgba(201,168,76,0.15);
+            border-radius:100px; font-size:0.65rem; color:var(--gold-light); letter-spacing:0.05em;
         }
 
-        .btn-accent:hover {
-            background-color: var(--accent-light);
+        .research-cta { display:flex; align-items:center; gap:1.5rem; }
+        .research-link {
+            font-size:0.77rem; letter-spacing:0.1em; text-transform:uppercase;
+            color:var(--gold); display:inline-flex; align-items:center; gap:0.4rem;
+            transition:gap var(--transition);
         }
+        .research-link:hover { gap:0.8rem; }
 
-        /* Gallery Section */
-        .gallery-section {
-            margin: var(--spacing-xl) 0;
+        /* ── GRADUATION ── */
+        .graduation-section { background:var(--cream); overflow:hidden; }
+        .graduation-section .section-heading { color:var(--navy); }
+        .graduation-lead { font-size:1rem; color:var(--text-mid); margin-bottom:2.75rem; max-width:490px; }
+
+        .grad-layout {
+            display:grid; grid-template-columns:1fr 1fr 1fr;
+            grid-template-rows:auto auto; gap:0.75rem; margin-bottom:0.75rem;
         }
-
-        .gallery-category {
-            margin-bottom: var(--spacing-xl);
+        .grad-item { position:relative; overflow:hidden; border-radius:var(--radius); cursor:pointer; }
+        .grad-item:first-child { grid-column:1/3; grid-row:1/3; }
+        .grad-item img { width:100%; height:100%; object-fit:cover; object-position:top center; display:block; transition:transform 0.6s cubic-bezier(0.25,0.45,0.45,0.95); }
+        .grad-item:first-child img { min-height:530px; }
+        .grad-item:not(:first-child) img { height:256px; }
+        .grad-item:hover img { transform:scale(1.1); }
+        .grad-caption {
+            position:absolute; bottom:0; left:0; right:0;
+            background:linear-gradient(to top, rgba(11,25,41,0.9) 0%, transparent 100%);
+            padding:2rem 1.5rem 1.25rem; opacity:0; transform:translateY(8px);
+            transition:opacity 0.3s, transform 0.3s;
         }
+        .grad-item:hover .grad-caption { opacity:1; transform:translateY(0); }
+        .grad-caption p { font-size:0.85rem; color:var(--white); margin:0; line-height:1.45; }
 
-        .gallery-title {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin-bottom: var(--spacing-md);
-            padding-bottom: var(--spacing-xs);
-            border-bottom: 2px solid var(--accent-color);
-            display: inline-block;
-            transition: var(--transition);
+        /* ── GALLERY ── */
+        .gallery-section { background:var(--cream-dark); }
+        .gallery-section .section-heading { color:var(--navy); }
+        .gallery-category { margin-bottom:3.75rem; }
+        .gallery-cat-title {
+            font-family:var(--sans); font-size:0.68rem; letter-spacing:0.18em;
+            text-transform:uppercase; color:var(--gold-dim); font-weight:600;
+            margin-bottom:1.2rem; padding-bottom:0.55rem;
+            border-bottom:1px solid rgba(11,25,41,0.12);
+            display:flex; align-items:center; gap:0.75rem;
         }
-
-        .gallery-title:hover {
-            color: var(--primary-light);
+        .gallery-cat-title::after { content:''; flex:1; height:1px; background:rgba(11,25,41,0.08); }
+        .gallery-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(275px,1fr)); gap:0.75rem; }
+        .gallery-item { position:relative; overflow:hidden; border-radius:var(--radius); aspect-ratio:4/3; cursor:pointer; background:var(--cream); content-visibility:auto; contain-intrinsic-size:275px 210px; }
+        .gallery-item.wide { aspect-ratio:16/9; }
+        .gallery-item img {
+            width:100%; height:100%; object-fit:cover; object-position:top center;
+            transition:transform 0.55s cubic-bezier(0.25,0.45,0.45,0.95), filter 0.4s;
+            filter:saturate(0.88);
         }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-md);
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition-slow);
-            aspect-ratio: 16/15; /* Original aspect ratio */
-            transform: translateY(20px);
-            opacity: 0;
-            animation: fadeInStagger 0.6s forwards;
-            animation-delay: calc(var(--animation-order) * 100ms);
-            will-change: transform, opacity;
-        }
-
-        .gallery-item.animated {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: var(--shadow-lg);
-            z-index: 10;
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-            will-change: transform;
-        }
-
-        /* Special handling for group photos to ensure faces aren't cut off */
-        .gallery-item.group-photo .gallery-img {
-            object-fit: contain;
-            background-color: #f0f0f0;
-        }
-
-        .gallery-item:hover .gallery-img {
-            transform: scale(1.1);
-        }
-
+        .gallery-item:hover img { transform:scale(1.14); filter:saturate(1.15); }
         .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-            color: var(--white);
-            padding: var(--spacing-md);
-            transform: translateY(100%);
-            transition: var(--transition-slow);
-            opacity: 0;
-            pointer-events: none;
+            position:absolute; inset:0; background:rgba(11,25,41,0.68);
+            display:flex; align-items:flex-end; padding:1.2rem; opacity:0; transition:opacity 0.3s;
         }
+        .gallery-item:hover .gallery-caption { opacity:1; }
+        .gallery-caption p { font-size:0.83rem; color:var(--white); margin:0; line-height:1.4; }
 
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(0);
-            opacity: 1;
+        /* ── CONTACT / FOOTER ── */
+        .contact-section { background:var(--navy-mid); position:relative; overflow:hidden; }
+        .contact-glow { position:absolute; inset:0; pointer-events:none; z-index:0; }
+        .contact-glow::before {
+            content:''; position:absolute;
+            width:640px; height:640px; top:-220px; left:-160px; border-radius:50%;
+            background:radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+            animation:pulse 8s ease-in-out infinite;
         }
-
-        .gallery-caption p {
-            margin-bottom: 0;
-            font-size: 0.95rem;
-            line-height: 1.4;
+        .contact-glow::after {
+            content:''; position:absolute;
+            width:560px; height:560px; bottom:-200px; right:-140px; border-radius:50%;
+            background:radial-gradient(circle, rgba(28,48,80,0.8) 0%, transparent 72%);
+            animation:pulse 11s ease-in-out infinite reverse;
         }
-
-        .gallery-nav {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-sm);
-            margin-top: var(--spacing-md);
+        .contact-section .section-inner { position:relative; z-index:1; }
+        .contact-grid { display:grid; grid-template-columns:1.25fr 1fr; gap:5rem; align-items:center; }
+        .contact-section .section-heading { color:var(--white); margin-bottom:1.4rem; }
+        .contact-intro { color:rgba(255,255,255,0.58); font-size:1.03rem; line-height:1.78; margin-bottom:1.85rem; }
+        .contact-items { display:flex; flex-direction:column; gap:0.85rem; }
+        .contact-item {
+            display:flex; align-items:center; gap:1rem; padding:0.95rem 1.2rem;
+            background:rgba(255,255,255,0.04); border:1px solid rgba(201,168,76,0.1);
+            border-radius:var(--radius); transition:border-color var(--transition), background var(--transition);
+            color:var(--white);
         }
-
-        .gallery-nav-btn {
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
+        .contact-item:hover { border-color:rgba(201,168,76,0.32); background:rgba(201,168,76,0.05); }
+        .contact-icon {
+            width:40px; height:40px; border-radius:4px;
+            background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center;
+            color:var(--gold); font-size:0.88rem; flex-shrink:0;
         }
+        .contact-item-text span { display:block; font-size:0.67rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.38); margin-bottom:0.15rem; }
+        .contact-item-text strong { font-weight:400; font-size:0.92rem; color:rgba(255,255,255,0.82); }
 
-        .gallery-nav-btn:hover {
-            background: var(--primary-light);
+        .contact-social-panel {
+            background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.14);
+            border-radius:var(--radius); padding:2.5rem;
         }
-
-        /* Contact Form */
-        .contact-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-md);
-        }
-
-        .form-group {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .form-group.full-width {
-            grid-column: span 2;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            font-size: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: var(--border-radius);
-            background-color: var(--white);
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-light);
-            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.2);
-        }
-
-        textarea.form-control {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 50%, var(--primary-color) 100%);
-            background-size: 200% 200%;
-            animation: headerGradient 10s ease infinite;
-            color: var(--white);
-            padding: var(--spacing-xl) 0;
-            margin-top: auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
-            transform: translateX(-100%);
-            animation: shine 6s infinite;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: var(--spacing-xl);
-        }
-
-        .footer-col h3 {
-            position: relative;
-            margin-bottom: var(--spacing-md);
-            padding-bottom: var(--spacing-xs);
-            font-size: 1.3rem;
-        }
-
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 30px;
-            height: 2px;
-            background-color: var(--accent-color);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-link {
-            margin-bottom: var(--spacing-xs);
-            transition: var(--transition);
-        }
-
-        .footer-link:hover {
-            transform: translateX(5px);
-        }
-
-        .footer-link a {
-            color: rgba(255, 255, 255, 0.8);
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-        }
-
-        .footer-link a:hover {
-            color: var(--white);
-        }
-
-        .footer-link i {
-            width: 20px;
-            text-align: center;
-        }
-
-        .social-links {
-            list-style: none;
-            display: flex;
-            gap: var(--spacing-sm);
-            margin-top: var(--spacing-md);
-        }
-
+        .contact-social-panel h3 { font-family:var(--serif); font-size:1.55rem; color:var(--white); margin-bottom:0.45rem; }
+        .contact-social-panel p { font-size:0.88rem; color:rgba(255,255,255,0.48); margin-bottom:1.85rem; }
+        .social-links { display:flex; flex-direction:column; gap:0.7rem; }
         .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            transition: var(--transition);
-            color: var(--white);
+            display:flex; align-items:center; gap:0.9rem; padding:0.82rem 1.2rem;
+            border-radius:4px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);
+            color:rgba(255,255,255,0.72); font-size:0.86rem; transition:all var(--transition);
         }
+        .social-link i { color:var(--gold); width:18px; text-align:center; }
+        .social-link:hover { background:rgba(201,168,76,0.1); border-color:rgba(201,168,76,0.28); color:var(--white); transform:translateX(4px); }
 
-        .social-link:hover {
-            background: var(--accent-color);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3);
+        /* ── FOOTER (merged into Get In Touch) ── */
+        .footer-bar {
+            margin-top:4rem; padding-top:2.25rem;
+            border-top:1px solid rgba(201,168,76,0.14);
+            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem;
         }
-
-        .copyright {
-            text-align: center;
-            padding-top: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
+        .footer-bar-brand { display:flex; align-items:center; gap:0.9rem; }
+        .footer-bar-brand img {
+            width:34px; height:34px; border-radius:50%; object-fit:cover;
+            border:1.5px solid var(--gold-dim); flex-shrink:0;
         }
+        .footer-bar-brand-text { font-size:0.8rem; color:rgba(255,255,255,0.45); line-height:1.5; }
+        .footer-bar-brand-text strong { display:block; font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--white); }
+        .footer-bar-brand-text strong em { color:var(--gold); font-style:italic; }
+        .footer-bar-links { display:flex; gap:0.35rem; flex-wrap:wrap; }
+        .footer-bar-links a {
+            font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+            color:rgba(255,255,255,0.5); padding:0.4rem 0.75rem; border-radius:4px;
+            transition:color var(--transition), background var(--transition);
+        }
+        .footer-bar-links a:hover { color:var(--gold); background:rgba(201,168,76,0.08); }
+        .footer-bar-copy { font-size:0.76rem; color:rgba(255,255,255,0.28); white-space:nowrap; }
 
-        /* Back to top button */
+        /* ── BACK TO TOP ── */
         .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 99;
-            box-shadow: var(--shadow-md);
-            border: none;
+            position:fixed; bottom:2rem; right:2rem;
+            width:44px; height:44px; background:var(--gold); color:var(--navy);
+            border:none; border-radius:4px; cursor:pointer; font-size:0.95rem;
+            display:flex; align-items:center; justify-content:center;
+            opacity:0; visibility:hidden; transform:translateY(12px);
+            transition:all 0.3s; z-index:999; box-shadow:0 4px 20px rgba(201,168,76,0.3);
         }
+        .back-to-top.active { opacity:1; visibility:visible; transform:translateY(0); }
+        .back-to-top:hover { background:var(--gold-light); transform:translateY(-3px); }
 
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
+        /* ── SIDE NAV ── */
+        .side-nav {
+            position:fixed; right:1.75rem; top:50%; transform:translateY(-50%);
+            z-index:900; display:flex; flex-direction:column; align-items:center; gap:0.85rem;
         }
-
-        .back-to-top:hover {
-            background-color: var(--primary-light);
-            transform: translateY(-3px) scale(1.1);
+        .side-nav-dot {
+            position:relative; width:9px; height:9px; border-radius:50%;
+            background:rgba(11,25,41,0.18); border:1px solid rgba(11,25,41,0.28);
+            transition:background var(--transition), border-color var(--transition), transform var(--transition);
         }
-
-        /* Breadcrumbs */
-        .breadcrumbs {
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--spacing-md);
-            font-size: 0.9rem;
-            color: var(--text-light);
+        .side-nav-dot:hover { transform:scale(1.3); border-color:var(--gold-dim); }
+        .side-nav-dot.active { background:var(--gold); border-color:var(--gold); transform:scale(1.35); box-shadow:0 0 0 3px rgba(201,168,76,0.2); }
+        .side-nav.on-dark .side-nav-dot { background:rgba(255,255,255,0.28); border-color:rgba(255,255,255,0.42); }
+        .side-nav.on-dark .side-nav-dot:hover { border-color:var(--gold-light); }
+        .side-nav.on-dark .side-nav-dot.active { background:var(--gold); border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,168,76,0.32); }
+        .side-nav-dot::after {
+            content:attr(data-label);
+            position:absolute; right:150%; top:50%; transform:translateY(-50%);
+            white-space:nowrap; font-family:var(--sans); font-size:0.68rem;
+            letter-spacing:0.06em; text-transform:uppercase; font-weight:500;
+            color:var(--navy); background:var(--white);
+            padding:0.3rem 0.7rem; border-radius:4px; box-shadow:0 4px 16px rgba(11,25,41,0.14);
+            opacity:0; visibility:hidden; transition:opacity 0.2s, transform 0.2s;
         }
+        .side-nav-dot:hover::after { opacity:1; visibility:visible; transform:translateY(-50%) translateX(-4px); }
+        @media(max-width:1150px){ .side-nav { display:none; } }
 
-        .breadcrumbs a {
-            color: var(--text-light);
-            transition: var(--transition);
+        /* ── REVEAL ── */
+        .reveal { opacity:0; transform:translateY(48px) scale(0.97); transition:opacity 0.85s cubic-bezier(0.16,1,0.3,1), transform 0.85s cubic-bezier(0.16,1,0.3,1); }
+        .reveal.revealed { opacity:1; transform:translateY(0) scale(1); }
+        .reveal-delay-1 { transition-delay:0.14s; }
+        .reveal-delay-2 { transition-delay:0.28s; }
+        .reveal-delay-3 { transition-delay:0.42s; }
+        .reveal-delay-4 { transition-delay:0.56s; }
+
+        /* ── ENTRY ANIMATIONS ── */
+        @keyframes fadeUp { from{opacity:0;transform:translateY(46px);} to{opacity:1;transform:translateY(0);} }
+        @keyframes fadeIn  { from{opacity:0;} to{opacity:1;} }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:1100px){
+            .hero-content { grid-template-columns:1fr 360px; gap:3rem; }
+            .hero-photo-inner img { height:510px; }
+            .about-grid { grid-template-columns:300px 1fr; gap:3rem; }
+            .stats-inner { grid-template-columns:repeat(3,1fr); }
+            .stat-item:nth-child(3) { border-right:none; }
         }
-
-        .breadcrumbs a:hover {
-            color: var(--primary-color);
+        @media(max-width:900px){
+            .hero-content { grid-template-columns:1fr; padding:7rem 2rem 5rem; }
+            .hero-photo-wrap { order:-1; max-width:400px; }
+            .hero-photo-inner img { height:420px; }
+            .hero-name { font-size:clamp(2.5rem,6vw,3.5rem); }
+            .hero-bio { max-width:100%; }
+            .stats-inner { grid-template-columns:repeat(2,1fr); }
+            .stat-item:nth-child(2) { border-right:none; }
+            .about-grid { grid-template-columns:1fr; }
+            .about-photo { position:static; max-width:360px; }
+            .research-grid { grid-template-columns:1fr; }
+            .pub-strip { grid-template-columns:1fr; }
+            .grad-layout { grid-template-columns:1fr 1fr; }
+            .grad-item:first-child { grid-column:1/3; grid-row:auto; }
+            .contact-grid { grid-template-columns:1fr; }
+            .footer-bar { flex-direction:column; align-items:flex-start; }
         }
-
-        .breadcrumbs .separator {
-            margin: 0 8px;
-        }
-
-        /* Accessibility */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-alt);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-light);
-        }
-
-        /* Media Queries */
-        @media (max-width: 992px) {
-            .profile-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-image-container {
-                order: -1;
-                max-width: 500px;
-                margin: 0 auto;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: var(--spacing-lg);
-            }
-        }
-
-        @media (max-width: 768px) {
-            :root {
-                --spacing-xl: 2rem;
-                --spacing-lg: 1.5rem;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .nav-container {
-                position: relative;
-            }
-
-            .mobile-toggle {
-                display: block;
-            }
-
-            .nav-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                gap: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-                box-shadow: var(--shadow-md);
-                z-index: 1000;
-            }
-
-            .nav-menu.active {
-                max-height: 300px;
-            }
-
-            .nav-item a {
-                padding: 12px 20px;
-                border-radius: 0;
-            }
-
-            .nav-item a::after {
-                display: none;
-            }
-
-            .contact-form {
-                grid-template-columns: 1fr;
-            }
-
-            .form-group.full-width {
-                grid-column: span 1;
-            }
-
-            .card:hover {
-                transform: none;
-            }
-
-            .gallery-item {
-                aspect-ratio: 4/3;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .header h1 {
-                font-size: 1.8rem;
-            }
-
-            .header p {
-                font-size: 1rem;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .main-content {
-                padding: var(--spacing-lg);
-            }
-        }
-
-        /* Print Styles */
-        @media print {
-            .nav, .footer, .back-to-top {
-                display: none;
-            }
-
-            body {
-                background-color: white;
-                color: black;
-            }
-
-            .main-content {
-                box-shadow: none;
-                padding: 0;
-            }
-
-            a {
-                color: black;
-                text-decoration: underline;
-            }
-
-            .card {
-                break-inside: avoid;
-                box-shadow: none;
-                border-left: 1px solid #ddd;
-            }
-        }
-
-        /* Animation Classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Schema Markup (Hidden) */
-        .schema-markup {
-            display: none;
+        @media(max-width:650px){
+            .nav { padding:0 1.25rem; }
+            .nav-links { display:none; flex-direction:column; gap:0; background:rgba(11,25,41,0.98); position:absolute; top:72px; left:0; right:0; padding:1rem 0; border-bottom:1px solid rgba(201,168,76,0.12); }
+            .nav-links.open { display:flex; }
+            .nav-links a { padding:0.7rem 1.5rem; border-radius:0; }
+            .mobile-toggle { display:flex; }
+            .hero-content { padding:6rem 1.5rem 4rem; }
+            .section-inner { padding:3.5rem 1.5rem; }
+            .stats-inner { grid-template-columns:repeat(2,1fr); }
+            .grad-layout { grid-template-columns:1fr; }
+            .grad-item:first-child { grid-column:auto; grid-row:auto; }
+            .grad-item:first-child img { min-height:300px; }
+            .footer-bar-links { gap:0.15rem; }
+            .stats-strip { padding:2rem 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Schema Markup -->
-    <script type="application/ld+json" class="schema-markup">
-    {
+
+<!-- ── NAV ── -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-brand">
+        <img src="images/HS_Dr. Naya.jpg" alt="Dr. Patricia Tiimah Naya" class="nav-avatar" decoding="async">
+        <span>Dr. Patricia T. <em>Naya</em></span>
+    </a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navMenu" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="Full-profile.html">About</a></li>
+        <li><a href="Articles.html">Research</a></li>
+        <li><a href="Full-profile.html#teaching">Teaching</a></li>
+        <li><a href="Patricia T. Naya CV.pdf" target="_blank">CV</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ── SIDE NAV ── -->
+<nav class="side-nav" aria-label="Page sections">
+    <a href="#about" class="side-nav-dot" data-label="About"></a>
+    <a href="#research" class="side-nav-dot" data-label="Research"></a>
+    <a href="#graduation" class="side-nav-dot" data-label="Graduation"></a>
+    <a href="#gallery" class="side-nav-dot" data-label="Gallery"></a>
+    <a href="#contact" class="side-nav-dot" data-label="Contact"></a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" aria-label="Introduction">
+    <div class="hero-bg">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <svg class="hero-signals" viewBox="0 0 1320 800" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+                <filter id="glowBlur" x="-300%" y="-300%" width="700%" height="700%">
+                    <feGaussianBlur stdDeviation="5"/>
+                </filter>
+                <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#f6e4ad" stop-opacity="1"/>
+                    <stop offset="45%" stop-color="#c9a84c" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+
+            <!-- base grid lines, varied dash pattern, speed, and direction -->
+            <line class="signal-line signal-h" x1="0" y1="150" x2="1320" y2="150" style="stroke-dasharray:5 300; animation-duration:7.4s;" />
+            <line class="signal-line signal-h" x1="1320" y1="330" x2="0" y2="330" style="stroke-dasharray:9 260; animation-duration:10.2s; animation-delay:-3.6s;" />
+            <line class="signal-line signal-h" x1="0" y1="520" x2="1320" y2="520" style="stroke-dasharray:4 340; animation-duration:6.3s; animation-delay:-1.4s;" />
+            <line class="signal-line signal-h" x1="1320" y1="690" x2="0" y2="690" style="stroke-dasharray:12 290; animation-duration:9.1s; animation-delay:-5.8s;" />
+            <line class="signal-line signal-v" x1="200" y1="0" x2="200" y2="800" style="stroke-dasharray:6 250; animation-duration:8.6s; animation-delay:-0.9s;" />
+            <line class="signal-line signal-v" x1="620" y1="800" x2="620" y2="0" style="stroke-dasharray:10 220; animation-duration:6.9s; animation-delay:-4.4s;" />
+            <line class="signal-line signal-v" x1="980" y1="0" x2="980" y2="800" style="stroke-dasharray:5 300; animation-duration:9.8s; animation-delay:-2.7s;" />
+            <line class="signal-line signal-v" x1="1160" y1="800" x2="1160" y2="0" style="stroke-dasharray:8 270; animation-duration:7.2s; animation-delay:-6.3s;" />
+
+            <!-- graceful glow comets riding a handful of paths, each visible for only a fraction of its own travel time -->
+            <circle class="signal-glow" r="5" fill="url(#glowGrad)" filter="url(#glowBlur)">
+                <animateMotion dur="7.4s" repeatCount="indefinite" begin="-1.1s" path="M0,150 L1320,150"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.04;0.16;0.3;0.42;1" dur="7.4s" repeatCount="indefinite" begin="-1.1s"/>
+            </circle>
+            <circle class="signal-glow" r="4" fill="url(#glowGrad)" filter="url(#glowBlur)">
+                <animateMotion dur="10.2s" repeatCount="indefinite" begin="-6.5s" path="M1320,330 L0,330"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1;0.24;0.4;0.55;1" dur="10.2s" repeatCount="indefinite" begin="-6.5s"/>
+            </circle>
+            <circle class="signal-glow" r="6" fill="url(#glowGrad)" filter="url(#glowBlur)">
+                <animateMotion dur="8.6s" repeatCount="indefinite" begin="-3.3s" path="M200,0 L200,800"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.07;0.2;0.34;0.48;1" dur="8.6s" repeatCount="indefinite" begin="-3.3s"/>
+            </circle>
+            <circle class="signal-glow" r="4" fill="url(#glowGrad)" filter="url(#glowBlur)">
+                <animateMotion dur="9.8s" repeatCount="indefinite" begin="-7.9s" path="M980,0 L980,800"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.13;0.28;0.44;0.6;1" dur="9.8s" repeatCount="indefinite" begin="-7.9s"/>
+            </circle>
+            <circle class="signal-glow" r="5" fill="url(#glowGrad)" filter="url(#glowBlur)">
+                <animateMotion dur="9.1s" repeatCount="indefinite" begin="-2.2s" path="M1320,690 L0,690"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.09;0.22;0.36;0.5;1" dur="9.1s" repeatCount="indefinite" begin="-2.2s"/>
+            </circle>
+            <circle class="signal-glow" r="3.5" fill="url(#glowGrad)" filter="url(#glowBlur)">
+                <animateMotion dur="6.9s" repeatCount="indefinite" begin="-4.9s" path="M620,800 L620,0"/>
+                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.05;0.18;0.33;0.47;1" dur="6.9s" repeatCount="indefinite" begin="-4.9s"/>
+            </circle>
+        </svg>
+    </div>
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="hero-eyebrow" aria-hidden="true">Scholar &middot; Educator &middot; Changemaker</div>
+            <h1 class="hero-name">
+                Patricia T.
+                <strong>Naya<em>, PhD</em></strong> 
+            </h1>
+            <p class="hero-title">Organizational change; power &amp; inequality; organizational identity, sensemaking; paradox of embodiment; qualitative &amp; process methods. </p>
+            <div class="hero-divider" aria-hidden="true"></div>
+            <p class="hero-bio">
+                I study what happens when organizations promise change. I examine how those promises are interpreted, experienced, enacted, contested, and managed over time, and what these processes reveal about power and the reproduction of inequality.
+            </p>
+            <div class="hero-ctas">
+                <a href="Articles.html" class="btn-primary"><i class="fas fa-book-open"></i> View Research</a>
+                <a href="Patricia T. Naya CV.pdf" target="_blank" class="btn-outline"><i class="fas fa-file-alt"></i> Download CV</a>
+            </div>
+            <div class="hero-credentials" aria-label="Key credentials">
+                <span class="credential-pill"><i class="fas fa-award"></i> AAUW International Fellow</span>
+                <span class="credential-pill"><i class="fas fa-globe"></i> Commonwealth Shared Scholar</span>
+                <span class="credential-pill"><i class="fas fa-trophy"></i> AOM Early Career Award 2024</span>
+                <span class="credential-pill"><i class="fas fa-university"></i> PhD — UMass Boston, May 2026</span>
+                <span class="credential-pill"><i class="fas fa-graduation-cap"></i> UCL MSc Distinction</span>
+            </div>
+        </div>
+        <div class="hero-photo-wrap">
+            <div class="hero-photo-frame">
+                <div class="corner corner-bl" aria-hidden="true"></div>
+                <div class="corner corner-tr" aria-hidden="true"></div>
+                <div class="hero-photo-inner">
+                    <img src="images/Patricia T. Naya, PhD.jpg" alt="Patricia Tiimah Naya, PhD" loading="eager" decoding="async" fetchpriority="high">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><i class="fas fa-chevron-down"></i><span>Scroll</span></div>
+</section>
+
+<!-- ── STATS STRIP ── -->
+<div class="stats-strip" aria-label="Scholarly profile at a glance">
+    <div class="stats-inner">
+        <div class="stat-item reveal">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Peer-Reviewed Publications</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+            <span class="stat-number">$200k+</span>
+            <span class="stat-label">Research Funding Secured</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+            <span class="stat-number">7+</span>
+            <span class="stat-label">Working Papers in Progress</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Universities Taught</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+            <span class="stat-number">2</span>
+            <span class="stat-label">International Fellowships</span>
+        </div>
+    </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section class="section about-section" id="about">
+    <div class="section-inner">
+        <div class="about-grid">
+            <div class="about-photo reveal">
+                <div class="about-photo-frame">
+                    <img src="images/fullprofile.jpg" alt="Dr. Patricia Tiimah Naya" loading="lazy" decoding="async">
+                    <div class="about-photo-badge">
+                        <span class="badge-title">Dr. Patricia T. Naya</span>
+                        <span class="badge-sub">UMass Boston · 2026</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <div class="section-label">About</div>
+                <h2 class="section-heading">Scholarship at the intersection of<br><em>power, justice, and organizational life</em></h2>
+                <p>Dr. Patricia Tiimah Naya is an organizational scholar studying what happens when organizations promise justice — how those promises are interpreted, experienced, and managed over time, and what these processes reveal about power and the reproduction of inequality.</p>
+                <p>An AAUW International Fellow and Commonwealth Shared Scholar, she holds a PhD in Business Administration from the University of Massachusetts Boston and an MSc with Distinction from University College London (UCL). Her scholarship has appeared in the <em>Academy of Management Learning &amp; Education</em> (A*), <em>Organization</em> (A), and Edward Elgar Publishing, and has been recognized with the AOM Critical Management Studies Division's Most Promising Early Career Paper Award (2024). Beyond the academy, she leads Dream Alliance, a social impact organization.</p>
+                <ul class="awards-list" aria-label="Selected honours">
+                    <li><i class="fas fa-diamond"></i> CMS Division's Most Promising Early Career Paper Award — Academy of Management, 2024</li>
+                    <li><i class="fas fa-diamond"></i> AAUW International Fellowship </li>
+                    <li><i class="fas fa-diamond"></i> Commonwealth Shared Scholarship — University College London</li>
+                    <li><i class="fas fa-diamond"></i> UMass Boston Dean Fellowship Award</li>
+                    <li><i class="fas fa-diamond"></i> MSc with Distinction &amp; Best Dissertation Award — UCL Institute for Global Prosperity, 2021</li>
+                    <li><i class="fas fa-diamond"></i> PhD Award for Academic Distinction in Organizations &amp; Social Change — UMass Boston, 2023</li>
+                    <li><i class="fas fa-diamond"></i> Beacon Emerging Leader Award — UMass Boston, 2023</li>
+                    <li><i class="fas fa-diamond"></i> Best Graduating Student — University for Development Studies, Ghana, 2019</li>
+                </ul>
+                <div class="about-cta">
+                    <a href="Full-profile.html" class="btn-navy">Full Profile <i class="fas fa-arrow-right"></i></a>
+                    <a href="Articles.html" class="btn-gold-outline">Research &amp; Writing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── RESEARCH ── -->
+<section class="section research-section" id="research" data-nav-theme="dark">
+    <div class="section-inner">
+        <div class="section-label" style="color:var(--gold)">Research Focus</div>
+        <h2 class="section-heading reveal" style="margin-bottom:0.75rem;">Research on organizational transformation<br><em style="color:var(--gold-light)">power, and inequality</em></h2>
+        <em class="dissertation-note reveal reveal-delay-1">Dissertation: "The Anti-Racist Organization? Power, Embodiment, and the Politics of Becoming"</em>
+
+        <div class="research-grid" style="margin-top:2.75rem;">
+            <div class="research-card reveal">
+                <div class="research-icon"><i class="fas fa-sitemap"></i></div>
+                <h3>Organizational Transformation</h3>
+            </div>
+            <div class="research-card reveal reveal-delay-1">
+                <div class="research-icon"><i class="fas fa-balance-scale"></i></div>
+                <h3>Power &amp; Inequality</h3>
+            </div>
+            <div class="research-card reveal reveal-delay-2">
+                <div class="research-icon"><i class="fas fa-fingerprint"></i></div>
+                <h3>Identity</h3>
+            </div>
+            <div class="research-card reveal reveal-delay-3">
+                <div class="research-icon"><i class="fas fa-random"></i></div>
+                <h3>Paradox</h3>
+            </div>
+            <div class="research-card reveal reveal-delay-4">
+                <div class="research-icon"><i class="fas fa-child"></i></div>
+                <h3>Embodiment</h3>
+            </div>
+            <div class="research-card reveal reveal-delay-5">
+                <div class="research-icon"><i class="fas fa-store-alt"></i></div>
+                <h3>Informal Economy</h3>
+            </div>
+        </div>
+
+        <!-- Selected Publications -->
+        <div class="pub-strip reveal">
+            <div class="pub-card">
+                <span class="pub-venue">Academy of Management Learning &amp; Education</span>
+                <p class="pub-title">"Those of Us Who Stay": Sensemaking, Embodiment, and Navigation of the Inclusion–Exclusion Paradox</p>
+                <p class="pub-meta">Naya, Contu &amp; Poole · Vol. 24, No. 3, 2025</p>
+                <span class="pub-badge">ABDC Ranking: A*</span>
+            </div>
+            <div class="pub-card">
+                <span class="pub-venue">Academy of Management Learning &amp; Education</span>
+                <p class="pub-title">Piercing the Veil of Colorblindness with an Anti-Racist Identity: Sensemaking, Power, and Racialized Inequality</p>
+                <p class="pub-meta">Naya, Contu &amp; Poole · 23(3), 2024</p>
+                <span class="pub-badge">ABDC Ranking: A*</span>
+            </div>
+        </div>
+
+        <div class="research-cta reveal reveal-delay-3">
+            <a href="Articles.html" class="btn-primary"><i class="fas fa-book-open"></i> View All Research</a>
+            <a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" target="_blank" class="research-link">Google Scholar <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ── GRADUATION ── -->
+<section class="section graduation-section" id="graduation">
+    <div class="section-inner">
+        <div class="section-label">Milestone</div>
+        <h2 class="section-heading reveal" style="color:var(--navy);">PhD Graduation<br><em style="font-style:italic;color:var(--gold-dim)">University of Massachusetts Boston, 2026</em></h2>
+        <p class="graduation-lead reveal reveal-delay-1">The conferral of the Doctor of Philosophy in Business Administration (Organization &amp; Social Change).</p>
+        <div class="grad-layout">
+            <div class="grad-item reveal">
+                <img src="images/Grad_15.jpg" alt="Dr. Patricia Tiimah Naya with Alessia Contu and Jared Poole at UMass Boston commencement" loading="lazy" decoding="async">
+                <div class="grad-caption"><p>With dissertation committee members Prof. Alessia Contu and Prof. Jared Poole — UMass Boston commencement ceremony</p></div>
+            </div>
+            <div class="grad-item reveal reveal-delay-1">
+                <img src="images/Grad_4.jpg" alt="Hooding ceremony" loading="lazy" decoding="async">
+                <div class="grad-caption"><p></p></div>
+            </div>
+            <div class="grad-item reveal reveal-delay-2">
+                <img src="images/Grad_7.jpg" alt="Dr. Patricia Naya" loading="lazy" decoding="async">
+                <div class="grad-caption"><p></p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section class="section gallery-section" id="gallery">
+    <div class="section-inner">
+        <div class="section-label">Gallery</div>
+        <h2 class="section-heading reveal" style="color:var(--navy);">Moments &amp; Milestones</h2>
+
+        <div class="gallery-category reveal">
+            <div class="gallery-cat-title">Graduation Album</div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/Grad_1.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_2.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_3.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_5.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_6.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_8.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_9.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_10.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_11.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_12.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_13.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+                <div class="gallery-item"><img src="images/Grad_14.jpg" alt="Graduation" loading="lazy" decoding="async"><div class="gallery-caption"></div></div>
+            </div>
+        </div>
+        
+        <div class="gallery-category reveal reveal-delay-1">
+            <div class="gallery-cat-title">Black Diaspora Career &amp; Care Summit</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/submit1.jpg" alt="Black Diaspora Career Summit" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Inaugural Black Diaspora Career &amp; Care Summit — UMass Boston, May 2025</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/submit2.jpg" alt="Conceptualizing the summit" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Conceptualizing the summit — 80+ attendees served</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/submit3.jpg" alt="Black Diaspora Career Summit" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p></p></div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="images/submit5.jpeg" alt="Speakers, Mentoring and Organizing Committee" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Speakers, mentoring leads, and organizing committee</p></div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="images/submit4.jpeg" alt="Excellence Awards" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Excellence Awards — honouring outstanding contributors</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-category reveal">
+            <div class="gallery-cat-title">Recognition at UMass Boston</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/umass2.png" alt="PhD Award for Academic Distinction" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>With Dean of the College of Management — PhD Award for Academic Distinction</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/umass3.png" alt="PhD Award for Academic Distinction 2023" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>PhD Award for Academic Distinction in Organizations &amp; Social Change (2023)</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/umass1.jpg" alt="With Alessia Contu and Jared M. Poole" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>With dissertation committee members Alessia Contu and Jared M. Poole</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-category reveal">
+            <div class="gallery-cat-title">Conferences &amp; Presentations</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/activity1.jpg" alt="Conference Presentation" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Conference presentation</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/activity2.jpg" alt="Conference Presentation" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Conference presentation</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/activity3.jpg" alt="Academy of Management 2024, Chicago" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Academy of Management Annual Meeting — Chicago, 2024</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-category reveal">
+            <div class="gallery-cat-title">University College London</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/ucl2.jpg" alt="MSc with Distinction and Best Dissertation Award" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>MSc with Distinction &amp; Best Dissertation Award — UCL Institute for Global Prosperity, 2021</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ucl1.png" alt="University College London" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>University College London</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-category reveal">
+            <div class="gallery-cat-title">Personal</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/family.png" alt="With family" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>With family</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/personal1.png" alt="Personal" loading="lazy" decoding="async">
+                    <div class="gallery-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/family2.jpeg" alt="With siblings" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>With siblings</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/family3.jpeg" alt="Family" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Family</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/family4.jpeg" alt="Family" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Family</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/family5.jpg" alt="Family" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Family</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/family6.jpg" alt="Family" loading="lazy" decoding="async">
+                    <div class="gallery-caption"><p>Family</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTACT / FOOTER ── -->
+<footer class="section contact-section" id="contact" role="contentinfo" data-nav-theme="dark">
+    <div class="contact-glow" aria-hidden="true"></div>
+    <div class="section-inner">
+        <div class="contact-grid">
+            <div>
+                <div class="section-label" style="color:var(--gold)">Get In Touch</div>
+                <h2 class="section-heading reveal" style="color:var(--white);margin-bottom:1.4rem;">Open to collaboration<br><em style="color:var(--gold-light)">and conversation</em></h2>
+                <p class="contact-intro reveal reveal-delay-1">For research collaboration, speaking engagements, or scholarly correspondence, please reach out through any of the following.</p>
+                <div class="contact-items reveal reveal-delay-2">
+                    <a href="mailto:Patricia.naya001@umb.edu" class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-item-text">
+                            <span>Email</span>
+                            <strong>Patricia.naya001@umb.edu</strong>
+                        </div>
+                    </a>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-item-text">
+                            <span>Institution</span>
+                            <strong>University of Massachusetts Boston</strong>
+                        </div>
+                    </div>
+                    <a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-google"></i></div>
+                        <div class="contact-item-text">
+                            <span>Academic Profile</span>
+                            <strong>Google Scholar</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-social-panel reveal reveal-delay-1">
+                <h3>Connect</h3>
+                <p>Follow my scholarly work and professional updates.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/pt-naya/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn — Patricia Tiimah Naya
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" target="_blank" class="social-link">
+                        <i class="fab fa-google"></i> Google Scholar Profile
+                    </a>
+                    <a href="mailto:Patricia.naya001@umb.edu" class="social-link">
+                        <i class="fas fa-envelope"></i> Patricia.naya001@umb.edu
+                    </a>
+                    <a href="Patricia T. Naya CV.pdf" target="_blank" class="social-link">
+                        <i class="fas fa-file-alt"></i> Download Curriculum Vitae
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bar reveal">
+            <div class="footer-bar-brand">
+                <img src="images/HS_Dr. Naya.jpg" alt="Dr. Patricia Tiimah Naya" loading="lazy" decoding="async">
+                <div class="footer-bar-brand-text">
+                    <strong>Dr. Patricia Tiimah <em>Naya</em></strong>
+                    &copy; <span id="current-year"></span> · University of Massachusetts Boston
+                </div>
+            </div>
+            <div class="footer-bar-links">
+                <a href="index.html">Home</a>
+                <a href="Full-profile.html">About</a>
+                <a href="Articles.html">Research</a>
+                <a href="Patricia T. Naya CV.pdf" target="_blank">CV</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+            <span class="footer-bar-copy">All rights reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script type="application/ld+json">
+{
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Patricia Tiimah Naya",
-    "jobTitle": "PhD Candidate",
-    "affiliation": {
-        "@type": "EducationalOrganization",
-        "name": "University of Massachusetts Boston"
-    },
+    "honorificPrefix": "Dr.",
+    "honorificSuffix": "PhD",
+    "jobTitle": "Organizational Scholar, PhD (Business Administration — Organization & Social Change)",
+    "affiliation": { "@type": "EducationalOrganization", "name": "University of Massachusetts Boston" },
     "alumniOf": [
-        {
-        "@type": "EducationalOrganization",
-        "name": "University College London"
-        },
-        {
-        "@type": "EducationalOrganization",
-        "name": "University for Development Studies, Ghana"
-        }
+        { "@type": "EducationalOrganization", "name": "University of Massachusetts Boston" },
+        { "@type": "EducationalOrganization", "name": "University College London" },
+        { "@type": "EducationalOrganization", "name": "University for Development Studies, Ghana" }
     ],
     "award": [
         "AAUW International Fellow",
         "Commonwealth Shared Scholar",
-        "CMS Division's Most Promising Early Career Paper Award (AOM, 2024)"
+        "CMS Division Most Promising Early Career Paper Award (AOM, 2024)",
+        "PhD Award for Academic Distinction in Organizations and Social Change (UMass Boston, 2023)",
+        "Beacon Emerging Leader Award (UMass Boston, 2023)",
+        "Best Dissertation Award, UCL Institute for Global Prosperity, 2021"
     ],
     "url": "https://nayapatricia.com",
     "sameAs": [
-        "https://www.linkedin.com/in/patricia-tiimah-naya-282261198/",
+        "https://www.linkedin.com/in/pt-naya/",
         "https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao"
     ]
-    }
-    </script>
+}
+</script>
 
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="sr-only">Skip to main content</a>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">Patricia Tiimah Naya</h1>
-            <p class="animate__animated animate__fadeIn animate__delay-1s">PhD Candidate (ABD) | AAUW International Fellow | Commonwealth Shared Scholar | MSc | BSc<br>
-            University of Massachusetts Boston</p>
-        </div>
-    </header>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 
-   <!-- Navigation -->
-    <nav class="nav" id="main-nav">
-        <div class="container nav-container">
-            <span class="brand"><i class="fas fa-graduation-cap"></i> Patricia T. Naya</span> 
-            <button class="mobile-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="Full-profile.html"><i class="fas fa-user"></i> About Me</a></li>
-                <li><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
-                <li><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
-                <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
-                <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    // Sticky nav
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 80);
+    }, { passive: true });
 
-    <!-- Breadcrumbs -->
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="index.html">Home</a>
-            <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>Welcome</span>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="container">
-        <main class="main-content" id="main-content">
-            <div class="profile-grid">
-                <div class="profile-text">
-                    <div class="card fade-in">
-                        <h2 class="section-heading">About Me</h2>
-                        <p>Patricia Tiimah Naya is a PhD candidate at the University of Massachusetts Boston studying organizational transformation and anti-racist change processes. An AAUW International Fellow, her research examines how institutions navigate complex transformational initiatives while grappling with power dynamics, resistance, and institutional sensemaking.</p>
-                        <p>Her work combines academic scholarship with practical experience, informed by her leadership of the Realizing Dreams Foundation in Ghana and past roles in public service. Naya's research has earned recognition including the CMS Division's Most Promising Early Career Paper Award (AOM, 2024).</p>
-                        <a href="Full-profile.html" class="btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="profile-image-container fade-in">
-                    <img src="images/Profile.JPG" alt="Patricia Tiimah Naya" class="profile-image">
-                </div>
-            </div>
-
-            <!-- Gallery Section -->
-            <div class="gallery-section fade-in" id="gallery">
-                <h2 class="section-heading">Gallery</h2>
-                                <!-- Black Diaspora Career Summit -->
-                <div class="gallery-category">
-                    <h3 class="gallery-title">Black Diaspora Career Summit</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item" style="--animation-order: 1">
-                            <img src="images/submit1.jpg" alt="Black Diaspora Career Summit" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>Inaugural Black Diaspora Career Summit at UMass Boston</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item" style="--animation-order: 2">
-                            <img src="images/submit2.jpg" alt="Black Diaspora Career Summit" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>Conceptualizing the submit</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item group-photo" style="--animation-order: 3">
-                            <img src="images/submit5.jpeg" alt="Black Diaspora Career Summit" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>Speakers, Mentoring and Organizing Committee</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item group-photo" style="--animation-order: 4">
-                            <img src="images/submit4.jpeg" alt="Black Diaspora Career Summit" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>Excellence Awards</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Recognition at UMass Boston -->
-                <div class="gallery-category">
-                    <h3 class="gallery-title">Recognition at UMass Boston</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item" style="--animation-order: 1">
-                            <img src="images/umass2.png" alt="Recognition at UMass Boston" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>With Dean of College of Management; The Ph.D. Award for Academic Distinction in Organizations and Social Change </p>
-                            </div>
-                        </div>
-                        <div class="gallery-item" style="--animation-order: 2">
-                            <img src="images/umass3.png" alt="Recognition at UMass Boston" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>The Ph.D. Award for Academic Distinction in Organizations and Social Change (2023)</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item" style="--animation-order: 3">
-                            <img src="images/umass1.jpg" alt="Supervisors" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>With my supervisors: Alessia Contu and Jared Mitchell Poole</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Related to PhD at UMass Boston -->
-                <div class="gallery-category">
-                    <h3 class="gallery-title">Activities</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item" style="--animation-order: 1">
-                            <img src="images/activity1.jpg" alt="Conference Presentation" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>Conference presentation </p>
-                            </div>
-                        </div>
-                        <div class="gallery-item" style="--animation-order: 2">
-                            <img src="images/activity2.jpg" alt="Conference presentation" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>Conference presentation</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item" style="--animation-order: 3">
-                            <img src="images/activity3.jpg" alt="AOMS 2024" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p> AOMS 2024</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Academic Excellence at UCL -->
-                <div class="gallery-category">
-                    <h3 class="gallery-title">Academic Excellence at University College London (UCL)</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item" style="--animation-order: 1">
-                            <img src="images/ucl2.jpg" alt="MSc with Distinction and Best Dissertation Award (2020)" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>MSc with Distinction and Best Dissertation Award (2020)</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item" style="--animation-order: 2">
-                            <img src="images/ucl1.png" alt="UCL" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>University College London </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Personal Life -->
-                <div class="gallery-category">
-                    <h3 class="gallery-title">Personal Life</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item" style="--animation-order: 1">
-                            <img src="images/family.png" alt="With Family" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>With my family</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item" style="--animation-order: 2">
-                            <img src="images/personal1.png" alt="Personal" class="gallery-img">
-                            <div class="gallery-caption">
-                            </div>
-                        </div>
-                        <div class="gallery-item" style="--animation-order: 3">
-                            <img src="images/family2.jpeg" alt="Family" class="gallery-img">
-                            <div class="gallery-caption">
-                                <p>With siblings</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Section -->
-            <div class="card fade-in" id="contact">
-                <h2 class="section-heading">Contact</h2>
-                <p>For collaboration opportunities or to discuss my research, please contact me at <a href="mailto:Patricia.naya001@umb.edu">Patricia.naya001@umb.edu</a>.</p>
-            </div>
-        </main>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>About Me</h3>
-                    <p>Patricia Tiimah Naya is a PhD candidate at the University of Massachusetts Boston studying organizational transformation and anti-racist change processes.</p>
-                    <ul class="social-links">
-                        <li><a href="https://www.linkedin.com/in/patricia-tiimah-naya-282261198/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="mailto:Patricia.Naya001@umb.edu" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-                        <li><a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" class="social-link" aria-label="Google Scholar"><i class="fab fa-google"></i></a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li class="footer-link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li class="footer-link"><a href="Full-profile.html"><i class="fas fa-user"></i> About Me</a></li>
-                        <li class="footer-link"><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
-                        <li class="footer-link"><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
-                        <li class="footer-link"><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li class="footer-link"><a href="mailto:Patricia.naya001@umb.edu"><i class="fas fa-envelope"></i> Patricia.naya001@umb.edu</a></li>
-                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> University of Massachusetts Boston</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                © <span id="current-year"></span> Patricia Tiimah Naya. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to top button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize AOS
-            AOS.init({
-                duration: 800,
-                easing: 'ease',
-                once: true
-            });
-
-            // Mobile navigation
-            const mobileToggle = document.querySelector('.mobile-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-
-            mobileToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                mobileToggle.innerHTML = navMenu.classList.contains('active') ? 
-                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            });
-
-            // Sticky navigation
-            const nav = document.getElementById('main-nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
-
-            // Back to top button
-            const backToTop = document.getElementById('backToTop');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    backToTop.classList.add('active');
-                } else {
-                    backToTop.classList.remove('active');
-                }
-            });
-
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-
-            // Fade in elements on scroll with staggered timing
-            const fadeElems = document.querySelectorAll('.fade-in');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.classList.add('appear');
-                        }, index * 150);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            fadeElems.forEach(el => {
-                observer.observe(el);
-            });
-
-            // Gallery item animations with staggered timing
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            galleryItems.forEach((item, index) => {
-                // Set custom property for animation delay
-                item.style.setProperty('--animation-order', index);
-                
-                // Intersection Observer for each item
-                const io = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('animated');
-                            io.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1 });
-                
-                io.observe(item);
-            });
-
-            // Current year for copyright
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            // Highlight active nav link based on current page
-            const currentLocation = location.pathname;
-            const navLinks = document.querySelectorAll('.nav-item a');
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentLocation) {
-                    link.classList.add('active');
-                } else if (currentLocation === '/' && link.getAttribute('href') === '/') {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (navMenu.classList.contains('active')) {
-                            navMenu.classList.remove('active');
-                            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                        }
-                    }
-                });
-            });
+    // Mobile toggle
+    const toggle = document.getElementById('mobileToggle');
+    const menu   = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+        toggle.innerHTML = open ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerHTML = '<i class="fas fa-bars"></i>';
         });
-    </script>
+    });
+
+    // Back to top
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        btt.classList.toggle('active', window.scrollY > 500);
+    }, { passive: true });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Side nav active state + theme (light/dark background) tracking
+    const sideNav = document.querySelector('.side-nav');
+    const sideDots = document.querySelectorAll('.side-nav-dot');
+    if (sideNav && sideDots.length) {
+        const sections = Array.from(sideDots).map(dot => document.querySelector(dot.getAttribute('href'))).filter(Boolean);
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const dot = document.querySelector(`.side-nav-dot[href="#${entry.target.id}"]`);
+                if (!dot) return;
+                if (entry.isIntersecting) {
+                    sideDots.forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                    sideNav.classList.toggle('on-dark', entry.target.dataset.navTheme === 'dark');
+                }
+            });
+        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+        sections.forEach(sec => navObserver.observe(sec));
+    }
+
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const id = this.getAttribute('href');
+            if (id === '#') return;
+            const target = document.querySelector(id);
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+    });
+});
+</script>
 </body>
 </html>
