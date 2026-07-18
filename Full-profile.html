@@ -1,1146 +1,1385 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
- <title>Full Profile - Patricia Tiimah Naya | PhD Candidate</title>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="description" content="Complete professional profile of Patricia Tiimah Naya, PhD Candidate at University of Massachusetts Boston studying organizational transformation and anti-racist change processes.">
- <meta name="author" content="Patricia Tiimah Naya">
- 
- <!-- Favicon -->
- <link rel="icon" href="images/pat.svg" type="image/svg+xml">
- 
- <!-- Fonts & Icons -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
- <style>
- /* Base Styles and Variables */
- :root {
-    --primary-color: #1e3c72;
-    --primary-light: #2a5298;
-    --primary-dark: #0c2553;
-    --accent-color: #ff7e5f;
-    --accent-light: #ff9e88;
-    --text-color: #333;
-    --text-light: #6c757d;
-    --bg-color: #f9f9f9;
-    --bg-alt: #f0f2f5;
-    --white: #ffffff;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-    --border-radius: 8px;
-    --transition: all 0.3s ease;
-    --transition-slow: all 0.6s ease;
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
- }
-
- /* Keyframe animations */
- @keyframes headerGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
- }
-
- @keyframes shine {
-    0% { transform: translateX(-100%); }
-    20% { transform: translateX(100%); }
-    100% { transform: translateX(100%); }
- }
-
- @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
- }
-
- @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
- }
-
- /* Reset & Base Styles */
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
-
- html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
- }
-
- body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.8;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
- }
-
- h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', serif;
-    line-height: 1.3;
-    margin-bottom: var(--spacing-sm);
- }
-
- p {
-    margin-bottom: var(--spacing-sm);
- }
-
- a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: var(--transition);
- }
-
- a:hover {
-    color: var(--primary-light);
- }
-
- img {
-    max-width: 100%;
-    height: auto;
-    display: block;
- }
-
- /* Layout */
- .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-lg);
-    width: 100%;
- }
-
- /* Header */
- .header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 50%, var(--primary-color) 100%);
-    background-size: 200% 200%;
-    animation: headerGradient 10s ease infinite;
-    color: var(--white);
-    padding: var(--spacing-xl) 0;
-    margin-bottom: var(--spacing-lg);
-    box-shadow: var(--shadow-lg);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
- }
-
- .header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
-    transform: translateX(-100%);
-    animation: shine 6s infinite;
- }
-
- .header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-xs);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
- }
-
- .header p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto;
-    opacity: 0.9;
- }
-
- /* Navigation */
- .nav {
-    background: var(--white);
-    box-shadow: var(--shadow-sm);
-    padding: var(--spacing-sm) 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: var(--transition);
-    backdrop-filter: blur(5px);
-    background-color: rgba(255,255,255,0.9);
- }
-
- .nav.scrolled {
-    padding: 0.8rem 0;
-    box-shadow: var(--shadow-md);
- }
-
- .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
-
- .brand {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
- }
-
- .brand i {
-    color: var(--accent-color);
- }
-
- .nav-menu {
-    display: flex;
-    list-style: none;
-    gap: var(--spacing-lg);
- }
-
- .nav-item a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: var(--transition);
-    display: block;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    position: relative;
- }
-
- .nav-item a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: var(--transition);
-    transform: translateX(-50%);
- }
-
- .nav-item a:hover {
-    color: var(--primary-color);
- }
-
- .nav-item a:hover::after {
-    width: 70%;
- }
-
- .nav-item a.active {
-    color: var(--primary-color);
- }
-
- .nav-item a.active::after {
-    width: 70%;
- }
-
- .mobile-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: var(--transition);
- }
-
- .mobile-toggle:hover {
-    color: var(--primary-color);
- }
-
- /* Main Content */
- .main-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: var(--spacing-xl);
-    background: var(--white);
-    box-shadow: var(--shadow-md);
-    border-radius: var(--border-radius);
-    margin-bottom: var(--spacing-xl);
-    flex: 1;
-    position: relative;
-    z-index: 1;
- }
-
- /* Profile Grid */
- .profile-grid {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
-    align-items: start;
- }
-
- .profile-image-container {
-    position: relative;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transform-style: preserve-3d;
-    perspective: 1000px;
- }
-
- .profile-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    border-radius: var(--border-radius);
-    transform: translateZ(0);
-    will-change: transform;
- }
-
- .profile-image-container:hover .profile-image {
-    transform: scale(1.05) translateZ(10px);
- }
-
- .profile-image-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.1) 100%);
-    pointer-events: none;
- }
-
- /* Profile Sections */
- .profile-section {
-    background: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-    padding: var(--spacing-lg);
-    transition: var(--transition);
-    margin-bottom: var(--spacing-lg);
-    border-left: 4px solid var(--primary-color);
-    opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
-    animation-play-state: paused;
-    position: relative;
-    overflow: hidden;
- }
-
- .profile-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(30,60,114,0.03) 0%, rgba(255,255,255,0) 100%);
-    z-index: 0;
- }
-
- .profile-section > * {
-    position: relative;
-    z-index: 1;
- }
-
- .profile-section:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
- }
-
- .section-heading {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-md);
-    position: relative;
-    display: inline-block;
- }
-
- .section-heading::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background-color: var(--accent-color);
-    transition: var(--transition);
- }
-
- .section-heading:hover::after {
-    width: 60px;
- }
-
- /* Timeline */
- .timeline {
-    position: relative;
-    padding-left: var(--spacing-lg);
-    margin: var(--spacing-lg) 0;
- }
-
- .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 7px;
-    height: 100%;
-    width: 2px;
-    background: var(--primary-light);
- }
-
- .timeline-item {
-    position: relative;
-    padding-bottom: var(--spacing-lg);
- }
-
- .timeline-item:last-child {
-    padding-bottom: 0;
- }
-
- .timeline-dot {
-    position: absolute;
-    left: -15px;
-    top: 0;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    border: 3px solid var(--white);
-    box-shadow: 0 0 0 3px var(--primary-light);
-    transition: var(--transition);
- }
-
- .timeline-item:hover .timeline-dot {
-    transform: scale(1.2);
-    background: var(--accent-color);
- }
-
- .timeline-date {
-    font-weight: 600;
-    color: var(--primary-light);
-    margin-bottom: var(--spacing-xs);
-    transition: var(--transition);
- }
-
- .timeline-item:hover .timeline-date {
-    color: var(--accent-color);
- }
-
- .timeline-title {
-    font-weight: 700;
-    margin-bottom: var(--spacing-xs);
-    color: var(--primary-dark);
- }
-
- /* Skills Grid */
- .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-md);
- }
-
- .skill-item {
-    background: var(--bg-alt);
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
- }
-
- .skill-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(30,60,114,0.05) 0%, rgba(255,255,255,0) 100%);
-    z-index: 0;
- }
-
- .skill-item > * {
-    position: relative;
-    z-index: 1;
- }
-
- .skill-item:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-sm);
- }
-
- .skill-icon {
-    margin-right: var(--spacing-sm);
-    color: var(--accent-color);
-    font-size: 1.2rem;
-    width: 30px;
-    text-align: center;
-    transition: var(--transition);
- }
-
- .skill-item:hover .skill-icon {
-    transform: rotate(15deg) scale(1.2);
-    color: var(--primary-color);
- }
-
- /* Buttons */
- .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: 0.8rem 2rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    text-decoration: none;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-    box-shadow: var(--shadow-sm);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
- }
-
- .btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
-    transform: translateX(-100%);
-    transition: var(--transition);
- }
-
- .btn:hover {
-    background-color: var(--primary-light);
-    color: var(--white);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
- }
-
- .btn:hover::after {
-    transform: translateX(100%);
- }
-
- .btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
- }
-
- .btn-outline:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
- }
-
- .btn-accent {
-    background-color: var(--accent-color);
- }
-
- .btn-accent:hover {
-    background-color: var(--accent-light);
- }
-
- /* Footer */
- .footer {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 50%, var(--primary-color) 100%);
-    background-size: 200% 200%;
-    animation: headerGradient 10s ease infinite;
-    color: var(--white);
-    padding: var(--spacing-xl) 0;
-    margin-top: auto;
-    position: relative;
-    overflow: hidden;
- }
-
- .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
-    transform: translateX(-100%);
-    animation: shine 6s infinite;
- }
-
- .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: var(--spacing-xl);
- }
-
- .footer-col h3 {
-    position: relative;
-    margin-bottom: var(--spacing-md);
-    padding-bottom: var(--spacing-xs);
-    font-size: 1.3rem;
- }
-
- .footer-col h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background-color: var(--accent-color);
- }
-
- .footer-links {
-    list-style: none;
- }
-
- .footer-link {
-    margin-bottom: var(--spacing-xs);
-    transition: var(--transition);
- }
-
- .footer-link:hover {
-    transform: translateX(5px);
- }
-
- .footer-link a {
-    color: rgba(255, 255, 255, 0.8);
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
- }
-
- .footer-link a:hover {
-    color: var(--white);
- }
-
- .footer-link i {
-    width: 20px;
-    text-align: center;
- }
-
- .social-links {
-    list-style: none;
-    display: flex;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-md);
- }
-
- .social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    transition: var(--transition);
-    color: var(--white);
- }
-
- .social-link:hover {
-    background: var(--accent-color);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3);
- }
-
- .copyright {
-    text-align: center;
-    padding-top: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
- }
-
- /* Back to top button */
- .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-    z-index: 99;
-    box-shadow: var(--shadow-md);
-    border: none;
- }
-
- .back-to-top.active {
-    opacity: 1;
-    visibility: visible;
- }
-
- .back-to-top:hover {
-    background-color: var(--primary-light);
-    transform: translateY(-3px) scale(1.1);
- }
-
- /* Breadcrumbs */
- .breadcrumbs {
-    display: flex;
-    align-items: center;
-    margin-bottom: var(--spacing-md);
-    font-size: 0.9rem;
-    color: var(--text-light);
- }
-
- .breadcrumbs a {
-    color: var(--text-light);
-    transition: var(--transition);
- }
-
- .breadcrumbs a:hover {
-    color: var(--primary-color);
- }
-
- .breadcrumbs .separator {
-    margin: 0 8px;
- }
-
- /* Custom Scrollbar */
- ::-webkit-scrollbar {
-    width: 8px;
- }
-
- ::-webkit-scrollbar-track {
-    background: var(--bg-alt);
- }
-
- ::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 4px;
- }
-
- ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-light);
- }
-
- /* Media Queries */
- @media (max-width: 992px) {
-    .profile-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-image-container {
-        order: -1;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--spacing-lg);
-    }
- }
-
- @media (max-width: 768px) {
-    :root {
-        --spacing-xl: 2rem;
-        --spacing-lg: 1.5rem;
-    }
-    
-    .header h1 {
-        font-size: 2rem;
-    }
-    
-    .nav-container {
-        position: relative;
-    }
-    
-    .mobile-toggle {
-        display: block;
-    }
-    
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        flex-direction: column;
-        gap: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        box-shadow: var(--shadow-md);
-        z-index: 1000;
-    }
-    
-    .nav-menu.active {
-        max-height: 300px;
-    }
-    
-    .nav-item a {
-        padding: 12px 20px;
-        border-radius: 0;
-    }
-    
-    .nav-item a::after {
-        display: none;
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
- }
-
- @media (max-width: 576px) {
-    .header h1 {
-        font-size: 1.8rem;
-    }
-    
-    .header p {
-        font-size: 1rem;
-    }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .main-content {
-        padding: var(--spacing-lg);
-    }
- }
- </style>
+    <title>About — Dr. Patricia Tiimah Naya, PhD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Full academic and professional profile of Dr. Patricia Tiimah Naya — organizational scholar, AAUW International Fellow, Commonwealth Shared Scholar, PhD, University of Massachusetts Boston.">
+    <meta name="author" content="Patricia Tiimah Naya">
+    <link rel="icon" href="images/HS_Dr. Naya.jpg" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --navy:       #0b1929;
+            --navy-mid:   #122035;
+            --navy-soft:  #1c3050;
+            --gold:       #c9a84c;
+            --gold-light: #dfc070;
+            --gold-dim:   #8a6e2e;
+            --cream:      #f6f1e9;
+            --cream-dark: #ede5d5;
+            --white:      #ffffff;
+            --text-body:  #1e1e1e;
+            --text-mid:   #555;
+            --text-light: #909090;
+            --serif:      'Cormorant Garamond', Georgia, serif;
+            --sans:       'Jost', sans-serif;
+            --radius:     5px;
+            --shadow-gold: 0 10px 50px rgba(201,168,76,0.2);
+            --shadow-dark: 0 24px 70px rgba(11,25,41,0.3);
+            --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; scroll-padding-top:72px; }
+        body { font-family:var(--sans); background:var(--cream); color:var(--text-body); overflow-x:hidden; line-height:1.7; }
+        h1,h2,h3,h4 { font-family:var(--serif); font-weight:600; line-height:1.15; }
+        p { margin-bottom:1rem; }
+        a { color:inherit; text-decoration:none; transition:color var(--transition); }
+        img { max-width:100%; display:block; }
+        ::-webkit-scrollbar { width:5px; }
+        ::-webkit-scrollbar-track { background:var(--cream-dark); }
+        ::-webkit-scrollbar-thumb { background:var(--gold-dim); border-radius:3px; }
+
+        /* GRAIN OVERLAY */
+        body::before {
+            content:''; position:fixed; inset:0;
+            background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+            pointer-events:none; z-index:0; opacity:0.5;
+        }
+
+        /* ── NAV ── */
+        .nav {
+            position:fixed; top:0; left:0; right:0; z-index:1000;
+            padding:0 2.5rem; height:72px;
+            display:flex; align-items:center; justify-content:space-between;
+            background:rgba(11,25,41,0.92);
+            backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+            border-bottom:1px solid rgba(201,168,76,0.1);
+            transition:background var(--transition);
+        }
+        .nav.scrolled { background:rgba(11,25,41,0.99); box-shadow:0 4px 32px rgba(0,0,0,0.35); }
+        .nav-brand { display:flex; align-items:center; gap:0.8rem; font-family:var(--serif); font-size:1.1rem; color:var(--white); letter-spacing:0.02em; }
+        .nav-avatar { width:38px; height:38px; border-radius:50%; object-fit:cover; border:1.5px solid var(--gold); flex-shrink:0; }
+        .nav-brand em { font-style:italic; color:var(--gold); }
+        .nav-links { display:flex; align-items:center; list-style:none; gap:0.15rem; }
+        .nav-links a {
+            font-family:var(--sans); font-size:0.75rem; font-weight:500;
+            letter-spacing:0.12em; text-transform:uppercase;
+            color:rgba(255,255,255,0.65); padding:0.45rem 0.9rem; border-radius:4px;
+            transition:color var(--transition), background var(--transition);
+        }
+        .nav-links a:hover, .nav-links a.active { color:var(--gold); background:rgba(201,168,76,0.08); }
+        .mobile-toggle {
+            display:none; background:none; border:1px solid rgba(201,168,76,0.4);
+            color:var(--gold); width:38px; height:38px; border-radius:4px;
+            font-size:1rem; cursor:pointer; transition:background var(--transition);
+            align-items:center; justify-content:center;
+        }
+        .mobile-toggle:hover { background:rgba(201,168,76,0.12); }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            background:var(--navy); position:relative; overflow:hidden;
+            padding:9rem 3rem 5.5rem;
+        }
+        .page-hero-bg::before {
+            content:''; position:absolute;
+            width:900px; height:900px; top:-200px; right:-200px; border-radius:50%;
+            background:radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 65%);
+            animation:pulse 10s ease-in-out infinite;
+        }
+        .page-hero-bg::after {
+            content:''; position:absolute;
+            width:600px; height:600px; bottom:-100px; left:-80px; border-radius:50%;
+            background:radial-gradient(circle, rgba(28,48,80,0.5) 0%, transparent 70%);
+            animation:pulse 14s ease-in-out infinite reverse;
+        }
+        .page-hero-grid {
+            position:absolute; inset:0;
+            background-image:linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+            background-size:64px 64px; pointer-events:none;
+        }
+        @keyframes pulse { 0%,100%{transform:scale(1);opacity:1;} 50%{transform:scale(1.08);opacity:0.7;} }
+
+        .page-hero-signals { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+        .signal-line {
+            stroke: var(--gold); stroke-width: 2; stroke-linecap: round;
+            opacity: 0.85; filter: drop-shadow(0 0 5px rgba(201,168,76,0.75));
+        }
+        .signal-h { stroke-dasharray: 5 300; animation: travel-h linear infinite; }
+        .signal-v { stroke-dasharray: 5 300; animation: travel-v linear infinite; }
+        @keyframes travel-h { to { stroke-dashoffset: -1400; } }
+        @keyframes travel-v { to { stroke-dashoffset: -1200; } }
+        @media (prefers-reduced-motion: reduce) { .signal-line { animation: none; } }
+
+        .page-hero-inner {
+            position:relative; z-index:2;
+            max-width:1200px; margin:0 auto;
+            display:grid; grid-template-columns:1fr 400px; gap:5rem; align-items:center;
+        }
+        .page-hero-eyebrow {
+            display:inline-flex; align-items:center; gap:0.6rem;
+            font-size:0.7rem; letter-spacing:0.22em; text-transform:uppercase;
+            color:var(--gold); margin-bottom:1.4rem; font-weight:500;
+            animation:fadeUp 0.8s ease 0.3s both;
+        }
+        .page-hero-eyebrow::before { content:''; display:inline-block; width:28px; height:1px; background:var(--gold); }
+        .page-hero-title {
+            font-family:var(--serif); font-size:clamp(2.6rem,4.5vw,4.6rem);
+            font-weight:300; color:var(--white); line-height:1.06;
+            margin-bottom:1rem; animation:fadeUp 0.9s ease 0.45s both;
+        }
+        .page-hero-title strong { font-weight:700; display:block; }
+        .page-hero-title em { font-style:italic; color:var(--gold-light); }
+        .page-hero-divider {
+            width:56px; height:2px;
+            background:linear-gradient(90deg, var(--gold), transparent);
+            margin-bottom:1.6rem; animation:fadeIn 0.8s ease 0.65s both;
+        }
+        .page-hero-desc {
+            font-size:1.05rem; color:rgba(255,255,255,0.68); line-height:1.82;
+            max-width:520px; margin-bottom:2rem; animation:fadeUp 0.8s ease 0.8s both;
+        }
+        .page-hero-pills {
+            display:flex; flex-wrap:wrap; gap:0.5rem;
+            padding-top:1.6rem; border-top:1px solid rgba(255,255,255,0.08);
+            animation:fadeUp 0.8s ease 0.95s both;
+        }
+        .pill {
+            display:inline-flex; align-items:center; gap:0.4rem;
+            padding:0.28rem 0.85rem;
+            background:rgba(201,168,76,0.09); border:1px solid rgba(201,168,76,0.22);
+            border-radius:100px; font-size:0.68rem; letter-spacing:0.06em;
+            color:var(--gold-light);
+        }
+        .pill i { font-size:0.6rem; }
+
+        /* Hero photo right */
+        .page-hero-photo { position:relative; animation:fadeIn 1.2s ease 0.4s both; }
+        .page-hero-photo-frame { position:relative; border-radius:2px; overflow:hidden; }
+        .page-hero-photo-frame::before {
+            content:''; position:absolute; inset:-1px;
+            background:linear-gradient(135deg, var(--gold) 0%, transparent 50%, var(--gold-dim) 100%);
+            border-radius:3px; z-index:0;
+        }
+        .page-hero-photo-inner { position:relative; z-index:1; margin:2px; border-radius:2px; overflow:hidden; background:var(--navy-mid); }
+        .page-hero-photo-inner img {
+            width:100%; height:520px; object-fit:cover; object-position:top center;
+            display:block; transition:transform 0.8s cubic-bezier(0.16,1,0.3,1);
+            filter:brightness(0.96) contrast(1.04);
+        }
+        .page-hero-photo-frame:hover .page-hero-photo-inner img { transform:scale(1.03); }
+        .corner { position:absolute; width:70px; height:70px; z-index:3; }
+        .corner-bl { bottom:-12px; left:-12px; border-left:2px solid var(--gold); border-bottom:2px solid var(--gold); }
+        .corner-tr { top:-12px; right:-12px; border-right:2px solid var(--gold); border-top:2px solid var(--gold); }
+        .hero-photo-badge {
+            position:absolute; bottom:1.5rem; left:1.5rem;
+            background:rgba(11,25,41,0.93); backdrop-filter:blur(8px);
+            border:1px solid rgba(201,168,76,0.28); border-radius:4px;
+            padding:0.7rem 1.1rem; color:var(--white);
+        }
+        .hero-photo-badge .badge-title { font-family:var(--serif); font-size:0.95rem; font-weight:600; color:var(--gold); display:block; }
+        .hero-photo-badge .badge-sub { font-size:0.68rem; letter-spacing:0.06em; color:rgba(255,255,255,0.5); text-transform:uppercase; }
+
+        /* ── STATS STRIP ── */
+        .stats-strip {
+            background:var(--navy-mid);
+            border-top:1px solid rgba(201,168,76,0.14);
+            border-bottom:1px solid rgba(201,168,76,0.14);
+            padding:2.5rem 3rem; position:relative; z-index:1;
+        }
+        .stats-inner {
+            max-width:1100px; margin:0 auto;
+            display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; text-align:center;
+        }
+        .stat-item { padding:1rem; border-right:1px solid rgba(201,168,76,0.1); }
+        .stat-item:last-child { border-right:none; }
+        .stat-number { font-family:var(--serif); font-size:2.5rem; font-weight:700; color:var(--gold); display:block; line-height:1; margin-bottom:0.35rem; }
+        .stat-label { font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.45); }
+
+        /* ── SECTION UTILITY ── */
+        .section { position:relative; z-index:1; }
+        .section-inner { max-width:1200px; margin:0 auto; padding:5.5rem 3rem; }
+        .section-label {
+            display:inline-flex; align-items:center; gap:0.6rem;
+            font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase;
+            color:var(--gold); font-weight:500; margin-bottom:0.85rem;
+        }
+        .section-label::before { content:''; display:inline-block; width:22px; height:1px; background:var(--gold); }
+        .section-heading {
+            font-family:var(--serif); font-size:clamp(1.85rem,3vw,2.8rem);
+            font-weight:600; line-height:1.12; margin-bottom:0.5rem;
+        }
+
+        /* ── ABOUT / BIOGRAPHY ── */
+        .about-section { background:var(--cream); }
+        .about-grid { display:grid; grid-template-columns:380px 1fr; gap:5rem; align-items:start; }
+        .about-photo-col { position:sticky; top:96px; }
+        .about-photo-frame { position:relative; border-radius:2px; overflow:hidden; box-shadow:var(--shadow-dark); }
+        .about-photo-frame img { width:100%; height:510px; object-fit:cover; object-position:top; filter:sepia(6%) contrast(1.05); transition:filter 0.4s; }
+        .about-photo-frame:hover img { filter:sepia(0%) contrast(1.08); }
+        .about-photo-badge {
+            position:absolute; bottom:1.5rem; left:1.5rem;
+            background:rgba(11,25,41,0.92); backdrop-filter:blur(8px);
+            border:1px solid rgba(201,168,76,0.28); border-radius:4px;
+            padding:0.7rem 1.2rem; color:var(--white);
+        }
+        .about-photo-badge .badge-title { font-family:var(--serif); font-size:1rem; font-weight:600; color:var(--gold); display:block; }
+        .about-photo-badge .badge-sub { font-size:0.7rem; letter-spacing:0.06em; color:rgba(255,255,255,0.55); text-transform:uppercase; }
+
+        .about-text .section-heading { color:var(--navy); margin-bottom:1.5rem; }
+        .about-text p { color:var(--text-mid); font-size:1.04rem; line-height:1.82; }
+
+        .interests-block { margin-top:1.75rem; margin-bottom:0.5rem; }
+        .interests-block h4 { font-family:var(--sans); font-size:0.67rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-dim); font-weight:600; margin-bottom:0.9rem; }
+        .interests-pills { display:flex; flex-wrap:wrap; gap:0.45rem; }
+        .int-pill {
+            display:inline-flex; align-items:center; gap:0.35rem;
+            padding:0.3rem 0.85rem;
+            background:rgba(11,25,41,0.06); border:1px solid rgba(11,25,41,0.12);
+            border-radius:100px; font-size:0.72rem; color:var(--text-mid);
+            transition:background var(--transition), border-color var(--transition), color var(--transition);
+        }
+        .int-pill:hover { background:rgba(201,168,76,0.12); border-color:rgba(201,168,76,0.3); color:var(--navy); }
+        .int-pill i { color:var(--gold); font-size:0.6rem; }
+
+        .about-cta { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
+        .btn-primary {
+            display:inline-flex; align-items:center; gap:0.5rem;
+            padding:0.85rem 2rem; background:var(--gold); color:var(--navy);
+            font-family:var(--sans); font-size:0.77rem; font-weight:600;
+            letter-spacing:0.1em; text-transform:uppercase; border-radius:var(--radius);
+            border:none; cursor:pointer;
+            transition:background var(--transition), transform var(--transition), box-shadow var(--transition);
+        }
+        .btn-primary:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:var(--shadow-gold); }
+        .btn-navy {
+            display:inline-flex; align-items:center; gap:0.5rem;
+            padding:0.85rem 2rem; background:var(--navy); color:var(--white);
+            font-family:var(--sans); font-size:0.77rem; font-weight:500;
+            letter-spacing:0.1em; text-transform:uppercase; border-radius:var(--radius);
+            border:1px solid transparent;
+            transition:background var(--transition), transform var(--transition), border-color var(--transition);
+        }
+        .btn-navy:hover { background:var(--navy-soft); border-color:var(--gold-dim); transform:translateY(-2px); }
+        .btn-gold-outline {
+            display:inline-flex; align-items:center; gap:0.5rem;
+            padding:0.85rem 2rem; background:transparent; color:var(--navy);
+            font-family:var(--sans); font-size:0.77rem; font-weight:500;
+            letter-spacing:0.1em; text-transform:uppercase; border-radius:var(--radius);
+            border:1.5px solid var(--gold-dim);
+            transition:background var(--transition), color var(--transition), transform var(--transition);
+        }
+        .btn-gold-outline:hover { background:var(--gold); color:var(--navy); transform:translateY(-2px); }
+
+        /* ── DISSERTATION ── */
+        .dissertation-section { background:var(--navy); }
+        .dissertation-section .section-heading { color:var(--white); }
+        .dissertation-card {
+            margin-top:2.5rem;
+            background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.18);
+            border-radius:var(--radius); padding:2.75rem 3rem;
+            position:relative; overflow:hidden;
+        }
+        .dissertation-card::before {
+            content:''; position:absolute; top:0; left:0; width:4px; height:100%;
+            background:linear-gradient(to bottom, var(--gold), var(--gold-dim));
+        }
+        .dissertation-card h3 {
+            font-family:var(--serif); font-size:1.55rem; color:var(--white);
+            font-style:italic; font-weight:400; line-height:1.3; margin-bottom:1.2rem;
+        }
+        .dissertation-card p { color:rgba(255,255,255,0.6); font-size:0.95rem; line-height:1.82; margin-bottom:0; }
+        .committee-row {
+            margin-top:1.75rem; padding-top:1.5rem;
+            border-top:1px solid rgba(201,168,76,0.14);
+            display:flex; align-items:flex-start; gap:3rem; flex-wrap:wrap;
+        }
+        .committee-label { font-size:0.67rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:0.5rem; }
+        .committee-names { font-family:var(--serif); font-size:1rem; color:rgba(255,255,255,0.75); }
+        .defense-tag {
+            display:inline-flex; align-items:center; gap:0.4rem;
+            background:rgba(201,168,76,0.15); border:1px solid rgba(201,168,76,0.25);
+            border-radius:100px; padding:0.25rem 0.75rem;
+            font-size:0.68rem; letter-spacing:0.08em; color:var(--gold-light);
+        }
+
+        /* ── RESEARCH THEMES ── */
+        .themes-section { background:var(--cream-dark); }
+        .themes-section .section-heading { color:var(--navy); }
+        .themes-grid {
+            display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px;
+            margin-top:2.75rem; background:rgba(11,25,41,0.09);
+            border-radius:var(--radius); overflow:hidden;
+        }
+        .theme-card {
+            background:var(--white); padding:2.25rem 1.9rem;
+            position:relative; overflow:hidden; transition:background var(--transition);
+        }
+        .theme-card:hover { background:var(--cream); }
+        .theme-card::before {
+            content:''; position:absolute; top:0; left:0; width:3px; height:0;
+            background:var(--gold); transition:height 0.4s;
+        }
+        .theme-card:hover::before { height:100%; }
+        .theme-icon { font-size:1.3rem; color:var(--gold); margin-bottom:1.2rem; opacity:0.85; }
+        .theme-card h3 { font-family:var(--serif); font-size:1.15rem; color:var(--navy); margin-bottom:0.6rem; font-weight:600; }
+        .theme-card p { font-size:0.88rem; color:var(--text-mid); line-height:1.74; margin:0; }
+
+        /* ── EDUCATION ── */
+        .education-section { background:var(--cream); }
+        .education-section .section-heading { color:var(--navy); }
+        .timeline { position:relative; padding-left:2rem; margin-top:2.5rem; }
+        .timeline::before {
+            content:''; position:absolute; top:6px; left:7px;
+            width:1px; height:calc(100% - 12px);
+            background:linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.1));
+        }
+        .timeline-item { position:relative; padding-bottom:2.5rem; }
+        .timeline-item:last-child { padding-bottom:0; }
+        .timeline-dot {
+            position:absolute; left:-25px; top:6px;
+            width:14px; height:14px; border-radius:50%;
+            background:var(--gold); border:2px solid var(--cream);
+            box-shadow:0 0 0 3px rgba(201,168,76,0.25);
+            transition:transform 0.3s, box-shadow 0.3s;
+        }
+        .timeline-item:hover .timeline-dot { transform:scale(1.25); box-shadow:0 0 0 5px rgba(201,168,76,0.2); }
+        .timeline-date {
+            font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase;
+            color:var(--gold-dim); font-weight:600; margin-bottom:0.35rem;
+        }
+        .timeline-degree {
+            font-family:var(--serif); font-size:1.15rem; color:var(--navy);
+            font-weight:600; margin-bottom:0.2rem;
+        }
+        .timeline-inst { font-size:0.88rem; color:var(--text-mid); margin-bottom:0.35rem; }
+        .timeline-note {
+            font-size:0.82rem; color:var(--text-light); font-style:italic;
+        }
+        .timeline-badge {
+            display:inline-flex; align-items:center; gap:0.3rem;
+            margin-top:0.5rem;
+            padding:0.2rem 0.65rem; background:rgba(201,168,76,0.1);
+            border:1px solid rgba(201,168,76,0.22); border-radius:100px;
+            font-size:0.65rem; color:var(--gold-dim); letter-spacing:0.05em;
+        }
+
+        /* ── AWARDS ── */
+        .awards-section { background:var(--navy-mid); }
+        .awards-section .section-heading { color:var(--white); }
+        .awards-grid {
+            display:grid; grid-template-columns:repeat(2,1fr); gap:1rem;
+        }
+        .award-card {
+            background:rgba(255,255,255,0.035); border:1px solid rgba(201,168,76,0.12);
+            border-radius:var(--radius); padding:1.5rem 1.75rem;
+            display:flex; gap:1.1rem; align-items:flex-start;
+            transition:border-color var(--transition), background var(--transition);
+        }
+        .award-card:hover { border-color:rgba(201,168,76,0.32); background:rgba(201,168,76,0.06); }
+        .award-icon {
+            width:38px; height:38px; border-radius:4px; flex-shrink:0;
+            background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center;
+            color:var(--gold); font-size:0.82rem;
+        }
+        .award-body {}
+        .award-name { font-family:var(--serif); font-size:1rem; color:var(--white); font-weight:600; line-height:1.3; margin-bottom:0.2rem; }
+        .award-org { font-size:0.78rem; color:rgba(255,255,255,0.45); }
+
+        /* ── TEACHING ── */
+        .teaching-section { background:var(--cream); }
+        .teaching-section .section-heading { color:var(--navy); }
+
+        .teaching-stats-bar {
+            display:grid; grid-template-columns:repeat(4,1fr); gap:1.5px;
+            background:rgba(11,25,41,0.08); border-radius:var(--radius);
+            overflow:hidden; margin-bottom:2.75rem;
+            box-shadow:0 2px 16px rgba(11,25,41,0.06);
+        }
+        .teaching-stat { background:var(--white); padding:1.6rem 1rem; text-align:center; }
+        .teaching-stat-number { font-family:var(--serif); font-size:2.1rem; font-weight:700; color:var(--navy); display:block; line-height:1; margin-bottom:0.4rem; }
+        .teaching-stat-number span { color:var(--gold); }
+        .teaching-stat-label { font-size:0.66rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--text-mid); }
+
+        .teaching-tabs { display:flex; gap:0.5rem; margin-bottom:2.25rem; flex-wrap:wrap; }
+        .tab-btn {
+            padding:0.4rem 1.1rem; border-radius:100px;
+            font-family:var(--sans); font-size:0.72rem; font-weight:500;
+            letter-spacing:0.08em; text-transform:uppercase;
+            background:transparent; border:1px solid rgba(11,25,41,0.18);
+            color:var(--text-mid); cursor:pointer;
+            transition:all var(--transition);
+        }
+        .tab-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+        .tab-btn:hover:not(.active) { border-color:var(--gold-dim); color:var(--navy); }
+        .teaching-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem; }
+        .teaching-card {
+            background:var(--white); border-radius:var(--radius);
+            padding:2rem; border-bottom:3px solid transparent;
+            box-shadow:0 2px 16px rgba(11,25,41,0.07);
+            transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+        }
+        .teaching-card:hover { border-color:var(--gold); transform:translateY(-3px); box-shadow:0 8px 32px rgba(11,25,41,0.12); }
+        .teaching-card.hide { display:none; }
+        .teaching-code { font-size:0.67rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:0.4rem; display:block; }
+        .teaching-title { font-family:var(--serif); font-size:1.1rem; color:var(--navy); margin-bottom:0.35rem; font-weight:600; }
+        .teaching-inst { font-size:0.78rem; color:var(--text-mid); margin-bottom:0.85rem; display:flex; align-items:center; gap:0.4rem; }
+        .teaching-inst i { color:var(--gold-dim); font-size:0.65rem; }
+        .teaching-card p { font-size:0.87rem; color:var(--text-mid); line-height:1.72; margin:0; }
+        .teaching-eval, .teaching-badge {
+            display:inline-flex; align-items:center; gap:0.3rem;
+            margin-top:0.75rem; padding:0.2rem 0.65rem;
+            background:rgba(201,168,76,0.1); border-radius:100px;
+            font-size:0.68rem; color:var(--gold-dim);
+        }
+        .teaching-badge-upcoming { background:rgba(28,48,80,0.08); color:var(--navy-soft); }
+
+        /* ── SERVICE ── */
+        .service-section { background:var(--navy); }
+        .service-section .section-heading { color:var(--white); }
+        .service-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5px; background:rgba(201,168,76,0.08); border-radius:var(--radius); overflow:hidden; }
+        .service-col {
+            background:var(--navy-mid); padding:2.5rem 2rem;
+            transition:background var(--transition);
+        }
+        .service-col:hover { background:var(--navy-soft); }
+        .service-col-icon { font-size:1.3rem; color:var(--gold); margin-bottom:1.1rem; opacity:0.8; }
+        .service-col h3 { font-family:var(--serif); font-size:1.25rem; color:var(--white); margin-bottom:1.2rem; font-weight:600; }
+        .service-list { list-style:none; display:flex; flex-direction:column; gap:0.65rem; }
+        .service-list li {
+            display:flex; gap:0.75rem; align-items:flex-start;
+            font-size:0.88rem; color:rgba(255,255,255,0.62); line-height:1.55;
+        }
+        .service-list li i { color:var(--gold); font-size:0.65rem; margin-top:0.35rem; flex-shrink:0; }
+
+        /* ── EXPERIENCE ── */
+        .experience-section { background:var(--cream-dark); }
+        .experience-section .section-heading { color:var(--navy); }
+        .exp-list { margin-top:2.5rem; display:flex; flex-direction:column; gap:1.25rem; }
+        .exp-item {
+            background:var(--white); border-radius:var(--radius);
+            padding:1.75rem 2rem; border-left:4px solid transparent;
+            box-shadow:0 2px 14px rgba(11,25,41,0.06);
+            transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+            display:grid; grid-template-columns:1fr auto; gap:0.5rem;
+        }
+        .exp-item:hover { border-left-color:var(--gold); transform:translateX(4px); box-shadow:0 6px 28px rgba(11,25,41,0.1); }
+        .exp-title-row { display:flex; flex-direction:column; }
+        .exp-role { font-family:var(--serif); font-size:1.08rem; color:var(--navy); font-weight:600; margin-bottom:0.15rem; }
+        .exp-org { font-size:0.82rem; color:var(--gold-dim); letter-spacing:0.04em; margin-bottom:0.65rem; }
+        .exp-desc { font-size:0.88rem; color:var(--text-mid); line-height:1.72; margin:0; }
+        .exp-date {
+            font-size:0.72rem; letter-spacing:0.08em; color:var(--text-light);
+            text-transform:uppercase; white-space:nowrap; padding-top:0.25rem;
+        }
+
+        /* ── PRESENTATIONS ── */
+        .presentations-section { background:var(--cream); }
+        .presentations-section .section-heading { color:var(--navy); }
+        .pres-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-bottom:1.5rem; }
+        .pres-card {
+            background:var(--white); border-radius:var(--radius);
+            padding:1.5rem 1.75rem; border-top:3px solid transparent;
+            box-shadow:0 2px 14px rgba(11,25,41,0.07);
+            transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+        }
+        .pres-card:hover { border-top-color:var(--gold); transform:translateY(-3px); box-shadow:0 8px 28px rgba(11,25,41,0.1); }
+        .pres-venue { font-size:0.67rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:0.4rem; display:block; }
+        .pres-title { font-family:var(--serif); font-size:0.98rem; color:var(--navy); line-height:1.38; margin-bottom:0.35rem; }
+        .pres-meta { font-size:0.78rem; color:var(--text-light); }
+        .pres-award { display:inline-flex; align-items:center; gap:0.3rem; margin-top:0.5rem; padding:0.18rem 0.65rem; background:rgba(201,168,76,0.1); border-radius:100px; font-size:0.63rem; color:var(--gold-dim); }
+
+        /* ── CONTACT ── */
+        .contact-section { background:var(--navy-mid); position:relative; overflow:hidden; }
+        .contact-glow { position:absolute; inset:0; pointer-events:none; z-index:0; }
+        .contact-glow::before {
+            content:''; position:absolute;
+            width:640px; height:640px; top:-220px; left:-160px; border-radius:50%;
+            background:radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+            animation:pulse 8s ease-in-out infinite;
+        }
+        .contact-glow::after {
+            content:''; position:absolute;
+            width:560px; height:560px; bottom:-200px; right:-140px; border-radius:50%;
+            background:radial-gradient(circle, rgba(28,48,80,0.8) 0%, transparent 72%);
+            animation:pulse 11s ease-in-out infinite reverse;
+        }
+        .contact-section .section-inner { position:relative; z-index:1; }
+        .contact-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:5rem; align-items:center; }
+        .contact-section .section-heading { color:var(--white); margin-bottom:1.4rem; }
+        .contact-intro { color:rgba(255,255,255,0.58); font-size:1.03rem; line-height:1.78; margin-bottom:1.85rem; }
+        .contact-items { display:flex; flex-direction:column; gap:0.85rem; }
+        .contact-item {
+            display:flex; align-items:center; gap:1rem; padding:0.95rem 1.2rem;
+            background:rgba(255,255,255,0.04); border:1px solid rgba(201,168,76,0.1);
+            border-radius:var(--radius); transition:border-color var(--transition), background var(--transition);
+            color:var(--white);
+        }
+        .contact-item:hover { border-color:rgba(201,168,76,0.32); background:rgba(201,168,76,0.05); }
+        .contact-icon { width:40px; height:40px; border-radius:4px; background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:0.88rem; flex-shrink:0; }
+        .contact-item-text span { display:block; font-size:0.67rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.38); margin-bottom:0.15rem; }
+        .contact-item-text strong { font-weight:400; font-size:0.92rem; color:rgba(255,255,255,0.82); }
+        .contact-social-panel { background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.14); border-radius:var(--radius); padding:2.5rem; }
+        .contact-social-panel h3 { font-family:var(--serif); font-size:1.55rem; color:var(--white); margin-bottom:0.45rem; }
+        .contact-social-panel p { font-size:0.88rem; color:rgba(255,255,255,0.48); margin-bottom:1.85rem; }
+        .social-links { display:flex; flex-direction:column; gap:0.7rem; }
+        .social-link {
+            display:flex; align-items:center; gap:0.9rem; padding:0.82rem 1.2rem;
+            border-radius:4px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);
+            color:rgba(255,255,255,0.72); font-size:0.86rem; transition:all var(--transition);
+        }
+        .social-link i { color:var(--gold); width:18px; text-align:center; }
+        .social-link:hover { background:rgba(201,168,76,0.1); border-color:rgba(201,168,76,0.28); color:var(--white); transform:translateX(4px); }
+
+        /* ── FOOTER (merged into Contact, matching index.html) ── */
+        .footer-bar {
+            margin-top:4rem; padding-top:2.25rem;
+            border-top:1px solid rgba(201,168,76,0.14);
+            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem;
+        }
+        .footer-bar-brand { display:flex; align-items:center; gap:0.9rem; }
+        .footer-bar-brand img {
+            width:34px; height:34px; border-radius:50%; object-fit:cover;
+            border:1.5px solid var(--gold-dim); flex-shrink:0;
+        }
+        .footer-bar-brand-text { font-size:0.8rem; color:rgba(255,255,255,0.45); line-height:1.5; }
+        .footer-bar-brand-text strong { display:block; font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--white); }
+        .footer-bar-brand-text strong em { color:var(--gold); font-style:italic; }
+        .footer-bar-links { display:flex; gap:0.35rem; flex-wrap:wrap; }
+        .footer-bar-links a {
+            font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+            color:rgba(255,255,255,0.5); padding:0.4rem 0.75rem; border-radius:4px;
+            transition:color var(--transition), background var(--transition);
+        }
+        .footer-bar-links a:hover { color:var(--gold); background:rgba(201,168,76,0.08); }
+        .footer-bar-copy { font-size:0.76rem; color:rgba(255,255,255,0.28); white-space:nowrap; }
+
+        /* ── BACK TO TOP ── */
+        .back-to-top {
+            position:fixed; bottom:2rem; right:2rem;
+            width:44px; height:44px; background:var(--gold); color:var(--navy);
+            border:none; border-radius:4px; cursor:pointer; font-size:0.95rem;
+            display:flex; align-items:center; justify-content:center;
+            opacity:0; visibility:hidden; transform:translateY(12px);
+            transition:all 0.3s; z-index:999; box-shadow:0 4px 20px rgba(201,168,76,0.3);
+        }
+        .back-to-top.active { opacity:1; visibility:visible; transform:translateY(0); }
+        .back-to-top:hover { background:var(--gold-light); transform:translateY(-3px); }
+
+        /* ── SIDE NAV ── */
+        .side-nav {
+            position:fixed; right:1.75rem; top:50%; transform:translateY(-50%);
+            z-index:900; display:flex; flex-direction:column; align-items:center; gap:0.85rem;
+        }
+        .side-nav-dot {
+            position:relative; width:9px; height:9px; border-radius:50%;
+            background:rgba(11,25,41,0.18); border:1px solid rgba(11,25,41,0.28);
+            transition:background var(--transition), border-color var(--transition), transform var(--transition);
+        }
+        .side-nav-dot:hover { transform:scale(1.3); border-color:var(--gold-dim); }
+        .side-nav-dot.active { background:var(--gold); border-color:var(--gold); transform:scale(1.35); box-shadow:0 0 0 3px rgba(201,168,76,0.2); }
+        .side-nav.on-dark .side-nav-dot { background:rgba(255,255,255,0.28); border-color:rgba(255,255,255,0.42); }
+        .side-nav.on-dark .side-nav-dot:hover { border-color:var(--gold-light); }
+        .side-nav.on-dark .side-nav-dot.active { background:var(--gold); border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,168,76,0.32); }
+        .side-nav-dot::after {
+            content:attr(data-label);
+            position:absolute; right:150%; top:50%; transform:translateY(-50%);
+            white-space:nowrap; font-family:var(--sans); font-size:0.68rem;
+            letter-spacing:0.06em; text-transform:uppercase; font-weight:500;
+            color:var(--navy); background:var(--white);
+            padding:0.3rem 0.7rem; border-radius:4px; box-shadow:0 4px 16px rgba(11,25,41,0.14);
+            opacity:0; visibility:hidden; transition:opacity 0.2s, transform 0.2s;
+        }
+        .side-nav-dot:hover::after { opacity:1; visibility:visible; transform:translateY(-50%) translateX(-4px); }
+        @media(max-width:1150px){ .side-nav { display:none; } }
+
+        /* ── REVEAL ── */
+        .reveal { opacity:0; transform:translateY(26px); transition:opacity 0.72s ease, transform 0.72s ease; }
+        .reveal.revealed { opacity:1; transform:translateY(0); }
+        .reveal-delay-1 { transition-delay:0.1s; }
+        .reveal-delay-2 { transition-delay:0.2s; }
+        .reveal-delay-3 { transition-delay:0.3s; }
+        .reveal-delay-4 { transition-delay:0.4s; }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeUp { from{opacity:0;transform:translateY(30px);} to{opacity:1;transform:translateY(0);} }
+        @keyframes fadeIn  { from{opacity:0;} to{opacity:1;} }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:1100px){
+            .page-hero-inner { grid-template-columns:1fr 340px; gap:3.5rem; }
+            .page-hero-photo-inner img { height:460px; }
+            .about-grid { grid-template-columns:320px 1fr; gap:3rem; }
+            .themes-grid { grid-template-columns:repeat(2,1fr); }
+            .stats-inner { grid-template-columns:repeat(3,1fr); }
+            .stat-item:nth-child(3) { border-right:none; }
+        }
+        @media(max-width:900px){
+            .page-hero-inner { grid-template-columns:1fr; padding:7rem 2rem 4rem; }
+            .page-hero-photo { order:-1; max-width:380px; }
+            .page-hero-photo-inner img { height:400px; }
+            .about-grid { grid-template-columns:1fr; }
+            .about-photo-col { position:static; max-width:360px; }
+            .themes-grid { grid-template-columns:1fr 1fr; }
+            .awards-grid { grid-template-columns:1fr; }
+            .teaching-grid { grid-template-columns:1fr; }
+            .teaching-stats-bar { grid-template-columns:repeat(2,1fr); }
+            .service-grid { grid-template-columns:1fr; }
+            .pres-grid { grid-template-columns:1fr; }
+            .contact-grid { grid-template-columns:1fr; }
+        }
+        @media(max-width:650px){
+            .nav { padding:0 1.25rem; }
+            .nav-links { display:none; flex-direction:column; gap:0; background:rgba(11,25,41,0.98); position:absolute; top:72px; left:0; right:0; padding:1rem 0; border-bottom:1px solid rgba(201,168,76,0.12); }
+            .nav-links.open { display:flex; }
+            .nav-links a { padding:0.7rem 1.5rem; border-radius:0; }
+            .mobile-toggle { display:flex; }
+            .page-hero { padding:8rem 1.5rem 4rem; }
+            .section-inner { padding:3.5rem 1.5rem; }
+            .stats-inner { grid-template-columns:repeat(2,1fr); }
+            .themes-grid { grid-template-columns:1fr; }
+            .exp-item { grid-template-columns:1fr; }
+            .footer-bar { flex-direction:column; align-items:flex-start; }
+            .stats-strip { padding:2rem 1.5rem; }
+            .dissertation-card { padding:2rem 1.5rem; }
+            .committee-row { gap:1.5rem; }
+        }
+    </style>
 </head>
-
 <body>
- <!-- Schema Markup -->
- <script type="application/ld+json" class="schema-markup">
- {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Patricia Tiimah Naya",
-  "jobTitle": "PhD Candidate",
-  "affiliation": {
-    "@type": "EducationalOrganization",
-    "name": "University of Massachusetts Boston"
-  },
-  "alumniOf": [
-    {
-      "@type": "EducationalOrganization",
-      "name": "University College London"
-    },
-    {
-      "@type": "EducationalOrganization",
-      "name": "University for Development Studies, Ghana"
-    }
-  ],
-  "award": [
-    "AAUW International Fellow",
-    "Commonwealth Shared Scholar",
-    "CMS Division's Most Promising Early Career Paper Award (AOM, 2024)"
-  ],
-  "url": "https://nayapatricia.com",
-  "sameAs": [
-    "https://www.linkedin.com/in/patricia-tiimah-naya-282261198/",
-    "https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao"
-  ]
-}
- </script>
 
- <!-- Skip to main content for accessibility -->
- <a href="#main-content" class="sr-only">Skip to main content</a>
+<!-- ── NAV ── -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-brand">
+        <img src="images/HS_Dr. Naya.jpg" alt="Dr. Patricia Tiimah Naya" class="nav-avatar">
+        <span>Dr. Patricia T. <em>Naya</em></span>
+    </a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navMenu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Full-profile.html" class="active">About</a></li>
+        <li><a href="Articles.html">Research</a></li>
+        <li><a href="Full-profile.html#teaching">Teaching</a></li>
+        <li><a href="Patricia T. Naya CV.pdf" target="_blank">CV</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
- <!-- Header -->
- <header class="header">
-    <div class="container">
-        <h1 class="animate__animated animate__fadeInDown">Patricia Tiimah Naya</h1>
-        <p class="animate__animated animate__fadeIn animate__delay-1s">PhD Candidate (ABD) | AAUW International Fellow | Commonwealth Shared Scholar | MSc | BSc<br>
-        University of Massachusetts Boston</p>
+<!-- ── SIDE NAV ── -->
+<nav class="side-nav" aria-label="Page sections">
+    <a href="#about" class="side-nav-dot" data-label="Biography"></a>
+    <a href="#dissertation" class="side-nav-dot" data-label="Dissertation"></a>
+    <a href="#research-themes" class="side-nav-dot" data-label="Research"></a>
+    <a href="#education" class="side-nav-dot" data-label="Education"></a>
+    <a href="#awards" class="side-nav-dot" data-label="Awards"></a>
+    <a href="#teaching" class="side-nav-dot" data-label="Teaching"></a>
+    <a href="#service" class="side-nav-dot" data-label="Service"></a>
+    <a href="#experience" class="side-nav-dot" data-label="Experience"></a>
+    <a href="#presentations" class="side-nav-dot" data-label="Presentations"></a>
+    <a href="#contact" class="side-nav-dot" data-label="Contact"></a>
+</nav>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-label="Profile introduction">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-grid" aria-hidden="true"></div>
+    <svg class="page-hero-signals" viewBox="0 0 1320 800" preserveAspectRatio="none" aria-hidden="true">
+        <line class="signal-line signal-h" x1="0" y1="140" x2="1320" y2="140" style="stroke-dasharray:5 300; animation-duration:7.4s;" />
+        <line class="signal-line signal-h" x1="1320" y1="360" x2="0" y2="360" style="stroke-dasharray:9 260; animation-duration:10.2s; animation-delay:-3.6s;" />
+        <line class="signal-line signal-h" x1="0" y1="600" x2="1320" y2="600" style="stroke-dasharray:4 340; animation-duration:6.3s; animation-delay:-1.4s;" />
+        <line class="signal-line signal-v" x1="220" y1="0" x2="220" y2="800" style="stroke-dasharray:6 250; animation-duration:8.6s; animation-delay:-0.9s;" />
+        <line class="signal-line signal-v" x1="1080" y1="800" x2="1080" y2="0" style="stroke-dasharray:7 280; animation-duration:9.8s; animation-delay:-4.2s;" />
+    </svg>
+    <div class="page-hero-inner">
+        <div class="page-hero-text">
+            <p class="page-hero-eyebrow"><i class="fas fa-user-circle"></i> Full profile</p>
+            <h1 class="page-hero-title">
+                Patricia T.<br>
+                <strong> Naya<em>, PhD</em></strong>
+            </h1>
+            <div class="page-hero-divider"></div>
+            <p class="page-hero-desc">
+                I study what happens when organizations promise justice — how those promises are interpreted, experienced, and managed over time, and what these processes reveal about power and the reproduction of inequality.
+            </p>
+            <div class="page-hero-pills">
+                <span class="pill"><i class="fas fa-circle"></i> PhD, Organization &amp; Social Change</span>
+                <span class="pill"><i class="fas fa-circle"></i> University of Massachusetts Boston</span>
+                <span class="pill"><i class="fas fa-circle"></i> AAUW International Fellow</span>
+                <span class="pill"><i class="fas fa-circle"></i> Commonwealth Shared Scholar</span>
+                <span class="pill"><i class="fas fa-circle"></i> 2026</span>
+            </div>
+        </div>
+        <div class="page-hero-photo">
+            <div class="page-hero-photo-frame">
+                <div class="corner corner-tr" aria-hidden="true"></div>
+                <div class="corner corner-bl" aria-hidden="true"></div>
+                <div class="page-hero-photo-inner">
+                    <img src="images/HS_Dr. Naya.jpg" alt="Dr. Patricia Tiimah Naya, PhD">
+                </div>
+                <div class="hero-photo-badge">
+                    <span class="badge-title">Patricia T. Naya, PhD</span>
+                    <span class="badge-sub">Organizational Scholar · Boston, MA</span>
+                </div>
+            </div>
+        </div>
     </div>
- </header>
+</section>
 
- <!-- Navigation -->
- <nav class="nav" id="main-nav">
-    <div class="container nav-container">
-        <span class="brand"><i class="fas fa-graduation-cap"></i> Patricia T. Naya</span>
-        <button class="mobile-toggle" aria-label="Toggle navigation menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-menu">
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="Full-profile.html" class="active"><i class="fas fa-user"></i> About Me</a></li>
-            <li><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
-            <li><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
-            <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
+<!-- ── STATS STRIP ── -->
+<div class="stats-strip" aria-label="Key metrics">
+    <div class="stats-inner">
+        <div class="stat-item">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Peer-reviewed publications</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">7+</span>
+            <span class="stat-label">Working papers</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">$200K+</span>
+            <span class="stat-label">Research funding</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Conference presentations</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Academic awards</span>
+        </div>
     </div>
- </nav>
-
- <!-- Breadcrumbs -->
- <div class="container">
-    <div class="breadcrumbs">
-        <a href="index.html">Home</a>
-        <span class="separator"><i class="fas fa-chevron-right"></i></span>
-        <span>Full Profile</span>
-    </div>
- </div>
-
-<!-- Main Content -->
-<div class="container">
-    <main class="main-content" id="main-content">
-        <!-- Profile Grid with Image and Introduction -->
-        <div class="profile-grid">
-            <div class="profile-text">
-                <div class="profile-section" style="animation-delay: 0.1s">
-                    <h2 class="section-heading">Professional Profile</h2>
-                    <p>As a researcher, I interrogate organizational change through intersectional and critical theoretical perspectives, investigating how institutions navigate complex transformational initiatives while grappling with deeply embedded power relations. My research agenda examines the political dimensions of organizational becoming, with particular attention to anti-racist change processes, sensemaking, paradoxes, and resistance in both formal and informal organizational contexts. My dissertation explores how organizations proclaim and navigate anti-racist change, examining the constitutive role of power in organizational becoming and surfacing how various stakeholders make sense of and experience these complex change processes.</p>
-                </div>
-            </div>
-            <div class="profile-image-container">
-                <img src="images/fullprofile.jpg" alt="Patricia Tiimah Naya" class="profile-image">
-            </div>
-        </div>
-
-        <!-- Education Section -->
-        <div class="profile-section" style="animation-delay: 0.2s">
-            <h2 class="section-heading">Education & Background</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021-Present</div>
-                    <h3 class="timeline-title">PhD in Business Administration (Organizations and Social Change)</h3>
-                    <p>University of Massachusetts Boston | Expected Dec. 2025</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2020-2021</div>
-                    <h3 class="timeline-title">MSc in Prosperity, Innovation and Entrepreneurship</h3>
-                    <p>University College London (UCL) | Distinction | Best Dissertation Award</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2016-2019</div>
-                    <h3 class="timeline-title">Bachelor of Commerce in Human Resource Management </h3>
-                    <p>First Class Honors | University for Development Studies, Ghana</p>
-                    <p>Best Graduating Student, RAINS Cash Prize for First Female to attain First Class Honors</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2014-2016</div>
-                    <h3 class="timeline-title">Diploma in Integrated Business Studies</h3>
-                    <p>Distinction | University for Development Studies, Ghana</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Awards and Recognitions Section -->
-        <div class="profile-section" style="animation-delay: 0.3s">
-            <h2 class="section-heading">Awards & Recognition</h2>
-            <p>I am an American Association of University Women (AAUW) International Fellow (2023-2024). Currently, I am completing my Ph.D. in Business Administration (Organizations and Social Change, ABD) at the University of Massachusetts Boston's College of Management. I earned my MSc in Prosperity, Innovation, and Entrepreneurship with Distinction from University College London (UCL), where my dissertation on employee-driven green human resource management received the Best Dissertation Award. I also hold a Bachelor of Commerce (Human Resource Management, Honors) from the University for Development Studies, Ghana.</p>
-            <p>I have received over $272,000 in fellowships and scholarships, including the American Association of University Women (AAUW) International Fellowship, The Dean Fellowships, and the Commonwealth Shared Scholarship. I have also been recognized with the Critical Management Studies Division's Most Promising Early Career Paper Award (Academy of Management, 2024), Ph.D. Award for Academic Distinction in Organizations and Social Change (College of Management, UMass Boston, 2023), Beacon Emerging Leader Award (University of Massachusetts Boston, 2023), and University College London Institute for Global Prosperity Best Dissertation Award (2021). Additionally, I was named Best Graduating Student at the University for Development Studies (2019) and received the RAINS Cash Prize as First Female to attain First Class Honors.</p>
-        </div>
-
-        <!-- Professional Practice Section -->
-        <div class="profile-section" style="animation-delay: 0.4s">
-            <h2 class="section-heading">Scholarly Practice</h2>
-            <p>My scholarly practice is deeply informed by ongoing engagement with practice through my role and experience with working local organizations advancing women's and girls' empowerment through research, advocacy, and action, particularly in Northern Ghana.</p>
-        </div>
-
-        <!-- Thematic Areas Section - Original Beautiful Arrangement -->
-        <div class="profile-section" style="animation-delay: 0.5s">
-            <h2 class="section-heading">Areas of Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fas fa-sync-alt skill-icon" aria-hidden="true"></i>
-                    <h3>Organizational Change and Resistance</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-balance-scale skill-icon" aria-hidden="true"></i>
-                    <h3>Power Dynamics and Sensemaking</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-users skill-icon" aria-hidden="true"></i>
-                    <h3>Informal Economies and Grassroots Leadership</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-leaf skill-icon" aria-hidden="true"></i>
-                    <h3>Sustainability and Green Human Resource Management (GHRM)</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-seedling skill-icon" aria-hidden="true"></i>
-                    <h3>Rural Entrepreneurship and Gender</h3>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Information Section -->
-        <div class="profile-section" style="animation-delay: 0.6s">
-            <h2 class="section-heading">Contact Information</h2>
-            <p>For collaboration opportunities or to discuss my research, please contact me at <a href="mailto:Patricia.naya001@umb.edu">Patricia.naya001@umb.edu</a>.</p>
-        </div>
-    </main>
 </div>
 
- <!-- Footer -->
- <footer class="footer" id="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>About Me</h3>
-                <p>Patricia Tiimah Naya is a PhD candidate at the University of Massachusetts Boston studying organizational transformation and anti-racist change processes.</p>
-                <ul class="social-links">
-                    <li><a href="https://www.linkedin.com/in/patricia-tiimah-naya-282261198/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="mailto:Patricia.Naya001@umb.edu" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-                    <li><a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en&oi=ao" class="social-link" aria-label="Google Scholar"><i class="fab fa-google"></i></a></li>
-                </ul>
+<!-- ── BIOGRAPHY ── -->
+<section class="section about-section" id="about" aria-label="Biography">
+    <div class="section-inner">
+        <div class="about-grid">
+            <div class="about-photo-col reveal">
+                <div class="about-photo-frame">
+                    <img src="images/HS_Dr. Naya.jpg" alt="Dr. Patricia Tiimah Naya">
+                    <div class="about-photo-badge">
+                        <span class="badge-title">PhD</span>
+                        <span class="badge-sub">UMass Boston · Business Administration</span>
+                    </div>
+                </div>
             </div>
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li class="footer-link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li class="footer-link"><a href="Full-profile.html"><i class="fas fa-user"></i> About Me</a></li>
-                    <li class="footer-link"><a href="Articles.html"><i class="fas fa-book-open"></i> Research</a></li>
-                    <li class="footer-link"><a href="Patricia T. Naya CV.pdf"><i class="fas fa-file-alt"></i> CV</a></li>
-                </ul>
+            <div class="about-text">
+                <p class="section-label">Biography</p>
+                <h2 class="section-heading reveal">Scholarship at the intersection of power, justice, &amp; transformation</h2>
+                <div class="reveal reveal-delay-1">
+                    <p>Patricia studies what happens when organizations promise justice — how those promises are interpreted, experienced, and managed over time, and what these processes reveal about power and the reproduction of inequality.</p>
+                    <p>She earned her PhD in Business Administration (Organization &amp; Social Change) from the University of Massachusetts Boston in 2026, with a dissertation on <em>The Anti-Racist Organization? Power, Embodiment, and the Politics of Becoming</em>. She also holds an MSc from University College London and a Bachelor of Commerce from the University for Development Studies, Ghana.</p>
+                    <p>Her work has appeared in <em>Academy of Management Learning &amp; Education</em> (A*), <em>Organization</em> (A), and Edward Elgar Publishing. She is a CMS Division (AOM) Most Promising Early Career Paper recipient (2024), an AAUW International Fellow, and a Commonwealth Shared Scholar.</p>
+                    <p>She is founder and CEO of Dream Alliance, and has taught at Northeastern University, Bentley University, and UMass Boston.</p>
+                </div>
+                <div class="interests-block reveal reveal-delay-2">
+                    <h4>Research interests</h4>
+                    <div class="interests-pills">
+                        <span class="int-pill"><i class="fas fa-circle"></i> Organizational transformation</span>
+                        <span class="int-pill"><i class="fas fa-circle"></i> Power &amp; inequality</span>
+                        <span class="int-pill"><i class="fas fa-circle"></i> Embodiment &amp; sensemaking</span>
+                        <span class="int-pill"><i class="fas fa-circle"></i> Organizational identity</span>
+                        <span class="int-pill"><i class="fas fa-circle"></i> Paradox theory</span>
+                        <span class="int-pill"><i class="fas fa-circle"></i> Qualitative methods</span>
+                        <span class="int-pill"><i class="fas fa-circle"></i> Process research</span>
+                        <span class="int-pill"><i class="fas fa-circle"></i> Informal economies</span>
+                        <span class="int-pill"><i class="fas fa-circle"></i> Green HRM</span>
+                    </div>
+                </div>
+                <div class="about-cta reveal reveal-delay-3">
+                    <a href="Articles.html" class="btn-primary"><i class="fas fa-book-open"></i> View research</a>
+                    <a href="Patricia T. Naya CV.pdf" target="_blank" class="btn-gold-outline"><i class="fas fa-file-alt"></i> Download CV</a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h3>Contact</h3>
-                <ul class="footer-links">
-                    <li class="footer-link"><a href="mailto:Patricia.naya001@umb.edu"><i class="fas fa-envelope"></i> Patricia.naya001@umb.edu</a></li>
-                    <li class="footer-link"><i class="fas fa-map-marker-alt"></i> University of Massachusetts Boston</li>
-                    <li class="footer-link"><i class="fas fa-building"></i> College of Management</li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            © <span id="current-year"></span> Patricia Tiimah Naya. All rights reserved.
         </div>
     </div>
- </footer>
+</section>
 
- <!-- Back to top button -->
- <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
- </button>
+<!-- ── DISSERTATION ── -->
+<section class="section dissertation-section" id="dissertation" aria-label="Dissertation" data-nav-theme="dark">
+    <div class="section-inner">
+        <p class="section-label">Doctoral research</p>
+        <h2 class="section-heading reveal">Dissertation</h2>
+        <div class="dissertation-card reveal reveal-delay-1">
+            <h3>The Anti-Racist Organization? Power, Embodiment, and the Politics of Becoming</h3>
+            <div class="committee-row">
+                <div>
+                    <div class="committee-label">Dissertation chair</div>
+                    <div class="committee-names">Alessia Contu</div>
+                </div>
+                <div>
+                    <div class="committee-label">Committee members</div>
+                    <div class="committee-names">Jared M. Poole &nbsp;·&nbsp; Stephanie J. Creary</div>
+                </div>
+                <div>
+                    <div class="committee-label">Status</div>
+                    <span class="defense-tag"><i class="fas fa-check-circle"></i> PhD Awarded — 2026</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
- <!-- Scripts -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease',
-            once: true
-        });
+<!-- ── RESEARCH THEMES ── -->
+<section class="section themes-section" id="research-themes" aria-label="Research themes">
+    <div class="section-inner">
+        <p class="section-label">Scholarly focus</p>
+        <h2 class="section-heading reveal">Research domains</h2>
+        <div class="themes-grid reveal reveal-delay-1">
+            <div class="theme-card">
+                <div class="theme-icon"><i class="fas fa-sitemap"></i></div>
+                <h3>Organizational Change</h3>
+            </div>
+            <div class="theme-card">
+                <div class="theme-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Power</h3>
+            </div>
+            <div class="theme-card">
+                <div class="theme-icon"><i class="fas fa-balance-scale"></i></div>
+                <h3>Inequality</h3>
+            </div>
+            <div class="theme-card">
+                <div class="theme-icon"><i class="fas fa-brain"></i></div>
+                <h3>Sensemaking</h3>
+            </div>
+            <div class="theme-card">
+                <div class="theme-icon"><i class="fas fa-random"></i></div>
+                <h3>Paradox</h3>
+            </div>
+            <div class="theme-card">
+                <div class="theme-icon"><i class="fas fa-user-check"></i></div>
+                <h3>Embodiment</h3>
+            </div>
+            <div class="theme-card">
+                <div class="theme-icon"><i class="fas fa-store-alt"></i></div>
+                <h3>Informal Economy</h3>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Mobile navigation
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navMenu = document.querySelector('.nav-menu');
+<!-- ── EDUCATION ── -->
+<section class="section education-section" id="education" aria-label="Education">
+    <div class="section-inner">
+        <p class="section-label">Academic formation</p>
+        <h2 class="section-heading reveal">Education</h2>
+        <div class="timeline reveal reveal-delay-1">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021 – 2026</div>
+                <div class="timeline-degree">PhD, Business Administration — Organization &amp; Social Change</div>
+                <div class="timeline-inst">University of Massachusetts Boston, College of Management · Boston, MA</div>
+                <div class="timeline-note">Dissertation: <em>The Anti-Racist Organization? Power, Embodiment, and the Politics of Becoming</em></div>
+                <div class="timeline-note">Committee: Alessia Contu (Chair), Jared M. Poole, Stephanie J. Creary</div>
+                <span class="timeline-badge"><i class="fas fa-star"></i> PhD Award for Academic Distinction, 2023</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">September 2020 – September 2021</div>
+                <div class="timeline-degree">MSc, Prosperity, Innovation, and Entrepreneurship — Distinction</div>
+                <div class="timeline-inst">University College London (UCL), UK</div>
+                <div class="timeline-note">Dissertation: <em>Era of Inclusivity: Employees Driving Green Human Resources toward Sustainable Prosperity</em></div>
+                <span class="timeline-badge"><i class="fas fa-award"></i> Best Dissertation Award, UCL Institute for Global Prosperity</span>
+                <span class="timeline-badge" style="margin-left:0.5rem;"><i class="fas fa-globe"></i> Commonwealth Shared Scholar (£48,100)</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">September 2016 – July 2019</div>
+                <div class="timeline-degree">Bachelor of Commerce (HRM Major) — First Class Honours</div>
+                <div class="timeline-inst">University for Development Studies, Ghana</div>
+                <div class="timeline-note">Project: <em>Examining the Impact of T&amp;D on Craftsmanship in Wa-Municipality, Ghana</em></div>
+                <span class="timeline-badge"><i class="fas fa-trophy"></i> Best Graduating Student &amp; First Female First Class Honors</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">September 2014 – July 2016</div>
+                <div class="timeline-degree">Diploma in Integrated Business Studies — Distinction</div>
+                <div class="timeline-inst">University for Development Studies, Ghana</div>
+                <div class="timeline-note">Term paper: <em>Exploring the Relationship between Teacher's Qualification and Student Performance in BECE, Upper East Region</em></div>
+                <span class="timeline-badge"><i class="fas fa-medal"></i> Overall Best Diploma Graduating Student</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileToggle.innerHTML = navMenu.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
+<!-- ── AWARDS ── -->
+<section class="section awards-section" id="awards" aria-label="Awards and recognition" data-nav-theme="dark">
+    <div class="section-inner">
+        <p class="section-label">Recognition</p>
+        <h2 class="section-heading reveal">Awards &amp; fellowships</h2>
+        <div class="awards-grid reveal reveal-delay-1">
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-star"></i></div>
+                <div class="award-body">
+                    <div class="award-name">Most Promising Early Career Paper Award</div>
+                    <div class="award-org">CMS Division, Academy of Management · 2024</div>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-globe-americas"></i></div>
+                <div class="award-body">
+                    <div class="award-name">AAUW International Fellow</div>
+                    <div class="award-org">American Association of University Women · 2023–2024</div>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-globe"></i></div>
+                <div class="award-body">
+                    <div class="award-name">Commonwealth Shared Scholar</div>
+                    <div class="award-org">Commonwealth Scholarship Commission · UCL, 2020–2021</div>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-university"></i></div>
+                <div class="award-body">
+                    <div class="award-name">Dean Fellowship Award </div>
+                    <div class="award-org">University of Massachusetts Boston · 2021–2024</div>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="award-body">
+                    <div class="award-name">PhD Award for Academic Distinction in Organizations &amp; Social Change</div>
+                    <div class="award-org">University of Massachusetts Boston · 2023</div>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-award"></i></div>
+                <div class="award-body">
+                    <div class="award-name">Beacon Emerging Leader Award</div>
+                    <div class="award-org">University of Massachusetts Boston · 2023</div>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-book"></i></div>
+                <div class="award-body">
+                    <div class="award-name">Best Dissertation Award</div>
+                    <div class="award-org">UCL Institute for Global Prosperity · 2021</div>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                <div class="award-body">
+                    <div class="award-name">Best Graduating Student &amp; First Female First Class Honours — RAINS Cash Prize</div>
+                    <div class="award-org">University for Development Studies, Ghana · 2019</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-        });
+<!-- ── TEACHING ── -->
+<section class="section teaching-section" id="teaching" aria-label="Teaching experience">
+    <div class="section-inner">
+        <p class="section-label">Pedagogy</p>
+        <h2 class="section-heading reveal">Teaching experience</h2>
 
-        // Sticky navigation
-        const nav = document.getElementById('main-nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
+        <div class="teaching-stats-bar reveal">
+            <div class="teaching-stat">
+                <span class="teaching-stat-number">5</span>
+                <span class="teaching-stat-label">Courses taught</span>
+            </div>
+            <div class="teaching-stat">
+                <span class="teaching-stat-number">3</span>
+                <span class="teaching-stat-label">Institutions</span>
+            </div>
+            <div class="teaching-stat">
+                <span class="teaching-stat-number">94<span>%</span></span>
+                <span class="teaching-stat-label">Evaluation response rate</span>
+            </div>
+            <div class="teaching-stat">
+                <span class="teaching-stat-number">2022<span>–2026</span></span>
+                <span class="teaching-stat-label">Teaching span</span>
+            </div>
+        </div>
 
-        // Back to top button
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTop.classList.add('active');
-            } else {
-                backToTop.classList.remove('active');
-            }
-        });
+        <div class="teaching-tabs reveal" role="tablist" aria-label="Filter teaching experience by institution">
+            <button type="button" class="tab-btn active" data-filter="all">All institutions</button>
+            <button type="button" class="tab-btn" data-filter="northeastern">Northeastern University</button>
+            <button type="button" class="tab-btn" data-filter="bentley">Bentley University</button>
+            <button type="button" class="tab-btn" data-filter="umb">UMass Boston</button>
+        </div>
 
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+        <div class="teaching-grid reveal reveal-delay-1">
+            <div class="teaching-card" data-institution="northeastern">
+                <span class="teaching-code">ORGB 3201 · Course Instructor</span>
+                <div class="teaching-title">Organizational Behavior</div>
+                <div class="teaching-inst"><i class="fas fa-map-marker-alt"></i> Northeastern University · Fall 2025, Spring 2026 (In-person)</div>
+                <p>Designed and delivered an undergraduate course integrating individual-, team-, and organizational-level analysis of motivation, leadership, team dynamics, and culture. Implemented evidence-based active-learning pedagogy — simulations, role-plays, structured debates, and applied reflection — to support inclusive and engaged learning.</p>
+                <span class="teaching-eval"><i class="fas fa-chart-bar"></i> 94% student evaluation response rate</span>
+            </div>
+            <div class="teaching-card" data-institution="bentley">
+                <span class="teaching-code">MG 345 · Course Instructor</span>
+                <div class="teaching-title">Organizations, Society &amp; Responsible Management</div>
+                <div class="teaching-inst"><i class="fas fa-map-marker-alt"></i> Bentley University · Spring 2026 (In-person)</div>
+                <p>Designed and delivered an upper-level undergraduate course on organizations and responsible management, integrating ethical, legal, social, and digital dimensions of business decision-making. Implemented active-learning pedagogy including structured debates, case discussions, and an interview-based group project.</p>
+            </div>
+            <div class="teaching-card" data-institution="bentley">
+                <span class="teaching-code">Human Behavior in Organizations · Course Instructor</span>
+                <div class="teaching-title">Introduction to Organizational Behavior</div>
+                <div class="teaching-inst"><i class="fas fa-map-marker-alt"></i> Bentley University · Fall 2026 (In-person, scheduled)</div>
+                <p>Designed and delivered an introductory undergraduate course integrating individual-, group-, inter-group-, and organization-level analysis of behavior and its link to organizational effectiveness. Emphasized team dynamics, workforce diversity, and the global contexts of work, and equipped students with analytical frameworks for understanding and influencing organizational behavior. Implemented active-learning pedagogy including a business simulation, case studies, and team-based projects to build competence in working across difference.</p>
+                <span class="teaching-badge teaching-badge-upcoming"><i class="fas fa-hourglass-half"></i> Scheduled — Fall 2026</span>
+            </div>
+            <div class="teaching-card" data-institution="umb">
+                <span class="teaching-code">MGT 330 · Instructor of Record</span>
+                <div class="teaching-title">Business Environment &amp; Public Policy</div>
+                <div class="teaching-inst"><i class="fas fa-map-marker-alt"></i> UMass Boston · Fall 2023; Summer 2024, 2025 &amp; 2026 (In-person &amp; Online)</div>
+                <p>Designed and delivered a core management course on business–government relations and strategic decision-making in both in-person and online formats. Integrated current business cases, breakout rooms, and collaborative digital tools to maintain high engagement across modalities.</p>
+                <span class="teaching-eval"><i class="fas fa-chart-bar"></i> 4.5/5.0 in-person 2023 · 4.0/5.0 Remote 2024  · 3.64/5.0 Online (Asynchronized) 2025 </span>
+            </div>
+            <div class="teaching-card" data-institution="umb">
+                <span class="teaching-code">MGT 303 / 330 / 470 · Teaching Assistant</span>
+                <div class="teaching-title">Managing Organizations · Public Policy · Entrepreneurship</div>
+                <div class="teaching-inst"><i class="fas fa-map-marker-alt"></i> UMass Boston · Fall 2022 – Spring 2025</div>
+                <p>Supported course design and delivery for three core management courses. Facilitated discussion sections, provided individual student support, and assisted with assessment design and grading across multiple semesters.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Animate sections when they come into view
-        const profileSections = document.querySelectorAll('.profile-section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.animationPlayState = 'running';
-                    }, index * 150);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
+<!-- ── SERVICE ── -->
+<section class="section service-section" id="service" aria-label="Service and engagement" data-nav-theme="dark">
+    <div class="section-inner">
+        <p class="section-label">Scholarly citizenship</p>
+        <h2 class="section-heading reveal">Service &amp; community</h2>
+        <div class="service-grid reveal reveal-delay-1">
+            <div class="service-col">
+                <div class="service-col-icon"><i class="fas fa-university"></i></div>
+                <h3>Institutional service</h3>
+                <ul class="service-list">
+                    <li><i class="fas fa-diamond"></i> Board Member, Center for Innovative Teaching, UMass Boston (2022–2026) — organizing workshops on inclusive teaching practices and evaluating teaching grant proposals</li>
+                    <li><i class="fas fa-diamond"></i> Commissioner, Restorative Justice Commission, UMass Boston (2023–2026) — co-developing conflict resolution policies and leading working groups on organizational change</li>
+                    <li><i class="fas fa-diamond"></i> Commonwealth Scholarship Alumni Advisory Panel (2023–2025) — selected as one of 116 representatives from 31,000+ alumni globally to advise on scholar engagement</li>
+                    <li><i class="fas fa-diamond"></i> Reviewer, Academy of Management Annual Meeting (2025)</li>
+                    <li><i class="fas fa-diamond"></i> Reviewer, Business Ethics (2026)</li>
+                    <li><i class="fas fa-diamond"></i> Reviewer, Journal of Management Inquiry (2025)</li>
+                </ul>
+            </div>
+            <div class="service-col">
+                <div class="service-col-icon"><i class="fas fa-globe-africa"></i></div>
+                <h3>Professional membership</h3>
+                <ul class="service-list">
+                    <li><i class="fas fa-diamond"></i> Member, Academy of Management — CMS &amp; OMT Divisions</li>
+                    <li><i class="fas fa-diamond"></i> Member, European Group for Organizational Studies (EGOS)</li>
+                    <li><i class="fas fa-diamond"></i> Member, African Academy of Management</li>
+                </ul>
+                <div class="service-col-icon" style="margin-top:1.75rem;"><i class="fas fa-hands-helping"></i></div>
+                <h3>Community engagement</h3>
+                <ul class="service-list">
+                    <li><i class="fas fa-diamond"></i> Founder &amp; CEO, Dreams Alliance, a social impact organization  (2017–present)</li>
+                    <li><i class="fas fa-diamond"></i> Community Partnership Office, UMass Boston (2022–2023) — developed a 360° framework for assessing institutional community partnerships</li>
+                    <li><i class="fas fa-diamond"></i> Founder &amp; Principal Investigator, Black Diaspora Career &amp; Care Summit, UMass Boston (2025) — served 80+ students across career, immigration, and professional networking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
-        profileSections.forEach(section => {
-            observer.observe(section);
-        });
+<!-- ── PROFESSIONAL EXPERIENCE ── -->
+<section class="section experience-section" id="experience" aria-label="Professional experience">
+    <div class="section-inner">
+        <p class="section-label">Career</p>
+        <h2 class="section-heading reveal">Professional experience</h2>
+        <div class="exp-list reveal reveal-delay-1">
+            <div class="exp-item">
+                <div class="exp-title-row">
+                    <div class="exp-role">Founder &amp; CEO — DREAM Alliance</div>
+                    <div class="exp-org">Ghana</div>
+                    <p class="exp-desc">Design and implement leadership development programs, manage cross-sector partnerships with educational institutions, NGOs, and government agencies, and maintain a systematic evaluation framework for measuring program impact.</p>
+                </div>
+                <div class="exp-date">2017 – Present</div>
+            </div>
+            <div class="exp-item">
+                <div class="exp-title-row">
+                    <div class="exp-role">Human Resource Associate</div>
+                    <div class="exp-org">Ghana Health Service, Wa, Ghana</div>
+                    <p class="exp-desc">Managed HR operations for a regional healthcare organization serving 1,000+ employees. Designed and implemented training and development programs, streamlined recruitment and database management, and led needs assessment and capacity building across regional health centers.</p>
+                </div>
+                <div class="exp-date">2020 – 2021</div>
+            </div>
+            <div class="exp-item">
+                <div class="exp-title-row">
+                    <div class="exp-role">Assistant to Regional Audit Lead</div>
+                    <div class="exp-org">Ghana Audit Service, Wa, Ghana</div>
+                    <p class="exp-desc">Supported development of risk-based audit strategies for regional operations. Collaborated with audit teams to evaluate organizational processes and compliance, contributed to strategic planning and reporting, and developed monitoring systems for audit recommendation implementation.</p>
+                </div>
+                <div class="exp-date">2018</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+<!-- ── PRESENTATIONS ── -->
+<section class="section presentations-section" id="presentations" aria-label="Conference presentations">
+    <div class="section-inner">
+        <p class="section-label">Scholarly dissemination</p>
+        <h2 class="section-heading reveal">Selected conference presentations</h2>
+        <div class="pres-grid reveal reveal-delay-1">
+            <div class="pres-card">
+                <span class="pres-venue">16th PROS Symposium · June 2025</span>
+                <div class="pres-title">Power Relations and Organizational Becoming: A Process Study of Anti-Racist Change Initiatives</div>
+                <div class="pres-meta">Eretria, Greece · with Poole &amp; Contu</div>
+            </div>
+            <div class="pres-card">
+                <span class="pres-venue">AOM 84th Annual Conference · August 2024</span>
+                <div class="pres-title">"Those of Us Who Stay": The Cost of Finding the Right Home for Gendered and Racialized Academics</div>
+                <div class="pres-meta">Chicago, IL · CMS Division · with Contu &amp; Poole</div>
+                <div class="pres-award"><i class="fas fa-trophy"></i> Most Promising Early Career Paper Award</div>
+            </div>
+            <div class="pres-card">
+                <span class="pres-venue">40th EGOS Colloquium · July 2024</span>
+                <div class="pres-title">Organizational Anti-Racism as a Contested Site of Politics</div>
+                <div class="pres-meta">University of Milan-Bicocca, Italy · with Contu &amp; Poole</div>
+            </div>
+            <div class="pres-card">
+                <span class="pres-venue">Danish Gender Conference · September 2024</span>
+                <div class="pres-title">Embodying Paradox: Navigating the Inclusion-Exclusion Paradox among Black and Brown Women</div>
+                <div class="pres-meta">Copenhagen Business School, Denmark</div>
+            </div>
+            <div class="pres-card">
+                <span class="pres-venue">18th Org. Studies Summer Workshop · 2024</span>
+                <div class="pres-title">Organizational Anti-Racism as a Contested Site of Politics</div>
+                <div class="pres-meta">Greece · with Contu &amp; Poole</div>
+            </div>
+            <div class="pres-card">
+                <span class="pres-venue">Critical Management Studies Conf. · June 2023</span>
+                <div class="pres-title">If Not Now, When? If Not Here, Where? Becoming an Anti-Racist Organization and the Politics of Being Woke</div>
+                <div class="pres-meta">Nottingham, UK · with Contu &amp; Poole</div>
+            </div>
+            <div class="pres-card">
+                <span class="pres-venue">39th EGOS Colloquium · July 2023</span>
+                <div class="pres-title">Organizational Anti-Racism and the Politics of Becoming</div>
+                <div class="pres-meta">Cagliari, Italy · with Contu &amp; Poole</div>
+            </div>
+            <div class="pres-card">
+                <span class="pres-venue">AOM 83rd Annual Conference · August 2023</span>
+                <div class="pres-title">Becoming an Anti-Racist Organization — CMS Division</div>
+                <div class="pres-meta">Boston, Massachusetts · with Contu &amp; Poole</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (navMenu.classList.contains('active')) {
-                        navMenu.classList.remove('active');
-                        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
-                }
-            });
+<!-- ── CONTACT ── -->
+<section class="section contact-section" id="contact" aria-label="Contact" data-nav-theme="dark">
+    <div class="contact-glow" aria-hidden="true"></div>
+    <div class="section-inner">
+        <div class="contact-grid">
+            <div>
+                <p class="section-label">Get in touch</p>
+                <h2 class="section-heading reveal">Contact</h2>
+                <p class="contact-intro reveal reveal-delay-1">Open to scholarly collaborations, speaking invitations, media inquiries, and conversations about research at the intersection of organizations, power, and justice.</p>
+                <div class="contact-items reveal reveal-delay-2">
+                    <a href="mailto:Patricia.naya001@umb.edu" class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-item-text">
+                            <span>Email</span>
+                            <strong>Patricia.naya001@umb.edu</strong>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pt-naya/" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="contact-item-text">
+                            <span>LinkedIn</span>
+                            <strong>Patricia Tiimah Naya</strong>
+                        </div>
+                    </a>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-item-text">
+                            <span>Institution</span>
+                            <strong>University of Massachusetts Boston</strong>
+                        </div>
+                    </div>
+                    <a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-google"></i></div>
+                        <div class="contact-item-text">
+                            <span>Academic profile</span>
+                            <strong>Google Scholar</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-social-panel reveal reveal-delay-1">
+                <h3>Connect</h3>
+                <p>Follow my scholarly work and professional updates.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/pt-naya/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn — Patricia Tiimah Naya
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en" target="_blank" class="social-link">
+                        <i class="fab fa-google"></i> Google Scholar Profile
+                    </a>
+                    <a href="mailto:Patricia.naya001@umb.edu" class="social-link">
+                        <i class="fas fa-envelope"></i> Patricia.naya001@umb.edu
+                    </a>
+                    <a href="Patricia T. Naya CV.pdf" target="_blank" class="social-link">
+                        <i class="fas fa-file-alt"></i> Download Curriculum Vitae
+                    </a>
+                    <a href="Articles.html" class="social-link">
+                        <i class="fas fa-book-open"></i> Research &amp; Publications
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bar reveal">
+            <div class="footer-bar-brand">
+                <img src="images/HS_Dr. Naya.jpg" alt="Dr. Patricia Tiimah Naya" loading="lazy" decoding="async">
+                <div class="footer-bar-brand-text">
+                    <strong>Dr. Patricia Tiimah <em>Naya</em></strong>
+                    &copy; <span id="current-year"></span> · University of Massachusetts Boston
+                </div>
+            </div>
+            <div class="footer-bar-links">
+                <a href="index.html">Home</a>
+                <a href="Full-profile.html">About</a>
+                <a href="Articles.html">Research</a>
+                <a href="Patricia T. Naya CV.pdf" target="_blank">CV</a>
+                <a href="index.html#gallery">Gallery</a>
+            </div>
+            <span class="footer-bar-copy">All rights reserved.</span>
+        </div>
+    </div>
+</section>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Patricia Tiimah Naya",
+    "honorificPrefix": "Dr.",
+    "honorificSuffix": "PhD",
+    "jobTitle": "Doctor of Philosophy in Business Administration (Organization & Social Change)",
+    "affiliation": { "@type": "EducationalOrganization", "name": "University of Massachusetts Boston" },
+    "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "University of Massachusetts Boston" },
+        { "@type": "EducationalOrganization", "name": "University College London" },
+        { "@type": "EducationalOrganization", "name": "University for Development Studies, Ghana" }
+    ],
+    "award": [
+        "AAUW International Fellow",
+        "Commonwealth Shared Scholar",
+        "CMS Division Most Promising Early Career Paper Award (AOM, 2024)",
+        "PhD Award for Academic Distinction in Organizations and Social Change (UMass Boston, 2023)",
+        "Beacon Emerging Leader Award (UMass Boston, 2023)",
+        "Best Dissertation Award, UCL Institute for Global Prosperity, 2021"
+    ],
+    "url": "https://nayapatricia.com",
+    "sameAs": [
+        "https://www.linkedin.com/in/pt-naya/",
+        "https://scholar.google.com/citations?user=qnzZy1YAAAAJ&hl=en"
+    ]
+}
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Sticky nav
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 80);
+    }, { passive: true });
+
+    // Mobile toggle
+    const toggle = document.getElementById('mobileToggle');
+    const menu   = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+        toggle.innerHTML = open ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerHTML = '<i class="fas fa-bars"></i>';
         });
     });
- </script>
+
+    // Back to top
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        btt.classList.toggle('active', window.scrollY > 500);
+    }, { passive: true });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Teaching section — filter cards by institution
+    const teachingTabs = document.querySelectorAll('.teaching-tabs .tab-btn');
+    const teachingCards = document.querySelectorAll('.teaching-grid .teaching-card');
+    if (teachingTabs.length && teachingCards.length) {
+        teachingTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                teachingTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const filter = tab.dataset.filter;
+                teachingCards.forEach(card => {
+                    const show = filter === 'all' || card.dataset.institution === filter;
+                    card.classList.toggle('hide', !show);
+                });
+            });
+        });
+    }
+
+    // Side nav active state + theme (light/dark background) tracking
+    const sideNav = document.querySelector('.side-nav');
+    const sideDots = document.querySelectorAll('.side-nav-dot');
+    if (sideNav && sideDots.length) {
+        const sections = Array.from(sideDots).map(dot => document.querySelector(dot.getAttribute('href'))).filter(Boolean);
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const dot = document.querySelector(`.side-nav-dot[href="#${entry.target.id}"]`);
+                if (!dot) return;
+                if (entry.isIntersecting) {
+                    sideDots.forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                    sideNav.classList.toggle('on-dark', entry.target.dataset.navTheme === 'dark');
+                }
+            });
+        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+        sections.forEach(sec => navObserver.observe(sec));
+    }
+
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const id = this.getAttribute('href');
+            if (id === '#') return;
+            const target = document.querySelector(id);
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+    });
+});
+</script>
 </body>
 </html>
